@@ -2,7 +2,7 @@
   "id": "dndestiny",
   "title": "Dungeons & Destiny",
   "description": "A Foundry VTT system for the Dungeons & Destiny TTRPG, forked from dnd5e.",
-  "version": "0.1.0",
+  "version": "0.5.0",
   "compatibility": {
     "minimum": "14",
     "verified": "14"

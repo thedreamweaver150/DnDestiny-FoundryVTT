@@ -1173,8 +1173,8 @@ Hooks.once("init", () => {
   const ActorDocumentClass = CONFIG.Actor.documentClass;
   if (ActorDocumentClass) {
     const originalGetRollData = ActorDocumentClass.prototype.getRollData;
-    ActorDocumentClass.prototype.getRollData = function () {
-      const data = originalGetRollData.call(this);
+    ActorDocumentClass.prototype.getRollData = function (options) {
+      const data = originalGetRollData.call(this, options);
       if (isCharacterLikeActor(this)) {
         data.dndestiny = {
           ...data.dndestiny,
@@ -1183,6 +1183,59 @@ Hooks.once("init", () => {
         };
       }
       return data;
+    };
+  }
+
+  // Routes "Shields"/"Overshields" healing-type damage parts (see
+  // CONFIG.DND5E.healingTypes.shields/.overshields registration above) into
+  // the custom meters instead of the actor's real HP. This used to be a
+  // dndestiny.applyActivityDamage hook listener, but that hook doesn't exist
+  // in this dnd5e version - Actor5e#applyDamage/#calculateDamage were
+  // restructured to apply every DamageDescription generically to HP, with
+  // only "healing"/"temphp"/"maximum" (dnd5e's own native types) getting
+  // special-cased. Left unhandled, a "Shields" healing part wouldn't just be
+  // a no-op - #calculateDamage only negates entries literally typed
+  // "healing", so a positive "Shields" roll would fall through as ordinary
+  // positive damage and directly reduce the character's real HP instead of
+  // restoring shields. So this has to intercept before the original method
+  // ever sees those entries, not just supplement it afterward. Patched here
+  // (inside "init", after ActorDocumentClass is captured above) rather than
+  // at module top-level - CONFIG.Actor.documentClass isn't Actor5e yet at
+  // top-level evaluation time, since dnd5e's own init hook is what sets it.
+  if (ActorDocumentClass) {
+    const CUSTOM_HEALING_TYPES = ["shields", "overshields"];
+    const originalApplyDamage = ActorDocumentClass.prototype.applyDamage;
+    ActorDocumentClass.prototype.applyDamage = async function (damages, options = {}) {
+      if (!Array.isArray(damages) || !isCharacterLikeActor(this)) {
+        return originalApplyDamage.call(this, damages, options);
+      }
+
+      const customEntries = damages.filter(d => CUSTOM_HEALING_TYPES.includes(d.type));
+      const remainingEntries = damages.filter(d => !CUSTOM_HEALING_TYPES.includes(d.type));
+
+      if (customEntries.length) {
+        const multiplier = options.multiplier ?? 1;
+        const totals = {};
+        for (const d of customEntries) {
+          // Unlike dnd5e's native healing types (folded into one shared
+          // damage.amount bucket as a negative, since it's the same
+          // hp.value field damage itself uses), Shields/Overshields have
+          // their own dedicated fields - a positive roll value just adds
+          // directly.
+          totals[d.type] = (totals[d.type] ?? 0) + (d.value * multiplier);
+        }
+        const updates = {};
+        for (const [key, amount] of Object.entries(totals)) {
+          if (!amount) continue;
+          const current = this.system?.[key]?.value ?? 0;
+          const max = this.system?.[key]?.max ?? 0;
+          updates[`system.${key}.value`] = Math.clamp(current + amount, 0, max);
+        }
+        if (Object.keys(updates).length) await this.update(updates);
+      }
+
+      if (!remainingEntries.length) return this;
+      return originalApplyDamage.call(this, remainingEntries, options);
     };
   }
 
@@ -1214,27 +1267,49 @@ Hooks.once("init", () => {
     };
   }
 
-  // "Light Save DC" option for Check activities - see
+  // "Light Save DC" option for Check AND Save activities - see
   // injectLightSaveDcOption for the dropdown option itself. This patches the
   // actual DC computation so selecting it uses 8 + prof + the actor's Light
   // Ability modifier (see getPrimaryLightClass), matching the formula shown
-  // on the Core Light Abilities tab.
+  // on the Core Light Abilities tab. Both activity types need their own
+  // patch since they store the computed DC on different fields
+  // (this.check.dc.value vs this.save.dc.value) - Save activities in
+  // particular are what every AoE Grenade (Chapter 6) actually uses, since
+  // "each creature must make a saving throw" is a save, not a check.
+  const computeLightSaveDc = (activity) => {
+    const actor = activity.actor;
+    const primaryClass = actor ? getPrimaryLightClass(actor) : null;
+    const lightAbilityKey = primaryClass?.system?.lightAbility || null;
+    if (!actor || !lightAbilityKey) return null;
+    const prof = actor.system?.attributes?.prof ?? 0;
+    const abilityMod = actor.system?.abilities?.[lightAbilityKey]?.mod ?? 0;
+    return 8 + prof + abilityMod;
+  };
+
   const CheckActivityClass = CONFIG.DND5E.activityTypes?.check?.documentClass;
   if (CheckActivityClass) {
     const originalPrepareFinalData = CheckActivityClass.prototype.prepareFinalData;
     CheckActivityClass.prototype.prepareFinalData = function (rollData) {
       originalPrepareFinalData.call(this, rollData);
-
       if (this.check?.dc?.calculation !== LIGHT_SAVE_DC_CALCULATION) return;
+      const dc = computeLightSaveDc(this);
+      if (dc !== null) this.check.dc.value = dc;
+    };
+  }
 
-      const actor = this.actor;
-      const primaryClass = actor ? getPrimaryLightClass(actor) : null;
-      const lightAbilityKey = primaryClass?.system?.lightAbility || null;
-      if (!actor || !lightAbilityKey) return;
-
-      const prof = actor.system?.attributes?.prof ?? 0;
-      const abilityMod = actor.system?.abilities?.[lightAbilityKey]?.mod ?? 0;
-      this.check.dc.value = 8 + prof + abilityMod;
+  const SaveActivityClass = CONFIG.DND5E.activityTypes?.save?.documentClass;
+  if (SaveActivityClass) {
+    const originalSavePrepareFinalData = SaveActivityClass.prototype.prepareFinalData;
+    SaveActivityClass.prototype.prepareFinalData = function (rollData) {
+      originalSavePrepareFinalData.call(this, rollData);
+      if (this.save?.dc?.calculation !== LIGHT_SAVE_DC_CALCULATION) return;
+      const dc = computeLightSaveDc(this);
+      if (dc !== null) {
+        this.save.dc.value = dc;
+        this.labels.save = game.i18n.format("DND5E.SaveDC", {
+          dc, ability: CONFIG.DND5E.abilities[this.ability]?.label ?? ""
+        });
+      }
     };
   }
 
@@ -1975,25 +2050,6 @@ Hooks.on("preUpdateActor", (actor, updateData) => {
   // updateData.system.attributes.hp is already known to exist - newHpTarget
   // was read from it via optional chaining without bailing out above.
   updateData.system.attributes.hp.value = currentHp - incomingDamage;
-});
-
-Hooks.on("dndestiny.applyActivityDamage", (activity, targets, rolls) => {
-  const healingType = activity.healing?.type;
-  if (!["shields", "overshields"].includes(healingType)) return;
-
-  const totalHeal = rolls.reduce((acc, r) => acc + (r.total || 0), 0);
-  if (totalHeal <= 0) return;
-
-  for (const target of targets) {
-    const actor = target.actor;
-    if (!isCharacterLikeActor(actor)) continue;
-
-    const currentVal = actor.system?.[healingType]?.value ?? 0;
-    const maxVal = actor.system?.[healingType]?.max ?? 10;
-    const newVal = Math.min(maxVal, currentVal + totalHeal);
-
-    actor.update({ [`system.${healingType}.value`]: newVal });
-  }
 });
 
 // Auto-deducts a weapon's Shot Capacity "Remaining" count on every attack it
@@ -4745,15 +4801,22 @@ async function applyPerkToSlot(weapon, slotNumber, perk) {
     const data = effect.toObject();
     delete data._id;
     data.origin = perk.uuid;
-    data.transfer = false;
     // Item5e#allApplicableEffects() (what actually decides which effects on
     // an item apply to that item's own data) only yields effects whose
-    // isAppliedEnchantment getter is true - which specifically requires
-    // type "enchantment" with an origin other than the item's own UUID, not
-    // just transfer:false - see ActiveEffect5e#isAppliedEnchantment. Perks
-    // are authored as ordinary effects on the perk (type "base" by default,
-    // since there's no reason to make someone building a perk think about
-    // this), so this has to force the type when cloning onto the weapon.
+    // applicableType getter resolves to "Item" - which for an
+    // EnchantmentData effect (data.type: "enchantment") means its isApplied
+    // getter needs to be true, which just checks `this.parent.transfer &&
+    // !!this.item` (see EnchantmentData#isApplied/#applicableType). transfer
+    // normally means "also apply this effect to the wielding actor," but
+    // EnchantmentData's own applicableType never resolves to "Actor" no
+    // matter what transfer is set to, so setting it true here only makes
+    // the effect apply to the weapon itself, same as intended - it doesn't
+    // also leak onto the actor the way a transfer:true "base"-type effect
+    // would. Perks are authored as ordinary effects on the perk (type
+    // "base" by default, since there's no reason to make someone building a
+    // perk think about any of this), so this has to force both fields when
+    // cloning onto the weapon.
+    data.transfer = true;
     data.type = "enchantment";
     foundry.utils.setProperty(data, "flags.dndestiny.perkSlot", slotNumber);
     foundry.utils.setProperty(data, "flags.dndestiny.perkSourceUuid", perk.uuid);
@@ -5190,7 +5253,20 @@ async function reloadWeapon(item) {
 // Tracks items currently mid-flight for ensureReloadActivity so a rapid
 // double-render (e.g. toggling the Shot Capacity property while the sheet
 // is open) can't race and create two Reload activities before the first
-// createActivity's own update+re-render round-trip has settled.
+// createActivity's own update+re-render round-trip has settled. This only
+// guards against a race WITHIN one client, though - it's an in-memory Set,
+// not anything server-authoritative, so it can't stop two different
+// sessions (e.g. two players, or a GM and a player, with the same weapon's
+// sheet open) from both seeing "no existing Reload activity" at the same
+// moment and both creating one. Confirmed live: exactly this produced a
+// duplicated Reload activity on a weapon during multi-session testing.
+// Rather than trying to build real cross-client locking (Foundry's update
+// API has no compare-and-swap to make that safe), this self-heals instead:
+// if more than one Reload activity is ever found, every client that
+// notices deletes all but one - deterministically the same one everywhere
+// (lowest _id), so two clients racing to clean up just both harmlessly
+// no-op on whichever ids the other already removed (deleteActivity is a
+// no-op for an id that's already gone).
 const pendingReloadActivitySync = new Set();
 
 // Auto-manages a "Reload" Activity (see ReloadActivity below) on a weapon:
@@ -5198,23 +5274,42 @@ const pendingReloadActivitySync = new Set();
 // is on, removed otherwise. Keeps this in sync with the same gate used for
 // the Capacity/Remaining fields themselves rather than requiring anyone to
 // add/remove it by hand.
-function ensureReloadActivity(item) {
+async function ensureReloadActivity(item) {
   const activities = item.system?.activities;
   if (!activities || !CONFIG.DND5E.activityTypes.dndestinyReload) return;
   if (pendingReloadActivitySync.has(item.id)) return;
 
   const hasProperty = !!item.system?.properties?.has("dndestinyShotCapacity");
   const trackingOn = game.settings.get(MODULE_ID, SETTING_TRACK_AMMO);
-  const existing = activities.find(a => a.type === "dndestinyReload");
+  const existingAll = activities.filter(a => a.type === "dndestinyReload")
+    .sort((a, b) => a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
 
   if (hasProperty && trackingOn) {
-    if (existing) return;
+    if (existingAll.length === 1) return;
+
     pendingReloadActivitySync.add(item.id);
-    item.createActivity("dndestinyReload", { name: "Reload" }, { renderSheet: false })
-      .finally(() => pendingReloadActivitySync.delete(item.id));
-  } else if (existing) {
+    try {
+      if (!existingAll.length) {
+        await item.createActivity("dndestinyReload", { name: "Reload" }, { renderSheet: false });
+      } else {
+        // Duplicates from a cross-session race - keep the first (lowest
+        // id, same choice on every client) and remove the rest one at a
+        // time, since deleteActivity itself does a full document update
+        // and firing several in parallel against the same item would just
+        // create a same-document version of the exact race this is meant
+        // to clean up.
+        for (const extra of existingAll.slice(1)) await item.deleteActivity(extra.id);
+      }
+    } finally {
+      pendingReloadActivitySync.delete(item.id);
+    }
+  } else if (existingAll.length) {
     pendingReloadActivitySync.add(item.id);
-    item.deleteActivity(existing.id).finally(() => pendingReloadActivitySync.delete(item.id));
+    try {
+      for (const activity of existingAll) await item.deleteActivity(activity.id);
+    } finally {
+      pendingReloadActivitySync.delete(item.id);
+    }
   }
 }
 
