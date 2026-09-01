@@ -1,0 +1,1098 @@
+/* Banners
+   .dnd5e2.sheet.actor is the root application window itself (the <form>),
+   which Foundry gives its own default "denim" texture background
+   (ui/denim075.png) independent of .sheet-header/.sheet-body. Any subpixel
+   rounding gap between our header and body - or any spot they don't fully
+   cover - shows that default texture through as a seam. Killing it at the
+   root removes the default entirely instead of chasing individual gaps.
+   .sheet-header gets the primary banner (name/class/level chrome).
+   .sheet-body is the single shared ancestor of every tab (sidebar +
+   tab-body + our injected Core Light Abilities section all live inside it),
+   so putting the dark banner there replaces dndestiny's own background
+   everywhere on the sheet, not just on one tab. */
+.dnd5e2.sheet.actor {
+  background-image: none !important;
+  background-color: #0a0a0c !important;
+}
+
+/* dndestiny also paints its own decorative wash of banner-character-dark.webp
+   via a ::before on .window-content - absolutely positioned over the top
+   300px at 50% opacity with a fade mask. Because it's absolutely
+   positioned it paints above .sheet-body's (statically positioned)
+   background in their overlap region, ghosting through right at the
+   header/body seam. Removing the generated box entirely instead of trying
+   to out-layer its background. */
+.dnd5e2.sheet.actor.character .window-content::before {
+  content: none !important;
+}
+
+.dnd5e2.sheet.actor .sheet-header {
+  background-image: linear-gradient(
+    to bottom, rgba(10, 10, 12, 0.15) 0%, rgba(10, 10, 12, 0.55) 100%
+  ), url("/systems/dndestiny/assets/ui/destiny-banner.webp") !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.dnd5e2.sheet.actor .sheet-body {
+  /* Starts at the same 0.55 opacity the header's gradient ends at, so the
+     two different background images meet at matching darkness instead of
+     a hard seam (header fades to 55% dark, body was starting fully clear).
+     Stays monotonically darker going down so there's no lighter band. */
+  background-image: linear-gradient(
+    to bottom, rgba(10, 10, 12, 0.55) 0%, rgba(10, 10, 12, 0.6) 35%,
+    rgba(10, 10, 12, 0.85) 75%, #0a0a0c 100%
+  ), url("/systems/dndestiny/assets/ui/destiny-banner-dark.webp") !important;
+  background-size: cover !important;
+  background-position: top center !important;
+  background-repeat: no-repeat !important;
+  background-color: #0a0a0c !important;
+}
+
+/* dndestiny paints the Item sheet's own banner via a ::before whose content and
+   background image come from --dndestiny-item-header-content/-image - "" and
+   banner-item-dark.webp in dark theme, but "none"/transparent in light
+   theme (no banner at all there). Overriding the pseudo-element directly
+   instead of chasing those variables through dndestiny's theme mixins
+   guarantees our banner shows regardless of theme, same as the actor
+   sheet's banner treatment above. */
+.dnd5e2.sheet.item:not(.minimized)::before {
+  content: "" !important;
+  background: url("/systems/dndestiny/assets/ui/banner-item-dark.webp") no-repeat top center / cover !important;
+}
+
+/* Smooth Sidebar & Container Transitions */
+.dnd5e2.sheet.actor main,
+.dnd5e2.sheet.actor aside.sidebar,
+.dnd5e2.sheet.actor .tab-body {
+  transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1), flex 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Custom Meter UI Styling */
+.dndestiny-vitals-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+.dndestiny-meter-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 3px;
+}
+.dndestiny-meter-label-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.dndestiny-meter-config {
+  color: inherit;
+  font-size: inherit;
+  flex-shrink: 0;
+  /* Only shown while the sheet is toggled to Edit mode, matching dndestiny's
+     own config buttons (AC, Initiative, etc.), which use {{#if editable}}. */
+  display: none;
+}
+.dnd5e2.sheet.actor.editable .dndestiny-meter-config {
+  display: inline-block;
+}
+.dndestiny-meter-roll-shield-die {
+  color: inherit;
+  font-size: inherit;
+  flex-shrink: 0;
+}
+.dndestiny-meter-roll-shield-die:hover {
+  color: var(--dndestiny-color-gold, #c9b054);
+}
+/* Opposite of the cog's edit-only visibility - this is a play-mode action
+   (rolling the die when you level up), so it hides while editing instead. */
+.dnd5e2.sheet.actor.editable .dndestiny-meter-roll-shield-die {
+  display: none;
+}
+.dndestiny-meter-frame {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 38px;
+  background: #101114;
+  border-radius: 4px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.dndestiny-meter-fill {
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  transition: width 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+.dndestiny-meter-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding-left: 10px;
+  gap: 4px;
+}
+.dndestiny-meter-input {
+  width: 36px;
+  height: 28px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Sidebar Custom Tab Button */
+.dnd5e2.sheet.actor aside.sidebar nav.tabs [data-tab="core-light-abilities"],
+.dnd5e2.sheet.actor nav.tabs [data-tab="core-light-abilities"] {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1rem !important;
+  cursor: pointer;
+}
+
+/* Core Light Tab Panel */
+.dnd5e2.sheet.actor .tab.core-light-abilities {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+  display: none;
+  overflow-y: auto;
+}
+
+.dnd5e2.sheet.actor .tab.core-light-abilities.active {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+}
+
+/* Centered Inner Box */
+.dndestiny-light-tab-inner {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Light Abilities Card - mirrors the native dnd5e2 "card" component
+   (.dnd5e2 .card / .card .header / .card .info) so it matches the rest of
+   the sheet, using the system's own CSS variables rather than custom colors. */
+.dndestiny-light-card {
+  width: 230px;
+  border-radius: 4px;
+  background: var(--dndestiny-background-card);
+  box-shadow: 0 0 6px var(--dndestiny-shadow-45);
+  border: var(--dndestiny-border-gold);
+}
+
+.dndestiny-light-card .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  background: linear-gradient(to right, var(--dndestiny-card-header-1), var(--dndestiny-card-header-2));
+  color: white;
+  border-radius: 3px 3px 0 0;
+  border-bottom: var(--dndestiny-border-gold);
+}
+
+.dndestiny-light-card .header h3 {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: var(--dndestiny-font-roboto-slab);
+  font-size: var(--font-size-13);
+  font-weight: bold;
+  line-height: 1;
+  color: inherit;
+}
+
+.dndestiny-light-card .header .subtitle {
+  font-family: var(--dndestiny-font-roboto-condensed);
+  font-size: var(--font-size-13);
+}
+
+.dndestiny-light-card .info {
+  display: flex;
+  align-items: stretch;
+  padding: 0.5rem 0;
+}
+
+.dndestiny-light-card .info > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0.5rem;
+  border-right: var(--dndestiny-border-separator-faint);
+}
+
+.dndestiny-light-card .info > div:last-child {
+  border-right: none;
+}
+
+.dndestiny-light-card .info .label {
+  font-family: var(--dndestiny-font-roboto-condensed);
+  font-size: var(--font-size-10);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+}
+
+.dndestiny-light-card .info .value {
+  font-family: var(--dndestiny-font-roboto-slab);
+  font-weight: bold;
+  font-size: var(--font-size-16);
+  color: var(--color-text-primary);
+}
+
+/* Scale Values (read-only, from the class's Advancement tab) - sits at the
+   bottom of the Light Abilities card itself, under the Ability/Attack/
+   Save DC/Level row, rather than widening the card (see
+   renderScaleValueList). */
+.dndestiny-scale-value-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.375rem 0.5rem 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  border-top: var(--dndestiny-border-separator-faint);
+}
+
+.dndestiny-scale-value-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding-bottom: 0.375rem;
+}
+
+.dndestiny-scale-value-name {
+  font-family: var(--dndestiny-font-roboto-condensed);
+  font-size: var(--font-size-11);
+  color: var(--color-text-secondary);
+}
+
+.dndestiny-scale-value-value {
+  font-family: var(--dndestiny-font-roboto-slab);
+  font-weight: bold;
+  font-size: var(--font-size-13);
+  color: var(--color-text-primary);
+}
+
+/* Row holding the Light Abilities card and the Ghost quick-access card
+   (see renderGhostLinkCard) side by side - wraps on narrow sheets rather
+   than overflowing. */
+.dndestiny-light-cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* Ghost Quick-Access Card - same dimensions/chrome as .dndestiny-light-card
+   so the two sit consistently next to each other; the body switches
+   between a drag-and-drop target (empty) and the linked Ghost's portrait
+   (filled) - see renderGhostLinkCard/bindGhostLinkCardEvents. */
+.dndestiny-ghost-link-card {
+  width: 230px;
+  border-radius: 4px;
+  background: var(--dndestiny-background-card);
+  box-shadow: 0 0 6px var(--dndestiny-shadow-45);
+  border: var(--dndestiny-border-gold);
+  display: flex;
+  flex-direction: column;
+}
+
+.dndestiny-ghost-link-card .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  background: linear-gradient(to right, var(--dndestiny-card-header-1), var(--dndestiny-card-header-2));
+  color: white;
+  border-radius: 3px 3px 0 0;
+  border-bottom: var(--dndestiny-border-gold);
+}
+
+.dndestiny-ghost-link-card .header h3 {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-family: var(--dndestiny-font-roboto-slab);
+  font-size: var(--font-size-13);
+  font-weight: bold;
+  line-height: 1;
+  color: inherit;
+}
+
+.dndestiny-ghost-link-body {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  min-height: 96px;
+}
+
+.dndestiny-ghost-link-dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px dashed var(--color-border-light-tertiary);
+  border-radius: 4px;
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-11);
+  text-align: center;
+}
+
+.dndestiny-ghost-link-card.drag-hover .dndestiny-ghost-link-dropzone {
+  border-color: var(--color-text-primary);
+  color: var(--color-text-primary);
+}
+
+.dndestiny-ghost-link-placeholder-icon {
+  width: 32px;
+  height: 32px;
+  opacity: 0.5;
+}
+
+.dndestiny-ghost-link-filled {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.dndestiny-ghost-link-portrait {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: var(--dndestiny-border-gold);
+}
+
+.dndestiny-ghost-link-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dndestiny-ghost-link-name {
+  margin-top: 0.4rem;
+  font-family: var(--dndestiny-font-roboto-slab);
+  font-size: var(--font-size-12);
+  font-weight: bold;
+  text-align: center;
+}
+
+.dndestiny-ghost-link-clear {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-11);
+}
+
+.dndestiny-ghost-link-clear:hover {
+  color: var(--color-text-primary);
+}
+
+.dndestiny-light-source-hint {
+  width: 100%;
+  text-align: center;
+  font-size: var(--font-size-11);
+  font-style: italic;
+  color: var(--color-text-tertiary);
+  margin-top: 0.75rem;
+}
+
+.dndestiny-light-abilities-body {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.dndestiny-light-section-heading {
+  font-family: var(--dndestiny-font-roboto-slab);
+  font-size: var(--font-size-13);
+  color: var(--color-text-primary);
+  margin: 0 0 0.375rem 0;
+  padding: 0 0 0.25rem 0;
+  border-bottom: var(--dndestiny-border-separator-faint);
+}
+
+.dndestiny-ability-slot-list + .dndestiny-light-section-heading {
+  margin-top: 1rem;
+}
+
+/* Core Ability Slots */
+.dndestiny-ability-slot-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dndestiny-ability-slot-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.5rem;
+  border-radius: 4px;
+  background: var(--dndestiny-background-card);
+  border: var(--dndestiny-border-gold);
+}
+
+.dndestiny-ability-slot-row.empty {
+  justify-content: center;
+}
+
+/* Scale Values (read-only, from the class's Advancement tab) */
+.dndestiny-scale-value-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.dndestiny-scale-value-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.375rem 0.5rem;
+  border-radius: 4px;
+  background: var(--dndestiny-background-card);
+  border: var(--dndestiny-border-gold);
+}
+
+.dndestiny-scale-value-name {
+  font-size: var(--font-size-13);
+  color: var(--color-text-primary);
+}
+
+.dndestiny-scale-value-value {
+  font-family: var(--dndestiny-font-roboto-slab);
+  font-weight: bold;
+  font-size: var(--font-size-14);
+  color: var(--dndestiny-color-gold);
+}
+
+.dndestiny-ability-slot-add {
+  padding: 0.25rem 0;
+  font-size: var(--font-size-12);
+  font-style: italic;
+  color: var(--color-text-tertiary);
+}
+
+.dndestiny-ability-slot-add:hover {
+  color: var(--color-text-primary);
+}
+
+.dndestiny-ability-slot-icon {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 4px;
+  object-fit: cover;
+  flex: none;
+}
+
+.dndestiny-ability-slot-name {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  cursor: var(--cursor-pointer);
+}
+
+.dndestiny-ability-slot-name .title {
+  font-family: var(--dndestiny-font-roboto-slab);
+  font-size: var(--font-size-13);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dndestiny-ability-slot-name .subtitle {
+  font-family: var(--dndestiny-font-roboto-condensed);
+  font-size: var(--font-size-11);
+  color: var(--color-text-secondary);
+}
+
+.dndestiny-ability-slot-uses,
+.dndestiny-ability-slot-recharge {
+  flex: none;
+  font-size: var(--font-size-11);
+  color: var(--color-text-secondary);
+  text-align: center;
+  min-width: 48px;
+}
+
+.dndestiny-ability-slot-btn {
+  flex: none;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-content: center;
+  color: var(--color-text-secondary);
+}
+
+.dndestiny-ability-slot-btn:hover {
+  color: var(--color-text-primary);
+  text-shadow: 0 0 5px var(--color-shadow-primary);
+}
+
+.dndestiny-ability-slot-delete {
+  flex: none;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: none;
+  place-content: center;
+  color: var(--color-text-secondary);
+}
+
+.dnd5e2.sheet.actor.editable .dndestiny-ability-slot-delete {
+  display: grid;
+}
+
+.dndestiny-ability-slot-delete:hover {
+  color: var(--dndestiny-color-red, #cc3333);
+  text-shadow: 0 0 5px var(--color-shadow-primary);
+}
+
+/* Grenade List */
+.dndestiny-grenade-empty {
+  text-align: center;
+  font-size: var(--font-size-12);
+  font-style: italic;
+  color: var(--color-text-tertiary);
+  margin: 0;
+}
+
+.dndestiny-grenade-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dndestiny-grenade-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.5rem;
+  border-radius: 4px;
+  background: var(--dndestiny-background-card);
+  border: var(--dndestiny-border-gold);
+}
+
+.dndestiny-grenade-item.active {
+  box-shadow: 0 0 0 1px var(--dndestiny-color-gold) inset;
+}
+
+.dndestiny-grenade-icon {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 4px;
+  object-fit: cover;
+  flex: none;
+}
+
+.dndestiny-grenade-name {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  cursor: var(--cursor-pointer);
+}
+
+.dndestiny-grenade-name .title {
+  font-family: var(--dndestiny-font-roboto-slab);
+  font-size: var(--font-size-13);
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dndestiny-grenade-name .subtitle {
+  font-family: var(--dndestiny-font-roboto-condensed);
+  font-size: var(--font-size-11);
+  color: var(--color-text-secondary);
+}
+
+.dndestiny-grenade-uses,
+.dndestiny-grenade-recharge {
+  flex: none;
+  font-size: var(--font-size-11);
+  color: var(--color-text-secondary);
+  text-align: center;
+  min-width: 48px;
+}
+
+.dndestiny-grenade-btn {
+  flex: none;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-content: center;
+  color: var(--color-text-secondary);
+}
+
+.dndestiny-grenade-btn:hover {
+  color: var(--color-text-primary);
+  text-shadow: 0 0 5px var(--color-shadow-primary);
+}
+
+.dndestiny-grenade-select.active {
+  color: var(--dndestiny-color-gold);
+}
+
+/* "Set as Active" is a manual override for the normal Short/Long Rest
+   picker (see injectActiveGrenadePicker) - only shown while the character
+   sheet itself is in Edit Mode (dnd5e2 tags the sheet root .editable in
+   Edit Mode, .interactable in Play Mode), same as dndestiny's own edit-only
+   controls. */
+.dnd5e2.actor:not(.editable) .dndestiny-grenade-select {
+  display: none;
+}
+
+/* Class Item - Grenade Slots */
+.dndestiny-grenade-slot-list {
+  list-style: none;
+  margin: 0.5rem 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.dndestiny-grenade-slot-empty {
+  font-size: var(--font-size-12);
+  font-style: italic;
+  color: var(--color-text-tertiary);
+}
+
+.dndestiny-grenade-slot {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  background: var(--dndestiny-background-card);
+  border: var(--dndestiny-border-gold);
+}
+
+.dndestiny-grenade-slot img {
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 4px;
+  object-fit: cover;
+  flex: none;
+}
+
+.dndestiny-grenade-slot-name {
+  flex: 1;
+  font-size: var(--font-size-13);
+  color: var(--color-text-primary);
+}
+
+/* Shared by both "remove this item" trash icons: the grenade list's delete
+   button (actor sheet) and the class item's slot remove button. Only shown
+   while their sheet is toggled to Edit mode, same convention as the meter
+   config cogs. */
+.dndestiny-grenade-delete,
+.dndestiny-grenade-slot-remove {
+  flex: none;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: none;
+  place-content: center;
+  color: var(--color-text-secondary);
+}
+
+.dnd5e2.sheet.actor.editable .dndestiny-grenade-delete,
+.dnd5e2.editable .dndestiny-grenade-slot-remove {
+  display: grid;
+}
+
+.dndestiny-grenade-delete:hover,
+.dndestiny-grenade-slot-remove:hover {
+  color: var(--dndestiny-color-red, #cc3333);
+  text-shadow: 0 0 5px var(--color-shadow-primary);
+}
+
+/* Parchment Tooltips */
+#tooltip.dndestiny-parchment-tooltip {
+  background:
+    url('/systems/dndestiny/ui/texture-gray1.webp') no-repeat top left,
+    #ded8c8 url('/systems/dndestiny/ui/texture-gray2.webp') no-repeat bottom right !important;
+  background-size: auto, auto !important;
+  border: 1px solid #7a7362 !important;
+  border-radius: 3px !important;
+  padding: 10px 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5) !important;
+  color: #191813 !important;
+  font-family: var(--dndestiny-font-roboto, sans-serif) !important;
+  min-width: 320px !important;
+  max-width: 480px !important;
+  width: max-content !important;
+  text-align: left !important;
+}
+
+#tooltip.dndestiny-parchment-tooltip .tooltip-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 16px !important;
+  margin-bottom: 8px !important;
+}
+
+#tooltip.dndestiny-parchment-tooltip .tooltip-header h3 {
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  font-family: var(--dndestiny-font-serif, "Modesto Element", Georgia, serif) !important;
+  font-size: 1.4rem !important;
+  font-weight: bold !important;
+  color: #191813 !important;
+  line-height: 1 !important;
+}
+
+#tooltip.dndestiny-parchment-tooltip .tooltip-header .pill {
+  background: #fcfbfa !important;
+  border: 1px solid #4a4945 !important;
+  border-radius: 3px !important;
+  padding: 3px 6px !important;
+  font-family: var(--dndestiny-font-roboto, sans-serif) !important;
+  font-size: 0.68rem !important;
+  font-weight: bold !important;
+  letter-spacing: 0.5px !important;
+  text-transform: uppercase !important;
+  color: #191813 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+
+#tooltip.dndestiny-parchment-tooltip .description {
+  font-size: 0.9rem !important;
+  color: #191813 !important;
+  line-height: 1.35 !important;
+  margin: 0 !important;
+}
+
+#tooltip.dndestiny-parchment-tooltip .description strong {
+  font-weight: bold !important;
+  color: #191813 !important;
+}
+
+/* Centers the Memory card on a Ghost's Inventory tab (see
+   injectGhostMemoryCard) - the native .top row is a flex container sized
+   for two side-by-side cards, and with the Carry Weight card removed (see
+   hideGhostCarryWeightCard) the lone Memory card would otherwise sit flush
+   left instead of centered. */
+.dndestiny-ghost-inventory-top {
+  justify-content: center;
+}
+
+.dndestiny-empty-containers-spacer {
+  flex: 0 0 auto !important;
+  width: 0 !important;
+}
+
+/* Glimmer Storage Card - restyles the native currency section on a Ghost's
+   Inventory tab (see injectGhostGlimmerCard), matching the look of the
+   Memory/Encumbrance cards above it. Scoped off .dndestiny-ghost-sheet
+   (added once to the sheet root, which is never replaced) with plain
+   structural selectors - .currency/its native children - rather than
+   waiting on injectGhostGlimmerCard's own JS-added classes. dndestiny
+   recreates the whole .currency section from scratch on ANY inventory
+   update, including an unrelated item's Quantity +/- click; a class-only
+   selector would leave a one-JS-tick gap where the browser paints dndestiny's
+   unstyled native section first, which read as the card visibly jumping
+   into place on every such click. Structural selectors close that gap
+   since they apply the instant the native markup exists, no JS required.
+   !important on the layout rules since dndestiny's own .currency CSS
+   otherwise wins on specificity. */
+.dndestiny-ghost-sheet .tab[data-tab="inventory"] section.currency,
+.dndestiny-glimmer-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  gap: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background: var(--dndestiny-background-card);
+  box-shadow: 0 0 6px var(--dndestiny-shadow-45);
+  border: var(--dndestiny-border-gold);
+  margin-bottom: 8px;
+}
+
+/* Pure-CSS label instead of a JS-inserted element, so it's there from the
+   very first paint of a fresh native section - see the big comment above. */
+.dndestiny-ghost-sheet .tab[data-tab="inventory"] section.currency::before {
+  content: "Glimmer Storage";
+  display: block;
+  font-family: var(--dndestiny-font-roboto-slab);
+  font-size: var(--font-size-11);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-secondary);
+  text-align: center;
+  width: 100%;
+}
+
+.dndestiny-ghost-sheet .tab[data-tab="inventory"] section.currency [data-action="currency"] {
+  display: none !important;
+}
+
+.dndestiny-ghost-sheet .tab[data-tab="inventory"] section.currency label,
+.dndestiny-glimmer-card label {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.dndestiny-ghost-sheet .tab[data-tab="inventory"] section.currency label i.currency.glimmer,
+.dndestiny-glimmer-card label i.currency.glimmer {
+  position: absolute;
+  top: 4px;
+  left: 6px;
+  margin: 0;
+}
+
+.dndestiny-ghost-sheet .tab[data-tab="inventory"] section.currency input,
+.dndestiny-glimmer-input {
+  flex: 1 1 auto !important;
+  width: 100% !important;
+  max-width: none !important;
+  min-width: 0;
+  text-align: center !important;
+  padding: 6px 4px 6px 28px !important;
+  font-size: var(--font-size-14);
+}
+
+/* Send to Ghost / Send to Player buttons (see injectSendItemButton) - the
+   normal item-control variant just inherits dndestiny's own button styling.
+   Container tiles have no controls row to join, so that variant becomes a
+   small overlay badge in the corner of the tile instead. Only one of the
+   two ever applies to a given container tile (an item lives on one actor
+   at a time), so both share the same corner position. */
+li.container {
+  position: relative;
+}
+
+.dndestiny-send-to-actor-container {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  background: var(--dndestiny-background-card);
+  border: var(--dndestiny-border-gold);
+  border-radius: 50%;
+  color: var(--color-text-secondary);
+}
+
+.dndestiny-send-to-actor-container:hover {
+  color: var(--color-text-primary);
+}
+
+/* Recharge Die/Threshold fields injected into a Recovery profile row when
+   its Period is set to "Light Ability Recharge" (see
+   injectLightRechargeRecoveryOption/syncLightRechargeRecoveryRow) - display:
+   contents so its two .form-group children lay out as direct siblings of
+   the row's other fields in that row's flex .form-fields, instead of being
+   squeezed into one flex cell as a group. */
+.dndestiny-light-recharge-fields {
+  display: contents;
+}
+
+/* "Brief Rest" button row (see injectBriefRestButton) - a sibling copy of
+   dndestiny's own .sheet-header-buttons (Short/Long Rest), which the character
+   sheet's own CSS anchors with position: absolute; top: 1.5625rem inside its
+   header. Our copy inherits that same rule by matching the same selector, so
+   this shifts it up by its own full height plus the native row's 8px gap to
+   sit directly above instead of on top of it. */
+.dndestiny-brief-rest-row {
+  transform: translateY(calc(-100% - 8px));
+}
+
+/* Ghost "Memory Cost"/"Max Stack" row injected into a physical item's sheet
+   header (see injectGhostMemoryField) - reuses dndestiny's own .price row class
+   for consistent look, but that class is sized for a short number + 3-letter
+   currency code, not placeholders like "Memory Cost"/"Max Stack". Left as-is
+   it truncated to "Memo"/"Max S" and, being the 4th row squeezed into a
+   header only sized for 3 (Quantity/Weight/Price), crowded down into the
+   item sheet's own tab navigation directly below the header. Widening the
+   inputs and forcing extra header height (via :has, matching how the rest
+   of this module already gates injected CSS on the presence of its own
+   classes) fixes both without touching dndestiny's native .price styling for
+   Quantity/Weight/Price themselves. */
+.dnd5e2.sheet.item .sheet-header .dndestiny-ghost-memory input {
+  width: 4.5em;
+}
+.dnd5e2.sheet.item .sheet-header:has(.dndestiny-ghost-memory) {
+  min-height: 148px;
+}
+
+/* Weapon Scope field's "/" separators (see SCOPE_DISTANCE_FIELDS/
+   injectWeaponRangeFields) - each Effective/Extended/Maximum input sits in a
+   label-top mini form-group (label stacked above the input), so a plain
+   .sep centers itself against that whole label+input block by default and
+   ends up sitting noticeably above the inputs' own midline instead of
+   between them. Aligning the row to the bottom edge and giving .sep the
+   same height as the inputs (dndestiny's own split-group + label-top fields use
+   this same fix - see ".activity.sheet .separated-list .split-group.
+   full-width .sep" in dndestiny.css) lines the slash up with the inputs instead
+   of the labels above them. */
+.dndestiny-weapon-range-field .form-group.split-group > .form-fields {
+  align-items: end;
+}
+.dndestiny-weapon-range-field .form-group.split-group > .form-fields > .sep {
+  height: var(--form-field-height);
+  display: grid;
+  place-content: center;
+}
+
+/* Weapon Customization tab's perk slots (see injectWeaponCustomizationTab) -
+   3 drop targets side by side, each either a "drag a perk here" prompt, a
+   filled slot showing the slotted perk's icon/name + a remove button, or a
+   locked placeholder when the weapon's Tier hasn't unlocked that slot yet. */
+.dndestiny-perk-slots {
+  display: flex;
+  gap: 8px;
+}
+.dndestiny-perk-slot {
+  flex: 1;
+  min-width: 0;
+  border: 1px dashed var(--dndestiny-color-gold);
+  border-radius: 4px;
+  padding: 6px;
+  text-align: center;
+}
+.dndestiny-perk-slot-label {
+  font-family: var(--dndestiny-font-roboto-condensed);
+  font-size: var(--font-size-10);
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin-bottom: 4px;
+}
+.dndestiny-perk-slot-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-height: 32px;
+  justify-content: center;
+}
+.dndestiny-perk-slot-content .hint {
+  margin: 0;
+  font-size: var(--font-size-11);
+}
+.dndestiny-perk-slot-locked {
+  border-style: solid;
+  border-color: var(--dndestiny-color-faint);
+  opacity: 0.6;
+}
+.dndestiny-perk-slot-icon {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 4px;
+  object-fit: cover;
+}
+.dndestiny-perk-slot-name {
+  font-size: var(--font-size-12);
+  font-weight: bold;
+}
+.dndestiny-perk-slot-remove {
+  color: var(--color-text-secondary);
+}
+.dndestiny-perk-slot-remove:hover {
+  color: var(--dndestiny-color-maroon);
+}
+.dndestiny-perk-slot-missing {
+  color: var(--dndestiny-color-maroon);
+}
+
+/* Perk Details' per-weapon-class rows (see injectPerkDetailsFields) - each
+   row is a checkbox plus a Slot select that's only meaningful once that
+   weapon class is actually checked, so it's hidden until then rather than
+   showing a slot picker for a weapon this perk isn't even available for. */
+.dndestiny-perk-weapon-class-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.dndestiny-perk-weapon-class-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.dndestiny-perk-weapon-class-row .checkbox {
+  flex: 1;
+}
+.dndestiny-perk-weapon-class-slot-select {
+  visibility: hidden;
+  width: 5.5em;
+}
+.dndestiny-perk-weapon-class-row.dndestiny-perk-weapon-class-active .dndestiny-perk-weapon-class-slot-select {
+  visibility: visible;
+}

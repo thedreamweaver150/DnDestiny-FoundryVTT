@@ -1,0 +1,17 @@
+{{#if content}}
+{{{ content }}}
+{{else}}
+{{> "dndestiny.card-face" }}
+{{/if}}
+
+{{#each summaries}}
+<div class="card-summary" data-message-id="{{ id }}" data-target-uuid="{{ token.uuid }}">{{{ html }}}</div>
+{{/each}}
+
+{{#if (and effects.length showTargets)}}
+<effect-application class="dnd5e2">
+    {{#each effects}}
+    <option value="{{ uuid }}"></option>
+    {{/each}}
+</effect-application>
+{{/if}}

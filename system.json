@@ -1,0 +1,745 @@
+{
+  "id": "dndestiny",
+  "title": "Dungeons & Destiny",
+  "description": "A Foundry VTT system for the Dungeons & Destiny TTRPG, forked from dnd5e.",
+  "version": "0.1.0",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14"
+  },
+  "authors": [
+    {
+      "name": "dreamweaver150",
+      "flags": {}
+    }
+  ],
+  "esmodules": [
+    "dndestiny.mjs",
+    "scripts/customization.mjs"
+  ],
+  "styles": [
+    "dndestiny.css",
+    "styles/customization.css"
+  ],
+  "relationships": {},
+  "documentTypes": {
+    "ActiveEffect": {
+      "condition": {},
+      "enchantment": {}
+    },
+    "Actor": {
+      "character": {
+        "htmlFields": ["details.biography.value", "details.biography.public", "bastion.description"]
+      },
+      "encounter": {
+        "htmlFields": ["description.full", "description.summary"]
+      },
+      "group": {
+        "htmlFields": ["description.full", "description.summary"]
+      },
+      "npc": {
+        "htmlFields": ["details.biography.value", "details.biography.public"]
+      },
+      "vehicle": {
+        "htmlFields": ["details.biography.value", "details.biography.public"]
+      },
+      "dndestiny.ghost": {
+        "htmlFields": ["details.biography.value", "details.biography.public", "bastion.description"]
+      }
+    },
+    "ChatMessage": {
+      "attack": {
+        "filePathFields": {
+          "targets.*.img": ["IMAGE", "VIDEO"]
+        }
+      },
+      "bastionAttack": {},
+      "bastionOrder": {},
+      "bastionTurn": {},
+      "check": {
+        "filePathFields": {
+          "targets.*.img": ["IMAGE", "VIDEO"]
+        }
+      },
+      "damage": {
+        "filePathFields": {
+          "targets.*.img": ["IMAGE", "VIDEO"]
+        }
+      },
+      "generic": {
+        "filePathFields": {
+          "targets.*.img": ["IMAGE", "VIDEO"]
+        }
+      },
+      "healing": {
+        "filePathFields": {
+          "targets.*.img": ["IMAGE", "VIDEO"]
+        }
+      },
+      "hitDie": {
+        "filePathFields": {
+          "targets.*.img": ["IMAGE", "VIDEO"]
+        }
+      },
+      "hitPoints": {
+        "filePathFields": {
+          "targets.*.img": ["IMAGE", "VIDEO"]
+        }
+      },
+      "item": {
+        "filePathFields": {
+          "item.img": ["IMAGE"],
+          "targets.*.img": ["IMAGE", "VIDEO"]
+        },
+        "htmlFields": ["description"]
+      },
+      "prompt": {},
+      "request": {},
+      "rest": {},
+      "save": {
+        "filePathFields": {
+          "targets.*.img": ["IMAGE", "VIDEO"]
+        }
+      },
+      "timePassed": {},
+      "turn": {},
+      "usage": {
+        "filePathFields": {
+          "activity.img": ["IMAGE"],
+          "item.img": ["IMAGE"],
+          "targets.*.img": ["IMAGE", "VIDEO"]
+        },
+        "htmlFields": ["activity.chatFlavor", "description"]
+      }
+    },
+    "Item": {
+      "weapon": {
+        "filePathFields": {
+          "activities.*.img": ["IMAGE"]
+        },
+        "htmlFields": [
+          "activities.*.description.value", "description.value", "description.chat", "unidentified.description"
+        ]
+      },
+      "equipment": {
+        "filePathFields": {
+          "activities.*.img": ["IMAGE"]
+        },
+        "htmlFields": [
+          "activities.*.description.value", "description.value", "description.chat", "unidentified.description"
+        ]
+      },
+      "consumable": {
+        "filePathFields": {
+          "activities.*.img": ["IMAGE"]
+        },
+        "htmlFields": [
+          "activities.*.description.value", "description.value", "description.chat", "unidentified.description"
+        ]
+      },
+      "tool": {
+        "filePathFields": {
+          "activities.*.img": ["IMAGE"]
+        },
+        "htmlFields": [
+          "activities.*.description.value", "description.value", "description.chat", "unidentified.description"
+        ]
+      },
+      "loot": {
+        "htmlFields": ["description.value", "description.chat", "unidentified.description"]
+      },
+      "race": {
+        "filePathFields": {
+          "advancement.*.img": ["IMAGE"]
+        },
+        "htmlFields": ["advancement.*.hint", "description.value", "description.chat"]
+      },
+      "background": {
+        "filePathFields": {
+          "advancement.*.img": ["IMAGE"]
+        },
+        "htmlFields": ["advancement.*.hint", "description.value", "description.chat"]
+      },
+      "class": {
+        "filePathFields": {
+          "advancement.*.img": ["IMAGE"]
+        },
+        "htmlFields": ["advancement.*.hint", "description.value", "description.chat"]
+      },
+      "subclass": {
+        "filePathFields": {
+          "advancement.*.img": ["IMAGE"]
+        },
+        "htmlFields": ["advancement.*.hint", "description.value", "description.chat"]
+      },
+      "spell": {
+        "filePathFields": {
+          "activities.*.img": ["IMAGE"]
+        },
+        "htmlFields": ["activities.*.description.value", "description.value", "description.chat"]
+      },
+      "feat": {
+        "filePathFields": {
+          "activities.*.img": ["IMAGE"],
+          "advancement.*.img": ["IMAGE"]
+        },
+        "htmlFields": ["activities.*.description.value", "advancement.*.hint", "description.value", "description.chat"]
+      },
+      "container": {
+        "htmlFields": ["description.value", "description.chat", "unidentified.description"]
+      },
+      "backpack": {
+        "htmlFields": ["description.value", "description.chat", "unidentified.description"]
+      },
+      "facility": {
+        "filePathFields": {
+          "activities.*.img": ["IMAGE"]
+        },
+        "htmlFields": ["activities.*.description.value", "description.value", "description.chat"]
+      },
+      "dndestiny.perk": {
+        "htmlFields": ["description.value", "description.chat"],
+        "filePathFields": {
+          "activities.*.img": ["IMAGE"]
+        }
+      }
+    },
+    "JournalEntryPage": {
+      "class": {
+        "htmlFields": [
+          "details.value",
+          "details.additionalHitPoints",
+          "description.additionalTraits",
+          "description.additionalEquipment",
+          "description.subclass"
+        ]
+      },
+      "map": {},
+      "rule": {
+        "htmlFields": ["tooltip"]
+      },
+      "spells": {},
+      "subclass": {
+        "htmlFields": ["details.value"]
+      }
+    },
+    "RegionBehavior": {
+      "dndestiny.applyActiveEffect": {},
+      "dndestiny.difficultTerrain": {},
+      "dndestiny.rotateArea": {}
+    }
+  },
+  "packs": [
+    {
+      "name": "heroes",
+      "label": "Starter Heroes",
+      "system": "dndestiny",
+      "path": "packs/heroes",
+      "type": "Actor",
+      "private": false,
+      "flags": {
+        "dndestiny": {
+          "sourceBook": "SRD 5.1",
+          "types": ["character"]
+        }
+      }
+    },
+    {
+      "name": "monsters",
+      "label": "Monsters (SRD)",
+      "system": "dndestiny",
+      "path": "packs/monsters",
+      "type": "Actor",
+      "private": false,
+      "flags": {
+        "dndestiny": {
+          "sourceBook": "SRD 5.1",
+          "types": ["npc"]
+        }
+      }
+    },
+    {
+      "name": "items",
+      "label": "Items (SRD)",
+      "system": "dndestiny",
+      "path": "packs/items",
+      "type": "Item",
+      "private": false,
+      "flags": {
+        "dndestiny": {
+          "sourceBook": "SRD 5.1",
+          "types": ["weapon", "equipment", "consumable", "tool", "loot", "feat", "container"]
+        }
+      }
+    },
+    {
+      "name": "tradegoods",
+      "label": "Trade Goods (SRD)",
+      "system": "dndestiny",
+      "path": "packs/tradegoods",
+      "type": "Item",
+      "private": false,
+      "flags": {
+        "dndestiny": {
+          "sourceBook": "SRD 5.1",
+          "types": ["loot"]
+        }
+      }
+    },
+    {
+      "name": "spells",
+      "label": "Spells (SRD)",
+      "system": "dndestiny",
+      "path": "packs/spells",
+      "type": "Item",
+      "private": false,
+      "flags": {
+        "dndestiny": {
+          "sorting": "m",
+          "sourceBook": "SRD 5.1",
+          "types": ["spell"]
+        }
+      }
+    },
+    {
+      "name": "backgrounds",
+      "label": "Backgrounds (SRD)",
+      "system": "dndestiny",
+      "path": "packs/backgrounds",
+      "type": "Item",
+      "private": false,
+      "flags": {
+        "dndestiny": {
+          "sourceBook": "SRD 5.1",
+          "types": ["background", "feat"]
+        }
+      }
+    },
+    {
+      "name": "classes",
+      "label": "Classes (SRD)",
+      "system": "dndestiny",
+      "path": "packs/classes",
+      "type": "Item",
+      "private": false,
+      "flags": {
+        "dndestiny": {
+          "sourceBook": "SRD 5.1",
+          "types": ["class"]
+        }
+      }
+    },
+    {
+      "name": "subclasses",
+      "label": "Subclasses (SRD)",
+      "system": "dndestiny",
+      "path": "packs/subclasses",
+      "type": "Item",
+      "private": false,
+      "flags": {
+        "dndestiny": {
+          "sourceBook": "SRD 5.1",
+          "types": ["subclass"]
+        }
+      }
+    },
+    {
+      "name": "classfeatures",
+      "label": "Class & Subclass Features (SRD)",
+      "system": "dndestiny",
+      "path": "packs/classfeatures",
+      "type": "Item",
+      "private": false,
+      "flags": {
+        "dndestiny": {
+          "sourceBook": "SRD 5.1",
+          "types": ["feat", "weapon"]
+        }
+      }
+    },
+    {
+      "name": "races",
+      "label": "Races (SRD)",
+      "system": "dndestiny",
+      "path": "packs/races",
+      "type": "Item",
+      "private": false,
+      "flags": {
+        "dndestiny": {
+          "sourceBook": "SRD 5.1",
+          "types": ["race", "feat"]
+        }
+      }
+    },
+    {
+      "name": "monsterfeatures",
+      "label": "Monster Features (SRD)",
+      "system": "dndestiny",
+      "path": "packs/monsterfeatures",
+      "type": "Item",
+      "private": false,
+      "flags": {
+        "dndestiny": {
+          "sourceBook": "SRD 5.1",
+          "types": ["feat", "weapon"]
+        }
+      }
+    },
+    {
+      "name": "rules",
+      "label": "Rules (SRD)",
+      "system": "dndestiny",
+      "path": "packs/rules",
+      "type": "JournalEntry",
+      "private": false,
+      "flags": {
+        "dndestiny": {
+          "display": "table-of-contents"
+        }
+      }
+    },
+    {
+      "name": "tables",
+      "label": "Tables (SRD)",
+      "system": "dndestiny",
+      "path": "packs/tables",
+      "type": "RollTable",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "content24",
+      "label": "Rules",
+      "path": "packs/content24",
+      "type": "JournalEntry",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "dndestiny",
+      "flags": {
+        "dndestiny": {
+          "display": "table-of-contents"
+        }
+      }
+    },
+    {
+      "name": "classes24",
+      "label": "Character Classes",
+      "path": "packs/classes24",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "dndestiny",
+      "flags": {
+        "dndestiny": {
+          "sourceBook": "SRD 5.2",
+          "types": ["class", "subclass", "feat"]
+        }
+      }
+    },
+    {
+      "name": "origins24",
+      "label": "Character Origins",
+      "path": "packs/origins24",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "dndestiny",
+      "flags": {
+        "dndestiny": {
+          "sourceBook": "SRD 5.2",
+          "types": ["race", "background", "feat"]
+        }
+      }
+    },
+    {
+      "name": "feats24",
+      "label": "Feats",
+      "path": "packs/feats24",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "dndestiny",
+      "flags": {
+        "dndestiny": {
+          "sourceBook": "SRD 5.2",
+          "types": ["feat"]
+        }
+      }
+    },
+    {
+      "name": "spells24",
+      "label": "Spells",
+      "path": "packs/spells24",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "dndestiny",
+      "flags": {
+        "dndestiny": {
+          "sorting": "m",
+          "sourceBook": "SRD 5.2",
+          "types": ["spell"]
+        }
+      }
+    },
+    {
+      "name": "equipment24",
+      "label": "Equipment",
+      "path": "packs/equipment24",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "dndestiny",
+      "flags": {
+        "dndestiny": {
+          "sourceBook": "SRD 5.2",
+          "types": ["weapon", "equipment", "consumable", "tool", "loot", "feat", "container"]
+        }
+      }
+    },
+    {
+      "name": "tables24",
+      "label": "Roll Tables",
+      "path": "packs/tables24",
+      "type": "RollTable",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "dndestiny"
+    },
+    {
+      "name": "actors24",
+      "label": "Actors",
+      "path": "packs/actors24",
+      "type": "Actor",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "system": "dndestiny",
+      "flags": {
+        "dndestiny": {
+          "sorting": "m",
+          "sourceBook": "SRD 5.2"
+        }
+      }
+    },
+    {
+      "name": "monsterfeatures24",
+      "label": "Monster Features",
+      "path": "packs/monsterfeatures24",
+      "type": "Item",
+      "ownership": {
+        "ASSISTANT": "OWNER"
+      },
+      "system": "dndestiny",
+      "flags": {
+        "dndestiny": {
+          "sourceBook": "SRD 5.2",
+          "types": ["feat", "weapon"]
+        }
+      }
+    },
+    {
+      "name": "effects",
+      "label": "Active Effects",
+      "system": "dndestiny",
+      "path": "packs/effects",
+      "type": "ActiveEffect",
+      "private": false,
+      "flags": {}
+    },
+    {
+      "name": "equipment",
+      "label": "Equipment",
+      "type": "Item",
+      "path": "packs/equipment",
+      "system": "dndestiny"
+    },
+    {
+      "name": "character-classes",
+      "label": "Character Classes",
+      "type": "Item",
+      "path": "packs/character-classes",
+      "system": "dndestiny"
+    },
+    {
+      "name": "character-origins",
+      "label": "Character Origins",
+      "type": "Item",
+      "path": "packs/character-origins",
+      "system": "dndestiny"
+    },
+    {
+      "name": "class-and-subclass-features",
+      "label": "Class and Subclass Features",
+      "type": "Item",
+      "path": "packs/class-and-subclass-features",
+      "system": "dndestiny"
+    },
+    {
+      "name": "character-subclasses",
+      "label": "Character Subclasses",
+      "type": "Item",
+      "path": "packs/character-subclasses",
+      "system": "dndestiny"
+    },
+    {
+      "name": "light-abilities",
+      "label": "Light Abilities",
+      "type": "Item",
+      "path": "packs/light-abilities",
+      "system": "dndestiny"
+    },
+    {
+      "name": "starter-guardians",
+      "label": "Starter Guardians",
+      "type": "Actor",
+      "path": "packs/starter-guardians",
+      "system": "dndestiny"
+    },
+    {
+      "name": "weapon-perks",
+      "label": "Weapon Perks",
+      "type": "Item",
+      "path": "packs/weapon-perks",
+      "system": "dndestiny"
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "D&D Modern Content",
+      "color": "#cd2c1e",
+      "sorting": "m",
+      "packs": [
+        "content24",
+        "classes24",
+        "origins24",
+        "feats24",
+        "spells24",
+        "tables24",
+        "actors24",
+        "equipment24",
+        "monsterfeatures24",
+        "effects"
+      ]
+    },
+    {
+      "name": "D&D Legacy Content",
+      "sorting": "m",
+      "color": "#cd2c1e",
+      "packs": [
+        "rules",
+        "tables",
+        "heroes"
+      ],
+      "folders": [
+        {
+          "name": "Character Features",
+          "sorting": "m",
+          "color": "#b72c1f",
+          "packs": [
+            "classes",
+            "subclasses",
+            "classfeatures",
+            "backgrounds",
+            "races"
+          ]
+        },
+        {
+          "name": "Items & Spells",
+          "sorting": "m",
+          "color": "#941919 ",
+          "packs": [
+            "items",
+            "spells",
+            "tradegoods"
+          ]
+        },
+        {
+          "name": "Monsters",
+          "sorting": "m",
+          "color": "#7d160c",
+          "packs": [
+            "monsters",
+            "monsterfeatures"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Dungeons and Destiny 1e Guidebook",
+      "sorting": "a",
+      "packs": [
+        "equipment",
+        "character-classes",
+        "character-origins",
+        "class-and-subclass-features",
+        "character-subclasses",
+        "light-abilities",
+        "starter-guardians",
+        "weapon-perks"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+      "flags": {}
+    }
+  ],
+  "media": [
+    {
+      "type": "cover",
+      "loop": false,
+      "flags": {}
+    },
+    {
+      "type": "setup",
+      "url": "systems/dndestiny/ui/official/dndestiny-repo.jpg",
+      "thumbnail": "systems/dndestiny/ui/official/dndestiny-thumbnail.jpg"
+    }
+  ],
+  "socket": true,
+  "grid": {
+    "distance": 5,
+    "units": "ft"
+  },
+  "primaryTokenAttribute": "attributes.hp",
+  "background": "systems/dndestiny/ui/official/dndestiny-background.webp",
+  "flags": {
+    "compendiumArtMappings": {
+      "dndestiny": {
+        "mapping": "systems/dndestiny/json/fa-token-mapping.json",
+        "credit": "<em>Token artwork by <a href=\"https://www.forgotten-adventures.net/\" target=\"_blank\" rel=\"noopener\">Forgotten Adventures</a>.</em>"
+      }
+    },
+    "dndestiny": {
+      "sourceBooks": {
+        "SRD 5.1": "SOURCE.BOOK.SRD51",
+        "SRD 5.2": "SOURCE.BOOK.SRD52"
+      }
+    },
+    "needsMigrationVersion": "0.1.0",
+    "compatibleMigrationVersion": "0.1.0",
+    "hotReload": {
+      "extensions": ["css", "hbs", "json"],
+      "paths": ["dndestiny.css", "templates", "lang"]
+    }
+  }
+}

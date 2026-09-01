@@ -1,0 +1,11 @@
+<section>
+    {{~#if hasConcentration}}
+    <fieldset>
+        <legend>{{ localize "DND5E.Concentration" }}</legend>
+        {{#each fields}}
+            {{ formField field name=name value=value options=options input=input }}
+        {{/each}}
+    </fieldset>
+    {{> "dndestiny.activity-usage-notes" }}
+    {{/if~}}
+</section>

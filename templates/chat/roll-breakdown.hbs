@@ -1,0 +1,36 @@
+{{#if parts.length}}
+<div class="dice-tooltip-collapser">
+    <div class="dice-tooltip">
+        {{#each parts}}
+        <section class="tooltip-part">
+            <div class="dice">
+                {{#if icon}}
+                <span class="part-method" data-tooltip aria-label="{{ localize method }}">
+                    {{{ icon }}}
+                </span>
+                {{/if}}
+                <ol class="dice-rolls">
+                    {{#each rolls}}
+                    <li class="roll {{ classes }}">{{{ result }}}</li>
+                    {{/each}}
+                </ol>
+                <div class="total">
+                    <span class="label">{{ flavor }}</span>
+                    <span class="value">{{ total }}</span>
+                </div>
+            </div>
+        </section>
+        {{/each}}
+        {{#if constant}}
+        <section class="tooltip-part constant">
+            <div class="dice">
+                <ol class="dice-rolls"></ol>
+                <div class="total">
+                    <span class="value">{{ dndestiny-formatModifier constant }}</span>
+                </div>
+            </div>
+        </section>
+        {{/if}}
+    </div>
+</div>
+{{/if}}

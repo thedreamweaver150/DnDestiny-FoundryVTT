@@ -1,0 +1,12 @@
+<div class="textbox {{ class }}">
+    <h3 class="icon">
+        {{#if icon}}<i class="{{ icon }}"></i>
+        {{~else if svg}}<dndestiny-icon src="systems/dndestiny/icons/svg/{{ svg }}.svg"></dndestiny-icon>{{/if}}
+        <span class="roboto-upper">{{ localize label }}</span>
+    </h3>
+    {{#if @root.editable}}
+    <textarea class="untext" name="{{ name }}">{{ value }}</textarea>
+    {{else}}
+    <p>{{ dndestiny-textFormat value }}</p>
+    {{/if}}
+</div>
