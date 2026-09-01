@@ -9,6 +9,7 @@
   },
   "url": "https://github.com/thedreamweaver150/DnDestiny-FoundryVTT",
   "manifest": "https://raw.githubusercontent.com/thedreamweaver150/DnDestiny-FoundryVTT/main/system.json",
+  "download": "https://github.com/thedreamweaver150/DnDestiny-FoundryVTT/releases/download/Pre-Release/dndestiny-release.zip",
   "authors": [
     {
       "name": "dreamweaver150",
