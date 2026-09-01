@@ -1096,3 +1096,42 @@ li.container {
 .dndestiny-perk-weapon-class-row.dndestiny-perk-weapon-class-active .dndestiny-perk-weapon-class-slot-select {
   visibility: visible;
 }
+
+/* ----------------------------------------- */
+/*  Shield Die / Destiny Hit Points Advancement
+    Their flow templates reuse dnd5e's own HitPoints breakdown markup
+    (.breakdown > .form-fields, .separator, label-top form-groups), but
+    dnd5e's layout rules for that markup are scoped to
+    [data-type="HitPoints"] specifically. Without an equivalent rule for
+    our own advancement types, .form-fields falls back to default form
+    flex behavior, which lets the "+"/"=" separators and number values
+    collapse on top of each other instead of sitting in a row. */
+/* ----------------------------------------- */
+.advancement.flow[data-type="ShieldDie"] [data-application-part="content"],
+.advancement.flow[data-type="DestinyHitPoints"] [data-application-part="content"] {
+  gap: 8px;
+}
+.advancement.flow[data-type="ShieldDie"] .breakdown > .form-fields,
+.advancement.flow[data-type="DestinyHitPoints"] .breakdown > .form-fields {
+  justify-content: center;
+  font-size: var(--font-size-18);
+}
+.advancement.flow[data-type="ShieldDie"] .breakdown > .form-fields .form-group,
+.advancement.flow[data-type="ShieldDie"] .breakdown > .form-fields .separator,
+.advancement.flow[data-type="DestinyHitPoints"] .breakdown > .form-fields .form-group,
+.advancement.flow[data-type="DestinyHitPoints"] .breakdown > .form-fields .separator {
+  align-items: center;
+  flex: 0 0 max-content;
+}
+.advancement.flow[data-type="ShieldDie"] .breakdown > .form-fields .separator,
+.advancement.flow[data-type="DestinyHitPoints"] .breakdown > .form-fields .separator {
+  padding-top: 10px;
+  color: var(--color-text-secondary);
+}
+.advancement.flow[data-type="ShieldDie"] .breakdown > .form-fields input {
+  width: 4em;
+}
+.advancement.flow[data-type="ShieldDie"] button {
+  --icon-fill: var(--color-text-secondary);
+  flex: 0;
+}
