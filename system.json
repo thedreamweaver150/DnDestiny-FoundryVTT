@@ -1,7 +1,7 @@
 {
   "id": "dndestiny",
   "title": "Dungeons & Destiny",
-  "description": "A Foundry VTT system for the Dungeons & Destiny TTRPG, forked from dnd5e.",
+  "description": "A Foundry VTT system for the Dungeons &amp; Destiny TTRPG, forked from dnd5e.",
   "version": "0.5.0",
   "compatibility": {
     "minimum": "14",
@@ -9,7 +9,6 @@
   },
   "url": "https://github.com/thedreamweaver150/DnDestiny-FoundryVTT",
   "manifest": "https://raw.githubusercontent.com/thedreamweaver150/DnDestiny-FoundryVTT/main/system.json",
-  "download": "https://github.com/thedreamweaver150/DnDestiny-FoundryVTT/releases/download/Pre-Release/dndestiny-release.zip",
   "authors": [
     {
       "name": "dreamweaver150",
@@ -21,10 +20,13 @@
     "scripts/customization.mjs"
   ],
   "styles": [
-    "dndestiny.css",
-    "styles/customization.css"
+    {
+      "src": "dndestiny.css"
+    },
+    {
+      "src": "styles/customization.css"
+    }
   ],
-  "relationships": {},
   "documentTypes": {
     "ActiveEffect": {
       "condition": {},
@@ -32,28 +34,51 @@
     },
     "Actor": {
       "character": {
-        "htmlFields": ["details.biography.value", "details.biography.public", "bastion.description"]
+        "htmlFields": [
+          "details.biography.value",
+          "details.biography.public",
+          "bastion.description"
+        ]
       },
       "encounter": {
-        "htmlFields": ["description.full", "description.summary"]
+        "htmlFields": [
+          "description.full",
+          "description.summary"
+        ]
       },
       "group": {
-        "htmlFields": ["description.full", "description.summary"]
+        "htmlFields": [
+          "description.full",
+          "description.summary"
+        ]
       },
       "npc": {
-        "htmlFields": ["details.biography.value", "details.biography.public"]
+        "htmlFields": [
+          "details.biography.value",
+          "details.biography.public"
+        ]
       },
       "vehicle": {
-        "htmlFields": ["details.biography.value", "details.biography.public"]
+        "htmlFields": [
+          "details.biography.value",
+          "details.biography.public"
+        ]
       },
       "dndestiny.ghost": {
-        "htmlFields": ["details.biography.value", "details.biography.public", "bastion.description"]
+        "htmlFields": [
+          "details.biography.value",
+          "details.biography.public",
+          "bastion.description"
+        ]
       }
     },
     "ChatMessage": {
       "attack": {
         "filePathFields": {
-          "targets.*.img": ["IMAGE", "VIDEO"]
+          "targets.*.img": [
+            "IMAGE",
+            "VIDEO"
+          ]
         }
       },
       "bastionAttack": {},
@@ -61,149 +86,269 @@
       "bastionTurn": {},
       "check": {
         "filePathFields": {
-          "targets.*.img": ["IMAGE", "VIDEO"]
+          "targets.*.img": [
+            "IMAGE",
+            "VIDEO"
+          ]
         }
       },
       "damage": {
         "filePathFields": {
-          "targets.*.img": ["IMAGE", "VIDEO"]
+          "targets.*.img": [
+            "IMAGE",
+            "VIDEO"
+          ]
         }
       },
       "generic": {
         "filePathFields": {
-          "targets.*.img": ["IMAGE", "VIDEO"]
+          "targets.*.img": [
+            "IMAGE",
+            "VIDEO"
+          ]
         }
       },
       "healing": {
         "filePathFields": {
-          "targets.*.img": ["IMAGE", "VIDEO"]
+          "targets.*.img": [
+            "IMAGE",
+            "VIDEO"
+          ]
         }
       },
       "hitDie": {
         "filePathFields": {
-          "targets.*.img": ["IMAGE", "VIDEO"]
+          "targets.*.img": [
+            "IMAGE",
+            "VIDEO"
+          ]
         }
       },
       "hitPoints": {
         "filePathFields": {
-          "targets.*.img": ["IMAGE", "VIDEO"]
+          "targets.*.img": [
+            "IMAGE",
+            "VIDEO"
+          ]
         }
       },
       "item": {
         "filePathFields": {
-          "item.img": ["IMAGE"],
-          "targets.*.img": ["IMAGE", "VIDEO"]
+          "item.img": [
+            "IMAGE"
+          ],
+          "targets.*.img": [
+            "IMAGE",
+            "VIDEO"
+          ]
         },
-        "htmlFields": ["description"]
+        "htmlFields": [
+          "description"
+        ]
       },
       "prompt": {},
       "request": {},
       "rest": {},
       "save": {
         "filePathFields": {
-          "targets.*.img": ["IMAGE", "VIDEO"]
+          "targets.*.img": [
+            "IMAGE",
+            "VIDEO"
+          ]
         }
       },
       "timePassed": {},
       "turn": {},
       "usage": {
         "filePathFields": {
-          "activity.img": ["IMAGE"],
-          "item.img": ["IMAGE"],
-          "targets.*.img": ["IMAGE", "VIDEO"]
+          "activity.img": [
+            "IMAGE"
+          ],
+          "item.img": [
+            "IMAGE"
+          ],
+          "targets.*.img": [
+            "IMAGE",
+            "VIDEO"
+          ]
         },
-        "htmlFields": ["activity.chatFlavor", "description"]
+        "htmlFields": [
+          "activity.chatFlavor",
+          "description"
+        ]
       }
     },
     "Item": {
       "weapon": {
         "filePathFields": {
-          "activities.*.img": ["IMAGE"]
+          "activities.*.img": [
+            "IMAGE"
+          ]
         },
         "htmlFields": [
-          "activities.*.description.value", "description.value", "description.chat", "unidentified.description"
+          "activities.*.description.value",
+          "description.value",
+          "description.chat",
+          "unidentified.description"
         ]
       },
       "equipment": {
         "filePathFields": {
-          "activities.*.img": ["IMAGE"]
+          "activities.*.img": [
+            "IMAGE"
+          ]
         },
         "htmlFields": [
-          "activities.*.description.value", "description.value", "description.chat", "unidentified.description"
+          "activities.*.description.value",
+          "description.value",
+          "description.chat",
+          "unidentified.description"
         ]
       },
       "consumable": {
         "filePathFields": {
-          "activities.*.img": ["IMAGE"]
+          "activities.*.img": [
+            "IMAGE"
+          ]
         },
         "htmlFields": [
-          "activities.*.description.value", "description.value", "description.chat", "unidentified.description"
+          "activities.*.description.value",
+          "description.value",
+          "description.chat",
+          "unidentified.description"
         ]
       },
       "tool": {
         "filePathFields": {
-          "activities.*.img": ["IMAGE"]
+          "activities.*.img": [
+            "IMAGE"
+          ]
         },
         "htmlFields": [
-          "activities.*.description.value", "description.value", "description.chat", "unidentified.description"
+          "activities.*.description.value",
+          "description.value",
+          "description.chat",
+          "unidentified.description"
         ]
       },
       "loot": {
-        "htmlFields": ["description.value", "description.chat", "unidentified.description"]
+        "htmlFields": [
+          "description.value",
+          "description.chat",
+          "unidentified.description"
+        ]
       },
       "race": {
         "filePathFields": {
-          "advancement.*.img": ["IMAGE"]
+          "advancement.*.img": [
+            "IMAGE"
+          ]
         },
-        "htmlFields": ["advancement.*.hint", "description.value", "description.chat"]
+        "htmlFields": [
+          "advancement.*.hint",
+          "description.value",
+          "description.chat"
+        ]
       },
       "background": {
         "filePathFields": {
-          "advancement.*.img": ["IMAGE"]
+          "advancement.*.img": [
+            "IMAGE"
+          ]
         },
-        "htmlFields": ["advancement.*.hint", "description.value", "description.chat"]
+        "htmlFields": [
+          "advancement.*.hint",
+          "description.value",
+          "description.chat"
+        ]
       },
       "class": {
         "filePathFields": {
-          "advancement.*.img": ["IMAGE"]
+          "advancement.*.img": [
+            "IMAGE"
+          ]
         },
-        "htmlFields": ["advancement.*.hint", "description.value", "description.chat"]
+        "htmlFields": [
+          "advancement.*.hint",
+          "description.value",
+          "description.chat"
+        ]
       },
       "subclass": {
         "filePathFields": {
-          "advancement.*.img": ["IMAGE"]
+          "advancement.*.img": [
+            "IMAGE"
+          ]
         },
-        "htmlFields": ["advancement.*.hint", "description.value", "description.chat"]
+        "htmlFields": [
+          "advancement.*.hint",
+          "description.value",
+          "description.chat"
+        ]
       },
       "spell": {
         "filePathFields": {
-          "activities.*.img": ["IMAGE"]
+          "activities.*.img": [
+            "IMAGE"
+          ]
         },
-        "htmlFields": ["activities.*.description.value", "description.value", "description.chat"]
+        "htmlFields": [
+          "activities.*.description.value",
+          "description.value",
+          "description.chat"
+        ]
       },
       "feat": {
         "filePathFields": {
-          "activities.*.img": ["IMAGE"],
-          "advancement.*.img": ["IMAGE"]
+          "activities.*.img": [
+            "IMAGE"
+          ],
+          "advancement.*.img": [
+            "IMAGE"
+          ]
         },
-        "htmlFields": ["activities.*.description.value", "advancement.*.hint", "description.value", "description.chat"]
+        "htmlFields": [
+          "activities.*.description.value",
+          "advancement.*.hint",
+          "description.value",
+          "description.chat"
+        ]
       },
       "container": {
-        "htmlFields": ["description.value", "description.chat", "unidentified.description"]
+        "htmlFields": [
+          "description.value",
+          "description.chat",
+          "unidentified.description"
+        ]
       },
       "backpack": {
-        "htmlFields": ["description.value", "description.chat", "unidentified.description"]
+        "htmlFields": [
+          "description.value",
+          "description.chat",
+          "unidentified.description"
+        ]
       },
       "facility": {
         "filePathFields": {
-          "activities.*.img": ["IMAGE"]
+          "activities.*.img": [
+            "IMAGE"
+          ]
         },
-        "htmlFields": ["activities.*.description.value", "description.value", "description.chat"]
+        "htmlFields": [
+          "activities.*.description.value",
+          "description.value",
+          "description.chat"
+        ]
       },
       "dndestiny.perk": {
-        "htmlFields": ["description.value", "description.chat"],
+        "htmlFields": [
+          "description.value",
+          "description.chat"
+        ],
         "filePathFields": {
-          "activities.*.img": ["IMAGE"]
+          "activities.*.img": [
+            "IMAGE"
+          ]
         }
       }
     },
@@ -219,11 +364,15 @@
       },
       "map": {},
       "rule": {
-        "htmlFields": ["tooltip"]
+        "htmlFields": [
+          "tooltip"
+        ]
       },
       "spells": {},
       "subclass": {
-        "htmlFields": ["details.value"]
+        "htmlFields": [
+          "details.value"
+        ]
       }
     },
     "RegionBehavior": {
@@ -236,165 +385,233 @@
     {
       "name": "heroes",
       "label": "Starter Heroes",
-      "system": "dndestiny",
       "path": "packs/heroes",
       "type": "Actor",
-      "private": false,
+      "system": "dndestiny",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
       "flags": {
         "dndestiny": {
           "sourceBook": "SRD 5.1",
-          "types": ["character"]
+          "types": [
+            "character"
+          ]
         }
       }
     },
     {
       "name": "monsters",
       "label": "Monsters (SRD)",
-      "system": "dndestiny",
       "path": "packs/monsters",
       "type": "Actor",
-      "private": false,
+      "system": "dndestiny",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
       "flags": {
         "dndestiny": {
           "sourceBook": "SRD 5.1",
-          "types": ["npc"]
+          "types": [
+            "npc"
+          ]
         }
       }
     },
     {
       "name": "items",
       "label": "Items (SRD)",
-      "system": "dndestiny",
       "path": "packs/items",
       "type": "Item",
-      "private": false,
+      "system": "dndestiny",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
       "flags": {
         "dndestiny": {
           "sourceBook": "SRD 5.1",
-          "types": ["weapon", "equipment", "consumable", "tool", "loot", "feat", "container"]
+          "types": [
+            "weapon",
+            "equipment",
+            "consumable",
+            "tool",
+            "loot",
+            "feat",
+            "container"
+          ]
         }
       }
     },
     {
       "name": "tradegoods",
       "label": "Trade Goods (SRD)",
-      "system": "dndestiny",
       "path": "packs/tradegoods",
       "type": "Item",
-      "private": false,
+      "system": "dndestiny",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
       "flags": {
         "dndestiny": {
           "sourceBook": "SRD 5.1",
-          "types": ["loot"]
+          "types": [
+            "loot"
+          ]
         }
       }
     },
     {
       "name": "spells",
       "label": "Spells (SRD)",
-      "system": "dndestiny",
       "path": "packs/spells",
       "type": "Item",
-      "private": false,
+      "system": "dndestiny",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
       "flags": {
         "dndestiny": {
           "sorting": "m",
           "sourceBook": "SRD 5.1",
-          "types": ["spell"]
+          "types": [
+            "spell"
+          ]
         }
       }
     },
     {
       "name": "backgrounds",
       "label": "Backgrounds (SRD)",
-      "system": "dndestiny",
       "path": "packs/backgrounds",
       "type": "Item",
-      "private": false,
+      "system": "dndestiny",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
       "flags": {
         "dndestiny": {
           "sourceBook": "SRD 5.1",
-          "types": ["background", "feat"]
+          "types": [
+            "background",
+            "feat"
+          ]
         }
       }
     },
     {
       "name": "classes",
       "label": "Classes (SRD)",
-      "system": "dndestiny",
       "path": "packs/classes",
       "type": "Item",
-      "private": false,
+      "system": "dndestiny",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
       "flags": {
         "dndestiny": {
           "sourceBook": "SRD 5.1",
-          "types": ["class"]
+          "types": [
+            "class"
+          ]
         }
       }
     },
     {
       "name": "subclasses",
       "label": "Subclasses (SRD)",
-      "system": "dndestiny",
       "path": "packs/subclasses",
       "type": "Item",
-      "private": false,
+      "system": "dndestiny",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
       "flags": {
         "dndestiny": {
           "sourceBook": "SRD 5.1",
-          "types": ["subclass"]
+          "types": [
+            "subclass"
+          ]
         }
       }
     },
     {
       "name": "classfeatures",
       "label": "Class & Subclass Features (SRD)",
-      "system": "dndestiny",
       "path": "packs/classfeatures",
       "type": "Item",
-      "private": false,
+      "system": "dndestiny",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
       "flags": {
         "dndestiny": {
           "sourceBook": "SRD 5.1",
-          "types": ["feat", "weapon"]
+          "types": [
+            "feat",
+            "weapon"
+          ]
         }
       }
     },
     {
       "name": "races",
       "label": "Races (SRD)",
-      "system": "dndestiny",
       "path": "packs/races",
       "type": "Item",
-      "private": false,
+      "system": "dndestiny",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
       "flags": {
         "dndestiny": {
           "sourceBook": "SRD 5.1",
-          "types": ["race", "feat"]
+          "types": [
+            "race",
+            "feat"
+          ]
         }
       }
     },
     {
       "name": "monsterfeatures",
       "label": "Monster Features (SRD)",
-      "system": "dndestiny",
       "path": "packs/monsterfeatures",
       "type": "Item",
-      "private": false,
+      "system": "dndestiny",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
       "flags": {
         "dndestiny": {
           "sourceBook": "SRD 5.1",
-          "types": ["feat", "weapon"]
+          "types": [
+            "feat",
+            "weapon"
+          ]
         }
       }
     },
     {
       "name": "rules",
       "label": "Rules (SRD)",
-      "system": "dndestiny",
       "path": "packs/rules",
       "type": "JournalEntry",
-      "private": false,
+      "system": "dndestiny",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
       "flags": {
         "dndestiny": {
           "display": "table-of-contents"
@@ -404,10 +621,13 @@
     {
       "name": "tables",
       "label": "Tables (SRD)",
-      "system": "dndestiny",
       "path": "packs/tables",
       "type": "RollTable",
-      "private": false,
+      "system": "dndestiny",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
       "flags": {}
     },
     {
@@ -415,11 +635,11 @@
       "label": "Rules",
       "path": "packs/content24",
       "type": "JournalEntry",
+      "system": "dndestiny",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "system": "dndestiny",
       "flags": {
         "dndestiny": {
           "display": "table-of-contents"
@@ -431,15 +651,19 @@
       "label": "Character Classes",
       "path": "packs/classes24",
       "type": "Item",
+      "system": "dndestiny",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "system": "dndestiny",
       "flags": {
         "dndestiny": {
           "sourceBook": "SRD 5.2",
-          "types": ["class", "subclass", "feat"]
+          "types": [
+            "class",
+            "subclass",
+            "feat"
+          ]
         }
       }
     },
@@ -448,15 +672,19 @@
       "label": "Character Origins",
       "path": "packs/origins24",
       "type": "Item",
+      "system": "dndestiny",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "system": "dndestiny",
       "flags": {
         "dndestiny": {
           "sourceBook": "SRD 5.2",
-          "types": ["race", "background", "feat"]
+          "types": [
+            "race",
+            "background",
+            "feat"
+          ]
         }
       }
     },
@@ -465,15 +693,17 @@
       "label": "Feats",
       "path": "packs/feats24",
       "type": "Item",
+      "system": "dndestiny",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "system": "dndestiny",
       "flags": {
         "dndestiny": {
           "sourceBook": "SRD 5.2",
-          "types": ["feat"]
+          "types": [
+            "feat"
+          ]
         }
       }
     },
@@ -482,16 +712,18 @@
       "label": "Spells",
       "path": "packs/spells24",
       "type": "Item",
+      "system": "dndestiny",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "system": "dndestiny",
       "flags": {
         "dndestiny": {
           "sorting": "m",
           "sourceBook": "SRD 5.2",
-          "types": ["spell"]
+          "types": [
+            "spell"
+          ]
         }
       }
     },
@@ -500,15 +732,23 @@
       "label": "Equipment",
       "path": "packs/equipment24",
       "type": "Item",
+      "system": "dndestiny",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "system": "dndestiny",
       "flags": {
         "dndestiny": {
           "sourceBook": "SRD 5.2",
-          "types": ["weapon", "equipment", "consumable", "tool", "loot", "feat", "container"]
+          "types": [
+            "weapon",
+            "equipment",
+            "consumable",
+            "tool",
+            "loot",
+            "feat",
+            "container"
+          ]
         }
       }
     },
@@ -517,22 +757,23 @@
       "label": "Roll Tables",
       "path": "packs/tables24",
       "type": "RollTable",
+      "system": "dndestiny",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "system": "dndestiny"
+      "flags": {}
     },
     {
       "name": "actors24",
       "label": "Actors",
       "path": "packs/actors24",
       "type": "Actor",
+      "system": "dndestiny",
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "system": "dndestiny",
       "flags": {
         "dndestiny": {
           "sorting": "m",
@@ -545,81 +786,127 @@
       "label": "Monster Features",
       "path": "packs/monsterfeatures24",
       "type": "Item",
+      "system": "dndestiny",
       "ownership": {
         "ASSISTANT": "OWNER"
       },
-      "system": "dndestiny",
       "flags": {
         "dndestiny": {
           "sourceBook": "SRD 5.2",
-          "types": ["feat", "weapon"]
+          "types": [
+            "feat",
+            "weapon"
+          ]
         }
       }
     },
     {
       "name": "effects",
       "label": "Active Effects",
-      "system": "dndestiny",
       "path": "packs/effects",
       "type": "ActiveEffect",
-      "private": false,
+      "system": "dndestiny",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
       "flags": {}
     },
     {
       "name": "equipment",
       "label": "Equipment",
-      "type": "Item",
       "path": "packs/equipment",
-      "system": "dndestiny"
+      "type": "Item",
+      "system": "dndestiny",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "character-classes",
       "label": "Character Classes",
-      "type": "Item",
       "path": "packs/character-classes",
-      "system": "dndestiny"
+      "type": "Item",
+      "system": "dndestiny",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "character-origins",
       "label": "Character Origins",
-      "type": "Item",
       "path": "packs/character-origins",
-      "system": "dndestiny"
+      "type": "Item",
+      "system": "dndestiny",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "class-and-subclass-features",
       "label": "Class and Subclass Features",
-      "type": "Item",
       "path": "packs/class-and-subclass-features",
-      "system": "dndestiny"
+      "type": "Item",
+      "system": "dndestiny",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "character-subclasses",
       "label": "Character Subclasses",
-      "type": "Item",
       "path": "packs/character-subclasses",
-      "system": "dndestiny"
+      "type": "Item",
+      "system": "dndestiny",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "light-abilities",
       "label": "Light Abilities",
-      "type": "Item",
       "path": "packs/light-abilities",
-      "system": "dndestiny"
+      "type": "Item",
+      "system": "dndestiny",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "starter-guardians",
       "label": "Starter Guardians",
-      "type": "Actor",
       "path": "packs/starter-guardians",
-      "system": "dndestiny"
+      "type": "Actor",
+      "system": "dndestiny",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     },
     {
       "name": "weapon-perks",
       "label": "Weapon Perks",
-      "type": "Item",
       "path": "packs/weapon-perks",
-      "system": "dndestiny"
+      "type": "Item",
+      "system": "dndestiny",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     }
   ],
   "packFolders": [
@@ -638,7 +925,8 @@
         "equipment24",
         "monsterfeatures24",
         "effects"
-      ]
+      ],
+      "folders": []
     },
     {
       "name": "D&D Legacy Content",
@@ -660,17 +948,19 @@
             "classfeatures",
             "backgrounds",
             "races"
-          ]
+          ],
+          "folders": []
         },
         {
           "name": "Items & Spells",
           "sorting": "m",
-          "color": "#941919 ",
+          "color": "#941919",
           "packs": [
             "items",
             "spells",
             "tradegoods"
-          ]
+          ],
+          "folders": []
         },
         {
           "name": "Monsters",
@@ -679,7 +969,8 @@
           "packs": [
             "monsters",
             "monsterfeatures"
-          ]
+          ],
+          "folders": []
         }
       ]
     },
@@ -695,7 +986,9 @@
         "light-abilities",
         "starter-guardians",
         "weapon-perks"
-      ]
+      ],
+      "color": null,
+      "folders": []
     }
   ],
   "languages": [
@@ -715,7 +1008,9 @@
     {
       "type": "setup",
       "url": "systems/dndestiny/ui/official/dndestiny-repo.jpg",
-      "thumbnail": "systems/dndestiny/ui/official/dndestiny-thumbnail.jpg"
+      "thumbnail": "systems/dndestiny/ui/official/dndestiny-thumbnail.jpg",
+      "loop": false,
+      "flags": {}
     }
   ],
   "socket": true,
@@ -735,14 +1030,27 @@
     "dndestiny": {
       "sourceBooks": {
         "SRD 5.1": "SOURCE.BOOK.SRD51",
-        "SRD 5.2": "SOURCE.BOOK.SRD52"
+        "SRD 5.2": "SOURCE.BOOK.SRD52",
+        "SRD 5": {
+          "1": "SOURCE.BOOK.SRD51",
+          "2": "SOURCE.BOOK.SRD52"
+        }
       }
     },
     "needsMigrationVersion": "0.1.0",
     "compatibleMigrationVersion": "0.1.0",
     "hotReload": {
-      "extensions": ["css", "hbs", "json"],
-      "paths": ["dndestiny.css", "templates", "lang"]
+      "extensions": [
+        "css",
+        "hbs",
+        "json"
+      ],
+      "paths": [
+        "dndestiny.css",
+        "templates",
+        "lang"
+      ]
     }
-  }
+  },
+  "download": "https://github.com/thedreamweaver150/DnDestiny-FoundryVTT/releases/download/Pre-Release/dndestiny-release.zip"
 }
