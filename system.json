@@ -7,6 +7,8 @@
     "minimum": "14",
     "verified": "14"
   },
+  "url": "https://github.com/thedreamweaver150/DnDestiny-FoundryVTT",
+  "manifest": "https://raw.githubusercontent.com/thedreamweaver150/DnDestiny-FoundryVTT/main/system.json",
   "authors": [
     {
       "name": "dreamweaver150",
