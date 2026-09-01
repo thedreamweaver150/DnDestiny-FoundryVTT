@@ -1,0 +1,62 @@
+<div class="standard-form">
+    <div class="breakdown form-group split-group">
+        <div class="form-fields">
+            {{!-- Previous Max Shields --}}
+            {{#if shields.previous}}
+            <div class="form-group label-top">
+                <label>Previous Max Shields</label>
+                <span>{{ shields.previous }}</span>
+            </div>
+            <span class="separator">+</span>
+            {{/if}}
+
+            {{!-- Selected Shields Increase --}}
+            {{#if isStartingLevel}}
+            <div class="form-group label-top">
+                <label>Starting Shields</label>
+                <span>{{ data.value }}</span>
+            </div>
+            {{else if manual}}
+            <div class="form-group label-top">
+                <label>Roll</label>
+                <div class="form-fields">
+                    <input class="roll-result" type="number" name="value" value="{{ data.value }}">
+                </div>
+            </div>
+            {{else}}
+            <div class="form-group label-top">
+                <label>Average</label>
+                <span>{{ data.value }}</span>
+            </div>
+            {{/if}}
+
+            <span class="separator">=</span>
+
+            {{!-- Final Max Shields --}}
+            <div class="form-group label-top">
+                <label>Total Shields</label>
+                <span>{{ shields.total }}</span>
+            </div>
+        </div>
+
+        {{#if manual}}
+        <button class="roll-button dice-button" type="button" data-action="rollShieldDie" data-tooltip
+                aria-label="Roll Shield Die ({{ shieldDie }})">
+            <dndestiny-icon src="systems/dndestiny/icons/svg/dice/{{ shieldDie }}.svg" inert></dndestiny-icon>
+        </button>
+        {{/if}}
+    </div>
+
+    {{#unless isStartingLevel}}
+    <fieldset>
+        <legend>Options</legend>
+        <div class="form-group">
+            <label for="{{ partId }}-useAverage">Take Average</label>
+            <div class="form-fields">
+                <dndestiny-checkbox name="useAverage" id="{{ partId }}-useAverage"
+                                {{ checked data.useAverage }}></dndestiny-checkbox>
+            </div>
+        </div>
+    </fieldset>
+    {{/unless}}
+</div>

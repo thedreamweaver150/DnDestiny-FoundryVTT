@@ -1,0 +1,35 @@
+<div class="standard-form">
+    <div class="breakdown form-group split-group">
+        <div class="form-fields">
+            {{!-- Previous Max HP --}}
+            {{#if hp.previous}}
+            <div class="form-group label-top">
+                <label>Previous Max HP</label>
+                <span>{{ hp.previous }}</span>
+            </div>
+            <span class="separator">+</span>
+            {{/if}}
+
+            {{!-- Base Hit Points (1st level only) --}}
+            {{#if hp.isFirstLevel}}
+            <div class="form-group label-top">
+                <label>Base</label>
+                <span>{{ hp.gained }}</span>
+            </div>
+            {{else}}
+            <div class="form-group label-top">
+                <label>{{ hp.modifierLabel }}</label>
+                <span>{{ hp.gained }}</span>
+            </div>
+            {{/if}}
+
+            <span class="separator">=</span>
+
+            {{!-- Final Max HP --}}
+            <div class="form-group label-top">
+                <label>Total</label>
+                <span>{{ hp.total }}</span>
+            </div>
+        </div>
+    </div>
+</div>
