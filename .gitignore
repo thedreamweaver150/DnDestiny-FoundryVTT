@@ -1,0 +1,5 @@
+# LevelDB runtime/lock files (compendium packs stay open while Foundry is running)
+packs/**/LOCK
+packs/**/LOG
+packs/**/LOG.old
+packs/**/*.log

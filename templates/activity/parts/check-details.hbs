@@ -1,0 +1,25 @@
+<fieldset>
+    <legend>{{ localize "DND5E.CHECK.FIELDS.check.label" }}</legend>
+    {{ formField fields.check.fields.associated value=source.check.associated options=associatedOptions rootId=partId }}
+    {{ formField fields.check.fields.ability value=source.check.ability options=abilityOptions rootId=partId }}
+    {{ formField fields.check.fields.bonus value=source.check.bonus rootId=partId }}
+    {{#with fields.check.fields.dc.fields as |fields|}}
+    {{ formField fields.calculation value=../activity.check.dc.calculation options=../calculationOptions
+                 rootId=@root.partId }}
+    {{#if (not ../source.check.dc.calculation)}}
+    {{ formField fields.formula value=../source.check.dc.formula rootId=@root.partId }}
+    {{else}}
+    {{ formField fields.formula name="" value=(localize "DND5E.SAVE.FIELDS.save.dc.DefaultFormula") disabled=true
+                 rootId=@root.partId }}
+    <input type="hidden" name="check.dc.formula" value="{{ ../source.check.dc.formula }}">
+    {{/if}}
+    {{/with}}
+    <div class="form-group">
+        <label>DC Bonus</label>
+        <div class="form-fields">
+            <input type="text" name="flags.dndestiny.dcBonus" value="{{ activity.flags.dndestiny.dcBonus }}">
+        </div>
+        <p class="hint">Added on top of the DC calculated above, evaluated against this activity's own roll
+            data - e.g. <code>@dndestiny.lightLevel</code> to scale the DC up with Light Level.</p>
+    </div>
+</fieldset>

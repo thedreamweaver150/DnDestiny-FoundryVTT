@@ -1,0 +1,4482 @@
+{
+  "dndestiny.actors24": {
+    "mmAdultCopperDra": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/CopperDragonAdult.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/CopperDragonAdult.webp",
+          "scaleX": 2.33,
+          "scaleY": 2.33
+        }
+      }
+    },
+    "mmAncientRedDrag": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/RedDragonAncient.webp",
+      "token": {
+        "width": 13,
+        "height": 13,
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/RedDragonAncient.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "mmErinyes0000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/fiend/Erinyes.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/fiend/Erinyes.webp",
+          "scaleX": 1.8,
+          "scaleY": 1.8
+        }
+      }
+    },
+    "mmSolar000000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/celestial/Solar.webp",
+      "token": "systems/dndestiny/tokens/celestial/Solar.webp"
+    },
+    "mmFleshGolem0000": {
+      "actor": "systems/dndestiny/tokens/construct/FleshGolem.webp",
+      "token": "systems/dndestiny/tokens/construct/FleshGolem.webp"
+    },
+    "mmYoungBlueDrago": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/YoungBlueDragon.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/YoungBlueDragon.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmYoungBrassDrag": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/YoungBrassDragon.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/YoungBrassDragon.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmYoungCopperDra": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/YoungCopperDragon.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/YoungCopperDragon.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmWyvern00000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/Wyvern.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/Wyvern.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmBarbedDevil000": {
+      "actor": "systems/dndestiny/tokens/fiend/Barbed.webp",
+      "token": "systems/dndestiny/tokens/fiend/Barbed.webp"
+    },
+    "mmCloudGiant0000": {
+      "actor": "systems/dndestiny/tokens/thumbs/giant/CloudGiant.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/giant/CloudGiant.webp",
+          "scaleX": 1.66,
+          "scaleY": 1.66
+        }
+      }
+    },
+    "mmEttin000000000": {
+      "actor": "systems/dndestiny/tokens/giant/Ettin.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/giant/Ettin.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmHillGiant00000": {
+      "actor": "systems/dndestiny/tokens/thumbs/giant/HillGiant.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/giant/HillGiant.webp",
+          "scaleX": 1.66,
+          "scaleY": 1.66
+        }
+      }
+    },
+    "mmHalfdragon0000": {
+      "actor": "systems/dndestiny/tokens/humanoid/HalfRedDragonVeteran.webp",
+      "token": "systems/dndestiny/tokens/humanoid/HalfRedDragonVeteran.webp"
+    },
+    "mmWeretiger00000": {
+      "actor": "systems/dndestiny/tokens/humanoid/Weretiger.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Weretiger.webp"
+    },
+    "mmSphinxOfValor0": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Androsphinx.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Androsphinx.webp"
+    },
+    "mmShamblingMound": {
+      "actor": "systems/dndestiny/tokens/plant/ShamblingMound.webp",
+      "token": "systems/dndestiny/tokens/plant/ShamblingMound.webp"
+    },
+    "mmTreant00000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/plant/Treant.webp",
+      "token": "systems/dndestiny/tokens/plant/Treant.webp"
+    },
+    "mmOgreZombie0000": {
+      "actor": "systems/dndestiny/tokens/undead/OgreZombie.webp",
+      "token": "systems/dndestiny/tokens/undead/OgreZombie.webp"
+    },
+    "mmAboleth0000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/aberration/Aboleth.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/aberration/Aboleth.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmChuul000000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/aberration/Chuul.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/aberration/Chuul.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmCloaker0000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/aberration/Cloaker.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/aberration/Cloaker.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmGibberingMouth": {
+      "actor": "systems/dndestiny/tokens/aberration/GibberingMouther.webp",
+      "token": "systems/dndestiny/tokens/aberration/GibberingMouther.webp"
+    },
+    "mmOtyugh00000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/aberration/Otyugh.webp",
+      "token": "systems/dndestiny/tokens/aberration/Otyugh.webp"
+    },
+    "mmApe00000000000": {
+      "actor": "systems/dndestiny/tokens/beast/Ape.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Ape.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmAxeBeak0000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/AxeBeak.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/AxeBeak.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmBaboon00000000": {
+      "actor": "systems/dndestiny/tokens/beast/Baboon.webp",
+      "token": "systems/dndestiny/tokens/beast/Baboon.webp"
+    },
+    "mmBadger00000000": {
+      "actor": "systems/dndestiny/tokens/beast/Badger.webp",
+      "token": "systems/dndestiny/tokens/beast/Badger.webp"
+    },
+    "mmBat00000000000": {
+      "actor": "systems/dndestiny/tokens/beast/Bat.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Bat.webp",
+          "scaleX": 0.6,
+          "scaleY": 0.6
+        }
+      }
+    },
+    "mmBlackBear00000": {
+      "actor": "systems/dndestiny/tokens/beast/BlackBear.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/BlackBear.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmBloodHawk00000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/BloodHawk.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/BloodHawk.webp",
+          "scaleX": 1.875,
+          "scaleY": 1.875
+        }
+      }
+    },
+    "mmBoar0000000000": {
+      "actor": "systems/dndestiny/tokens/beast/Boar.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Boar.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmBrownBear00000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/BrownBear.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/BrownBear.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmCamel000000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Camel.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Camel.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmCat00000000000": {
+      "actor": "systems/dndestiny/tokens/beast/CatOrange.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/CatOrange.webp",
+          "scaleX": 0.7,
+          "scaleY": 0.7
+        }
+      }
+    },
+    "mmConstrictorSna": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/ConstrictorSnake.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/ConstrictorSnake.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmCrab0000000000": {
+      "actor": "systems/dndestiny/tokens/beast/CrabOrange.webp",
+      "token": "systems/dndestiny/tokens/beast/CrabOrange.webp"
+    },
+    "mmCrocodile00000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Crocodile.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Crocodile.webp",
+          "scaleX": 1.2,
+          "scaleY": 1.2
+        }
+      }
+    },
+    "mmDeer0000000000": {
+      "actor": "systems/dndestiny/tokens/beast/Deer.webp",
+      "token": "systems/dndestiny/tokens/beast/Deer.webp"
+    },
+    "mmDireWolf000000": {
+      "actor": "systems/dndestiny/tokens/beast/DireWolf.webp",
+      "token": "systems/dndestiny/tokens/beast/DireWolf.webp"
+    },
+    "mmDraftHorse0000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/DraftHorse.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/DraftHorse.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmEagle000000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Eagle.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Eagle.webp",
+          "scaleX": 1.75,
+          "scaleY": 1.75
+        }
+      }
+    },
+    "mmElephant000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Elephant.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Elephant.webp",
+          "scaleX": 1.2,
+          "scaleY": 1.2
+        }
+      }
+    },
+    "mmElk00000000000": {
+      "actor": "systems/dndestiny/tokens/beast/Elk.webp",
+      "token": "systems/dndestiny/tokens/beast/Elk.webp"
+    },
+    "mmFlyingSnake000": {
+      "actor": "systems/dndestiny/tokens/beast/FlyingSnake.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/FlyingSnake.webp",
+          "scaleX": 0.8,
+          "scaleY": 0.8
+        }
+      }
+    },
+    "mmFrog0000000000": {
+      "actor": "systems/dndestiny/tokens/beast/Frog.webp",
+      "token": "systems/dndestiny/tokens/beast/Frog.webp"
+    },
+    "mmGiantApe000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantApe.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantApe.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmGiantBadger000": {
+      "actor": "systems/dndestiny/tokens/beast/GiantBadger.webp",
+      "token": "systems/dndestiny/tokens/beast/GiantBadger.webp"
+    },
+    "mmGiantBat000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantBat.webp",
+      "token": "systems/dndestiny/tokens/beast/GiantBat.webp"
+    },
+    "mmGiantBoar00000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantBoar.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantBoar.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmGiantCentipede": {
+      "actor": "systems/dndestiny/tokens/beast/GiantCentipede.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantCentipede.webp",
+          "scaleX": 1.875,
+          "scaleY": 1.875
+        }
+      }
+    },
+    "mmGiantConstrict": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantConstrictorSnake.webp",
+      "token": "systems/dndestiny/tokens/beast/GiantConstrictorSnake.webp"
+    },
+    "mmGiantCrab00000": {
+      "actor": "systems/dndestiny/tokens/beast/GiantCrab.webp",
+      "token": "systems/dndestiny/tokens/beast/GiantCrab.webp"
+    },
+    "mmGiantCrocodile": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantCrocodile.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantCrocodile.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmGiantEagle0000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantEagle.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantEagle.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmGiantElk000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantElk.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantElk.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmGiantFireBeetl": {
+      "actor": "systems/dndestiny/tokens/beast/GiantFireBeetle.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantFireBeetle.webp",
+          "scaleX": 0.875,
+          "scaleY": 0.875
+        }
+      }
+    },
+    "mmGiantFrog00000": {
+      "actor": "systems/dndestiny/tokens/beast/GiantFrog.webp",
+      "token": "systems/dndestiny/tokens/beast/GiantFrog.webp"
+    },
+    "mmGiantGoat00000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantGoat.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantGoat.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmGiantHyena0000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantHyena.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantHyena.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmGiantLizard000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantLizard.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantLizard.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmGiantOctopus00": {
+      "actor": "systems/dndestiny/tokens/beast/GiantOctopus.webp",
+      "token": "systems/dndestiny/tokens/beast/GiantOctopus.webp"
+    },
+    "mmGiantOwl000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantOwl.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantOwl.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmGiantVenomousS": {
+      "actor": "systems/dndestiny/tokens/beast/GiantPoisonousSnake.webp",
+      "token": "systems/dndestiny/tokens/beast/GiantPoisonousSnake.webp"
+    },
+    "mmGiantRat000000": {
+      "actor": "systems/dndestiny/tokens/beast/GiantRat.webp",
+      "token": "systems/dndestiny/tokens/beast/GiantRat.webp"
+    },
+    "mmGiantScorpion0": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantScorpion.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantScorpion.webp",
+          "scaleX": 1.4,
+          "scaleY": 1.4
+        }
+      }
+    },
+    "mmGiantSeahorse0": {
+      "actor": "systems/dndestiny/tokens/beast/GiantSeaHorse.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantSeaHorse.webp",
+          "scaleX": 1.2,
+          "scaleY": 1.2
+        }
+      }
+    },
+    "mmGiantShark0000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantShark.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantShark.webp",
+          "scaleX": 1.3,
+          "scaleY": 1.3
+        }
+      }
+    },
+    "mmGiantSpider000": {
+      "actor": "systems/dndestiny/tokens/beast/GiantSpider.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantSpider.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmGiantToad00000": {
+      "actor": "systems/dndestiny/tokens/beast/GiantToad.webp",
+      "token": "systems/dndestiny/tokens/beast/GiantToad.webp"
+    },
+    "mmGiantVulture00": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantVulture.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantVulture.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmGiantWasp00000": {
+      "actor": "systems/dndestiny/tokens/beast/GiantWasp.webp",
+      "token": "systems/dndestiny/tokens/beast/GiantWasp.webp"
+    },
+    "mmGiantWeasel000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantWeasel.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantWeasel.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmGiantWolfSpide": {
+      "actor": "systems/dndestiny/tokens/beast/GiantWolfSpider.webp",
+      "token": "systems/dndestiny/tokens/beast/GiantWolfSpider.webp"
+    },
+    "mmGoat0000000000": {
+      "actor": "systems/dndestiny/tokens/beast/Goat.webp",
+      "token": "systems/dndestiny/tokens/beast/Goat.webp"
+    },
+    "mmHawk0000000000": {
+      "actor": "systems/dndestiny/tokens/beast/Hawk.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Hawk.webp",
+          "scaleX": 0.8,
+          "scaleY": 0.8
+        }
+      }
+    },
+    "mmHunterShark000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/HunterShark.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/HunterShark.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmHyena000000000": {
+      "actor": "systems/dndestiny/tokens/beast/Hyena.webp",
+      "token": "systems/dndestiny/tokens/beast/Hyena.webp"
+    },
+    "mmJackal00000000": {
+      "actor": "systems/dndestiny/tokens/beast/Jackal.webp",
+      "token": "systems/dndestiny/tokens/beast/Jackal.webp"
+    },
+    "mmKillerWhale000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/KillerWhale.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/KillerWhale.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmLion0000000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Lion.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Lion.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmLizard00000000": {
+      "actor": "systems/dndestiny/tokens/beast/Lizard.webp",
+      "token": "systems/dndestiny/tokens/beast/Lizard.webp"
+    },
+    "mmMammoth0000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Mammoth.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Mammoth.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmMastiff0000000": {
+      "actor": "systems/dndestiny/tokens/beast/Mastiff.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Mastiff.webp"
+        }
+      }
+    },
+    "mmMule0000000000": {
+      "actor": "systems/dndestiny/tokens/beast/Mule.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Mule.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmOctopus0000000": {
+      "actor": "systems/dndestiny/tokens/beast/Octopus.webp",
+      "token": "systems/dndestiny/tokens/beast/Octopus.webp"
+    },
+    "mmOwl00000000000": {
+      "actor": "systems/dndestiny/tokens/beast/Owl.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Owl.webp",
+          "scaleX": 0.8,
+          "scaleY": 0.8
+        }
+      }
+    },
+    "mmPanther0000000": {
+      "actor": "systems/dndestiny/tokens/beast/Panther.webp",
+      "token": "systems/dndestiny/tokens/beast/Panther.webp"
+    },
+    "mmPlesiosaurus00": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Plesiosaurus.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Plesiosaurus.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmVenomousSnake0": {
+      "actor": "systems/dndestiny/tokens/beast/PoisonousSnake.webp",
+      "token": "systems/dndestiny/tokens/beast/PoisonousSnake.webp"
+    },
+    "mmPolarBear00000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/PolarBear.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/PolarBear.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmPony0000000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Pony.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Pony.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "mmPiranha0000000": {
+      "actor": "systems/dndestiny/tokens/beast/Quipper.webp",
+      "token": "systems/dndestiny/tokens/beast/Quipper.webp"
+    },
+    "mmRat00000000000": {
+      "actor": "systems/dndestiny/tokens/beast/Rat.webp",
+      "token": "systems/dndestiny/tokens/beast/Rat.webp"
+    },
+    "mmRaven000000000": {
+      "actor": "systems/dndestiny/tokens/beast/Raven.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Raven.webp",
+          "scaleX": 0.8,
+          "scaleY": 0.8
+        }
+      }
+    },
+    "mmReefShark00000": {
+      "actor": "systems/dndestiny/tokens/beast/ReefShark.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/ReefShark.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmRhinoceros0000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Rhinoceros.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Rhinoceros.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmRidingHorse000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/RidingHorse.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/RidingHorse.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmSabertoothedTi": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/SaberToothedTiger.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/SaberToothedTiger.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmScorpion000000": {
+      "actor": "systems/dndestiny/tokens/beast/Scorpion.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Scorpion.webp",
+          "scaleX": 0.8,
+          "scaleY": 0.8
+        }
+      }
+    },
+    "mmSeahorse000000": {
+      "actor": "systems/dndestiny/tokens/beast/SeaHorse.webp",
+      "token": "systems/dndestiny/tokens/beast/SeaHorse.webp"
+    },
+    "mmSpider00000000": {
+      "actor": "systems/dndestiny/tokens/beast/Spider.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Spider.webp",
+          "scaleX": 0.8,
+          "scaleY": 0.8
+        }
+      }
+    },
+    "mmStirge00000000": {
+      "actor": "systems/dndestiny/tokens/beast/Stirge.webp",
+      "token": "systems/dndestiny/tokens/beast/Stirge.webp"
+    },
+    "mmSwarmOfBats000": {
+      "actor": "systems/dndestiny/tokens/beast/SwarmBats.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/SwarmBats.webp",
+          "scaleX": 1.25,
+          "scaleY": 1.25
+        }
+      }
+    },
+    "mmSwarmOfVenomou": {
+      "actor": "systems/dndestiny/tokens/beast/SwarmPoisonousSnakes.webp",
+      "token": "systems/dndestiny/tokens/beast/SwarmPoisonousSnakes.webp"
+    },
+    "mmSwarmOfInsects": {
+      "actor": "systems/dndestiny/tokens/beast/SwarmInsects.webp",
+      "token": "systems/dndestiny/tokens/beast/SwarmInsects.webp"
+    },
+    "mmSwarmOfPiranha": {
+      "actor": "systems/dndestiny/tokens/beast/SwarmQuippers.webp",
+      "token": "systems/dndestiny/tokens/beast/SwarmQuippers.webp"
+    },
+    "mmSwarmOfRats000": {
+      "actor": "systems/dndestiny/tokens/beast/SwarmRats.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/SwarmRats.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmSwarmOfRavens0": {
+      "actor": "systems/dndestiny/tokens/beast/SwarmRavens.webp",
+      "token": "systems/dndestiny/tokens/beast/SwarmRavens.webp"
+    },
+    "mmTiger000000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Tiger.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Tiger.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmTyrannosaurusR": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/TyrannosaurusRex.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/TyrannosaurusRex.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmTriceratops000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Triceratops.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Triceratops.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmVulture0000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Vulture.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Vulture.webp",
+          "scaleX": 1.8,
+          "scaleY": 1.8
+        }
+      }
+    },
+    "mmWarhorse000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Warhorse.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Warhorse.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmWeasel00000000": {
+      "actor": "systems/dndestiny/tokens/beast/Weasel.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Weasel.webp",
+          "scaleX": 0.8,
+          "scaleY": 0.8
+        }
+      }
+    },
+    "mmWolf0000000000": {
+      "actor": "systems/dndestiny/tokens/beast/Wolf.webp",
+      "token": "systems/dndestiny/tokens/beast/Wolf.webp"
+    },
+    "mmCouatl00000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/celestial/Couatl.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/celestial/Couatl.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "mmDeva0000000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/celestial/Deva.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/celestial/Deva.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "mmPegasus0000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/celestial/Pegasus.webp",
+      "token": "systems/dndestiny/tokens/celestial/Pegasus.webp"
+    },
+    "mmPlanetar000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/celestial/Planetar.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/celestial/Planetar.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmUnicorn0000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/celestial/Unicorn.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/celestial/Unicorn.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmAnimatedArmor0": {
+      "actor": "systems/dndestiny/tokens/construct/AnimatedArmor.webp",
+      "token": "systems/dndestiny/tokens/construct/AnimatedArmor.webp"
+    },
+    "mmClayGolem00000": {
+      "actor": "systems/dndestiny/tokens/construct/ClayGolem.webp",
+      "token": "systems/dndestiny/tokens/construct/ClayGolem.webp"
+    },
+    "mmAnimatedFlying": {
+      "actor": "systems/dndestiny/tokens/construct/FlyingSword.webp",
+      "token": "systems/dndestiny/tokens/construct/FlyingSword.webp"
+    },
+    "mmHomunculus0000": {
+      "actor": "systems/dndestiny/tokens/construct/Homonculus.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/construct/Homonculus.webp"
+        }
+      }
+    },
+    "mmIronGolem00000": {
+      "actor": "systems/dndestiny/tokens/construct/IronGolem.webp",
+      "token": "systems/dndestiny/tokens/construct/IronGolem.webp"
+    },
+    "mmAnimatedRugOfS": {
+      "actor": "systems/dndestiny/tokens/construct/RugOfSmothering.webp",
+      "token": "systems/dndestiny/tokens/construct/RugOfSmothering.webp"
+    },
+    "mmShieldGuardian": {
+      "actor": "systems/dndestiny/tokens/construct/ShieldGuardian.webp",
+      "token": "systems/dndestiny/tokens/construct/ShieldGuardian.webp"
+    },
+    "mmStoneGolem0000": {
+      "actor": "systems/dndestiny/tokens/construct/StoneGolem.webp",
+      "token": "systems/dndestiny/tokens/construct/StoneGolem.webp"
+    },
+    "mmBlackDragonWyr": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/BlackDragonWyrmling.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/BlackDragonWyrmling.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "mmBlueDragonWyrm": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/BlueDragonWyrmling.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/BlueDragonWyrmling.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "mmBrassDragonWyr": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/BrassDragonWyrmling.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/BrassDragonWyrmling.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "mmBronzeDragonWy": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/BronzeDragonWyrmling.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/BronzeDragonWyrmling.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "mmCopperDragonWy": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/CopperDragonWyrmling.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/CopperDragonWyrmling.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "mmGoldDragonWyrm": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/GoldDragonWyrmling.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/GoldDragonWyrmling.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "mmGreenDragonWyr": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/GreenDragonWyrmling.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/GreenDragonWyrmling.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "mmPseudodragon00": {
+      "actor": "systems/dndestiny/tokens/dragon/Pseudodragon.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/Pseudodragon.webp",
+          "scaleX": 1.4,
+          "scaleY": 1.4
+        }
+      }
+    },
+    "mmRedDragonWyrml": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/RedDragonWyrmling.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/RedDragonWyrmling.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "mmSilverDragonWy": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/SilverDragonWyrmling.webp",
+      "token": "systems/dndestiny/tokens/dragon/SilverDragonWyrmling.webp"
+    },
+    "mmWhiteDragonWyr": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/WhiteDragonWyrmling.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/WhiteDragonWyrmling.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "mmYoungBlackDrag": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/YoungBlackDragon.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/YoungBlackDragon.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmYoungBronzeDra": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/YoungBronzeDragon.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/YoungBronzeDragon.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmYoungGoldDrago": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/YoungGoldDragon.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/YoungGoldDragon.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmYoungGreenDrag": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/YoungGreenDragon.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/YoungGreenDragon.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmYoungRedDragon": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/YoungRedDragon.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/YoungRedDragon.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmYoungSilverDra": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/YoungSilverDragon.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/YoungSilverDragon.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmYoungWhiteDrag": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/YoungWhiteDragon.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/YoungWhiteDragon.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmAzerSentinel00": {
+      "actor": "systems/dndestiny/tokens/elemental/Azer.webp",
+      "token": "systems/dndestiny/tokens/elemental/Azer.webp"
+    },
+    "mmDjinni00000000": {
+      "actor": "systems/dndestiny/tokens/elemental/Djinni.webp",
+      "token": "systems/dndestiny/tokens/elemental/Djinni.webp"
+    },
+    "mmDustMephit0000": {
+      "actor": "systems/dndestiny/tokens/elemental/DustMephit.webp",
+      "token": "systems/dndestiny/tokens/elemental/DustMephit.webp"
+    },
+    "mmEarthElemental": {
+      "actor": "systems/dndestiny/tokens/elemental/EarthElemental.webp",
+      "token": "systems/dndestiny/tokens/elemental/EarthElemental.webp"
+    },
+    "mmEfreeti0000000": {
+      "actor": "systems/dndestiny/tokens/elemental/Efreeti.webp",
+      "token": "systems/dndestiny/tokens/elemental/Efreeti.webp"
+    },
+    "mmFireElemental0": {
+      "actor": "systems/dndestiny/tokens/elemental/FireElemental.webp",
+      "token": "systems/dndestiny/tokens/elemental/FireElemental.webp"
+    },
+    "mmGargoyle000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/elemental/Gargoyle.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/elemental/Gargoyle.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "mmIceMephit00000": {
+      "actor": "systems/dndestiny/tokens/elemental/IceMephit.webp",
+      "token": "systems/dndestiny/tokens/elemental/IceMephit.webp"
+    },
+    "mmMagmaMephit000": {
+      "actor": "systems/dndestiny/tokens/elemental/MagmaMephit.webp",
+      "token": "systems/dndestiny/tokens/elemental/MagmaMephit.webp"
+    },
+    "mmMagmin00000000": {
+      "actor": "systems/dndestiny/tokens/elemental/Magmin.webp",
+      "token": "systems/dndestiny/tokens/elemental/Magmin.webp"
+    },
+    "mmSalamander0000": {
+      "actor": "systems/dndestiny/tokens/thumbs/elemental/Salamander.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/elemental/Salamander.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmSteamMephit000": {
+      "actor": "systems/dndestiny/tokens/elemental/SteamMephit.webp",
+      "token": "systems/dndestiny/tokens/elemental/SteamMephit.webp"
+    },
+    "mmWaterElemental": {
+      "actor": "systems/dndestiny/tokens/elemental/WaterElemental.webp",
+      "token": "systems/dndestiny/tokens/elemental/WaterElemental.webp"
+    },
+    "mmAirElemental00": {
+      "actor": "systems/dndestiny/tokens/elemental/WindElemental.webp",
+      "token": "systems/dndestiny/tokens/elemental/WindElemental.webp"
+    },
+    "mmXorn0000000000": {
+      "actor": "systems/dndestiny/tokens/elemental/Xorn.webp",
+      "token": "systems/dndestiny/tokens/elemental/Xorn.webp"
+    },
+    "mmBlinkDog000000": {
+      "actor": "systems/dndestiny/tokens/fey/BlinkDog.webp",
+      "token": "systems/dndestiny/tokens/fey/BlinkDog.webp"
+    },
+    "mmDryad000000000": {
+      "actor": "systems/dndestiny/tokens/fey/Dryad.webp",
+      "token": "systems/dndestiny/tokens/fey/Dryad.webp"
+    },
+    "mmGreenHag000000": {
+      "actor": "systems/dndestiny/tokens/fey/GreenHag.webp",
+      "token": "systems/dndestiny/tokens/fey/GreenHag.webp"
+    },
+    "mmSatyr000000000": {
+      "actor": "systems/dndestiny/tokens/fey/Satyr.webp",
+      "token": "systems/dndestiny/tokens/fey/Satyr.webp"
+    },
+    "mmSeaHag00000000": {
+      "actor": "systems/dndestiny/tokens/fey/SeaHag.webp",
+      "token": "systems/dndestiny/tokens/fey/SeaHag.webp"
+    },
+    "mmSprite00000000": {
+      "actor": "systems/dndestiny/tokens/fey/Sprite.webp",
+      "token": "systems/dndestiny/tokens/fey/Sprite.webp"
+    },
+    "mmBalor000000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/fiend/Balor.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/fiend/Balor.webp",
+          "scaleX": 2.3,
+          "scaleY": 2.3
+        }
+      }
+    },
+    "mmBeardedDevil00": {
+      "actor": "systems/dndestiny/tokens/fiend/BeardedDevil.webp",
+      "token": "systems/dndestiny/tokens/fiend/BeardedDevil.webp"
+    },
+    "mmBoneDevil00000": {
+      "actor": "systems/dndestiny/tokens/thumbs/fiend/BoneDevil.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/fiend/BoneDevil.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmChainDevil0000": {
+      "actor": "systems/dndestiny/tokens/thumbs/fiend/ChainDevil.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/fiend/ChainDevil.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "mmDretch00000000": {
+      "actor": "systems/dndestiny/tokens/fiend/Dretch.webp",
+      "token": "systems/dndestiny/tokens/fiend/Dretch.webp"
+    },
+    "mmGlabrezu000000": {
+      "actor": "systems/dndestiny/tokens/fiend/Glabrezu.webp",
+      "token": "systems/dndestiny/tokens/fiend/Glabrezu.webp"
+    },
+    "mmHellHound00000": {
+      "actor": "systems/dndestiny/tokens/fiend/HellHound.webp",
+      "token": "systems/dndestiny/tokens/fiend/HellHound.webp"
+    },
+    "mmHezrou00000000": {
+      "actor": "systems/dndestiny/tokens/fiend/Hezrou.webp",
+      "token": "systems/dndestiny/tokens/fiend/Hezrou.webp"
+    },
+    "mmHornedDevil000": {
+      "actor": "systems/dndestiny/tokens/thumbs/fiend/HornedDevil.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/fiend/HornedDevil.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmIceDevil000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/fiend/IceDevil.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/fiend/IceDevil.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmImp00000000000": {
+      "actor": "systems/dndestiny/tokens/fiend/Imp.webp",
+      "token": "systems/dndestiny/tokens/fiend/Imp.webp"
+    },
+    "mmLemure00000000": {
+      "actor": "systems/dndestiny/tokens/fiend/Lemure.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/fiend/Lemure.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmMarilith000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/fiend/Marilith.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/fiend/Marilith.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmNalfeshnee0000": {
+      "actor": "systems/dndestiny/tokens/fiend/Nalfeshnee.webp",
+      "token": "systems/dndestiny/tokens/fiend/Nalfeshnee.webp"
+    },
+    "mmNightHag000000": {
+      "actor": "systems/dndestiny/tokens/fiend/NightHag.webp",
+      "token": "systems/dndestiny/tokens/fiend/NightHag.webp"
+    },
+    "mmNightmare00000": {
+      "actor": "systems/dndestiny/tokens/thumbs/fiend/Nightmare.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/fiend/Nightmare.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmPitFiend000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/fiend/PitFiend.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/fiend/PitFiend.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmQuasit00000000": {
+      "actor": "systems/dndestiny/tokens/fiend/Quasit.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/fiend/Quasit.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmRakshasa000000": {
+      "actor": "systems/dndestiny/tokens/fiend/Rakshasa.webp",
+      "token": "systems/dndestiny/tokens/fiend/Rakshasa.webp"
+    },
+    "mmSuccubus000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/fiend/Succubus.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/fiend/Succubus.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "mmVrock000000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/fiend/Vrock.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/fiend/Vrock.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmFireGiant00000": {
+      "actor": "systems/dndestiny/tokens/thumbs/giant/FireGiant.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/giant/FireGiant.webp",
+          "scaleX": 1.6,
+          "scaleY": 1.6
+        }
+      }
+    },
+    "mmFrostGiant0000": {
+      "actor": "systems/dndestiny/tokens/thumbs/giant/FrostGiant.webp",
+      "token": "systems/dndestiny/tokens/giant/FrostGiant.webp"
+    },
+    "mmOgre0000000000": {
+      "actor": "systems/dndestiny/tokens/giant/Ogre.webp",
+      "token": "systems/dndestiny/tokens/giant/Ogre.webp"
+    },
+    "mmOni00000000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/giant/Oni.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/giant/Oni.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmStoneGiant0000": {
+      "actor": "systems/dndestiny/tokens/thumbs/giant/StoneGiant.webp",
+      "token": "systems/dndestiny/tokens/giant/StoneGiant.webp"
+    },
+    "mmStormGiant0000": {
+      "actor": "systems/dndestiny/tokens/thumbs/giant/StormGiant.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/giant/StormGiant.webp",
+          "scaleX": 1.66,
+          "scaleY": 1.66
+        }
+      }
+    },
+    "mmTroll000000000": {
+      "actor": "systems/dndestiny/tokens/giant/Troll.webp",
+      "token": "systems/dndestiny/tokens/giant/Troll.webp"
+    },
+    "mmPriestAcolyte0": {
+      "actor": "systems/dndestiny/tokens/humanoid/Acolyte.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Acolyte.webp"
+    },
+    "mmArchmage000000": {
+      "actor": "systems/dndestiny/tokens/humanoid/Archmage.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Archmage.webp"
+    },
+    "mmAssassin000000": {
+      "actor": "systems/dndestiny/tokens/humanoid/Assassin.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Assassin.webp"
+    },
+    "mmBandit00000000": {
+      "actor": "systems/dndestiny/tokens/humanoid/Bandit.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Bandit.webp"
+    },
+    "mmBanditCaptain0": {
+      "actor": "systems/dndestiny/tokens/humanoid/BanditCaptain.webp",
+      "token": "systems/dndestiny/tokens/humanoid/BanditCaptain.webp"
+    },
+    "mmBerserker00000": {
+      "actor": "systems/dndestiny/tokens/humanoid/Berserker.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Berserker.webp"
+    },
+    "mmBugbearWarrior": {
+      "actor": "systems/dndestiny/tokens/humanoid/Bugbear.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Bugbear.webp"
+    },
+    "mmCommoner000000": {
+      "actor": "systems/dndestiny/tokens/humanoid/Commoner.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Commoner.webp"
+    },
+    "mmCultistFanatic": {
+      "actor": "systems/dndestiny/tokens/humanoid/CultFanatic.webp",
+      "token": "systems/dndestiny/tokens/humanoid/CultFanatic.webp"
+    },
+    "mmCultist0000000": {
+      "actor": "systems/dndestiny/tokens/humanoid/Cultist.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Cultist.webp"
+    },
+    "mmDruid000000000": {
+      "actor": "systems/dndestiny/tokens/humanoid/Druid.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Druid.webp"
+    },
+    "mmGladiator00000": {
+      "actor": "systems/dndestiny/tokens/thumbs/humanoid/Gladiator.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/humanoid/Gladiator.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "mmGnollWarrior00": {
+      "actor": "systems/dndestiny/tokens/humanoid/Gnoll.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Gnoll.webp"
+    },
+    "mmGoblinWarrior0": {
+      "actor": "systems/dndestiny/tokens/humanoid/Goblin.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Goblin.webp"
+    },
+    "mmGrimlock000000": {
+      "actor": "systems/dndestiny/tokens/humanoid/Grimlock.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Grimlock.webp"
+    },
+    "mmGuard000000000": {
+      "actor": "systems/dndestiny/tokens/humanoid/Guard.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Guard.webp"
+    },
+    "mmHobgoblinWarri": {
+      "actor": "systems/dndestiny/tokens/humanoid/Hobgoblin.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Hobgoblin.webp"
+    },
+    "mmKnight00000000": {
+      "actor": "systems/dndestiny/tokens/humanoid/Knight.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Knight.webp"
+    },
+    "mmKoboldWarrior0": {
+      "actor": "systems/dndestiny/tokens/humanoid/Kobold.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Kobold.webp"
+    },
+    "mmMage0000000000": {
+      "actor": "systems/dndestiny/tokens/humanoid/Mage.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Mage.webp"
+    },
+    "mmMerfolkSkirmis": {
+      "actor": "systems/dndestiny/tokens/humanoid/Merfolk.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Merfolk.webp"
+    },
+    "mmNoble000000000": {
+      "actor": "systems/dndestiny/tokens/humanoid/Noble.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Noble.webp"
+    },
+    "mmPriest00000000": {
+      "actor": "systems/dndestiny/tokens/humanoid/Priest.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Priest.webp"
+    },
+    "mmSahuaginWarrio": {
+      "actor": "systems/dndestiny/tokens/humanoid/Sahuagin.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Sahuagin.webp"
+    },
+    "mmScout000000000": {
+      "actor": "systems/dndestiny/tokens/humanoid/Scout.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Scout.webp"
+    },
+    "mmSpy00000000000": {
+      "actor": "systems/dndestiny/tokens/humanoid/Spy.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Spy.webp"
+    },
+    "mmTough000000000": {
+      "actor": "systems/dndestiny/tokens/humanoid/Thug.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Thug.webp"
+    },
+    "mmWarriorInfantr": {
+      "actor": "systems/dndestiny/tokens/humanoid/TribalWarrior.webp",
+      "token": "systems/dndestiny/tokens/humanoid/TribalWarrior.webp"
+    },
+    "mmWarriorVeteran": {
+      "actor": "systems/dndestiny/tokens/humanoid/Veteran.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Veteran.webp"
+    },
+    "mmWerebear000000": {
+      "actor": "systems/dndestiny/tokens/humanoid/Werebear.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Werebear.webp"
+    },
+    "mmWereboar000000": {
+      "actor": "systems/dndestiny/tokens/humanoid/Wereboar.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Wereboar.webp"
+    },
+    "mmWererat0000000": {
+      "actor": "systems/dndestiny/tokens/humanoid/Wererat.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Wererat.webp"
+    },
+    "mmWerewolf000000": {
+      "actor": "systems/dndestiny/tokens/humanoid/Werewolf.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Werewolf.webp"
+    },
+    "mmAnkheg00000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Ankheg.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Ankheg.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmBasilisk000000": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Basilisk.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Basilisk.webp"
+    },
+    "mmBehir000000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Behir.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Behir.webp"
+    },
+    "mmBulette0000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Bulette.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Bulette.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmCentaurTrooper": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Centaur.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Centaur.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmChimera0000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Chimera.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Chimera.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmCockatrice0000": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Cockatrice.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Cockatrice.webp"
+    },
+    "mmDarkmantle0000": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Darkmantle.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Darkmantle.webp"
+    },
+    "mmDeathDog000000": {
+      "actor": "systems/dndestiny/tokens/monstrosity/DeathDog.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/DeathDog.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmDoppelganger00": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Doppelganger.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Doppelganger.webp"
+    },
+    "mmDrider00000000": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Drider.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Drider.webp"
+    },
+    "mmEttercap000000": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Ettercap.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Ettercap.webp"
+    },
+    "mmGorgon00000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Gorgon.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Gorgon.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmGrick000000000": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Grick.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Grick.webp"
+    },
+    "mmGriffon0000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Griffon.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Griffon.webp",
+          "scaleX": 2.8,
+          "scaleY": 2.8
+        }
+      }
+    },
+    "mmGuardianNaga00": {
+      "actor": "systems/dndestiny/tokens/monstrosity/GuardianNaga.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/GuardianNaga.webp"
+    },
+    "mmSphinxOfLore00": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Gynosphinx.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Gynosphinx.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmHarpy000000000": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Harpy.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Harpy.webp"
+    },
+    "mmHippogriff0000": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Hippogriff.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Hippogriff.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmLamia000000000": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Lamia.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Lamia.webp"
+    },
+    "mmManticore00000": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Manticore.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Manticore.webp"
+    },
+    "mmMedusa00000000": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Medusa.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Medusa.webp"
+    },
+    "mmMerrow00000000": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Merrow.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Merrow.webp"
+    },
+    "mmMimic000000000": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Mimic.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Mimic.webp",
+          "scaleX": 1.2,
+          "scaleY": 1.2
+        }
+      }
+    },
+    "mmMinotaurOfBaph": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Minotaur.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Minotaur.webp"
+    },
+    "mmOwlbear0000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Owlbear.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Owlbear.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmPhaseSpider000": {
+      "actor": "systems/dndestiny/tokens/monstrosity/PhaseSpider.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/PhaseSpider.webp"
+    },
+    "mmRemorhaz000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Remorhaz.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Remorhaz.webp"
+    },
+    "mmRoc00000000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Roc.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Roc.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "mmRoper000000000": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Roper.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Roper.webp"
+    },
+    "mmRustMonster000": {
+      "actor": "systems/dndestiny/tokens/monstrosity/RustMonster.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/RustMonster.webp"
+    },
+    "mmSpiritNaga0000": {
+      "actor": "systems/dndestiny/tokens/monstrosity/SpiritNaga.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/SpiritNaga.webp"
+    },
+    "mmTarrasque00000": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Tarrasque.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Tarrasque.webp"
+    },
+    "mmWinterWolf0000": {
+      "actor": "systems/dndestiny/tokens/monstrosity/WinterWolf.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/WinterWolf.webp"
+    },
+    "mmWorg0000000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Worg.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Worg.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmBlackPudding00": {
+      "actor": "systems/dndestiny/tokens/ooze/BlackPudding.webp",
+      "token": "systems/dndestiny/tokens/ooze/BlackPudding.webp"
+    },
+    "mmGelatinousCube": {
+      "actor": "systems/dndestiny/tokens/thumbs/ooze/GelatinousCube.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/ooze/GelatinousCube.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "mmGrayOoze000000": {
+      "actor": "systems/dndestiny/tokens/ooze/GrayOoze.webp",
+      "token": "systems/dndestiny/tokens/ooze/GrayOoze.webp"
+    },
+    "mmOchreJelly0000": {
+      "actor": "systems/dndestiny/tokens/ooze/OchreJelly.webp",
+      "token": "systems/dndestiny/tokens/ooze/OchreJelly.webp"
+    },
+    "mmAwakenedShrub0": {
+      "actor": "systems/dndestiny/tokens/plant/AwakenedShrub.webp",
+      "token": "systems/dndestiny/tokens/plant/AwakenedShrub.webp"
+    },
+    "mmShriekerFungus": {
+      "actor": "systems/dndestiny/tokens/plant/Shrieker.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/plant/Shrieker.webp",
+          "scaleX": 0.8,
+          "scaleY": 0.8
+        }
+      }
+    },
+    "mmVioletFungus00": {
+      "actor": "systems/dndestiny/tokens/plant/VioletFungus.webp",
+      "token": "systems/dndestiny/tokens/plant/VioletFungus.webp"
+    },
+    "mmGhast000000000": {
+      "actor": "systems/dndestiny/tokens/undead/Ghast.webp",
+      "token": "systems/dndestiny/tokens/undead/Ghast.webp"
+    },
+    "mmGhost000000000": {
+      "actor": "systems/dndestiny/tokens/undead/Ghost.webp",
+      "token": "systems/dndestiny/tokens/undead/Ghost.webp"
+    },
+    "mmGhoul000000000": {
+      "actor": "systems/dndestiny/tokens/undead/Ghoul.webp",
+      "token": "systems/dndestiny/tokens/undead/Ghoul.webp"
+    },
+    "mmLich0000000000": {
+      "actor": "systems/dndestiny/tokens/undead/Lich.webp",
+      "token": "systems/dndestiny/tokens/undead/Lich.webp"
+    },
+    "mmMinotaurSkelet": {
+      "actor": "systems/dndestiny/tokens/undead/MinotaurSkeleton.webp",
+      "token": "systems/dndestiny/tokens/undead/MinotaurSkeleton.webp"
+    },
+    "mmMummy000000000": {
+      "actor": "systems/dndestiny/tokens/undead/Mummy.webp",
+      "token": "systems/dndestiny/tokens/undead/Mummy.webp"
+    },
+    "mmMummyLord00000": {
+      "actor": "systems/dndestiny/tokens/undead/MummyLord.webp",
+      "token": "systems/dndestiny/tokens/undead/MummyLord.webp"
+    },
+    "mmShadow00000000": {
+      "actor": "systems/dndestiny/tokens/undead/Shadow.webp",
+      "token": "systems/dndestiny/tokens/undead/Shadow.webp"
+    },
+    "mmSkeleton000000": {
+      "actor": "systems/dndestiny/tokens/undead/Skeleton.webp",
+      "token": "systems/dndestiny/tokens/undead/Skeleton.webp"
+    },
+    "mmSpecter0000000": {
+      "actor": "systems/dndestiny/tokens/undead/Specter.webp",
+      "token": "systems/dndestiny/tokens/undead/Specter.webp"
+    },
+    "mmVampire0000000": {
+      "actor": "systems/dndestiny/tokens/undead/Vampire.webp",
+      "token": "systems/dndestiny/tokens/undead/Vampire.webp"
+    },
+    "mmVampireSpawn00": {
+      "actor": "systems/dndestiny/tokens/undead/VampireSpawn.webp",
+      "token": "systems/dndestiny/tokens/undead/VampireSpawn.webp"
+    },
+    "mmWarhorseSkelet": {
+      "actor": "systems/dndestiny/tokens/thumbs/undead/WarhorseSkeleton.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/undead/WarhorseSkeleton.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mmWight000000000": {
+      "actor": "systems/dndestiny/tokens/undead/Wight.webp",
+      "token": "systems/dndestiny/tokens/undead/Wight.webp"
+    },
+    "mmWillowisp00000": {
+      "actor": "systems/dndestiny/tokens/undead/WilloWisp.webp",
+      "token": "systems/dndestiny/tokens/undead/WilloWisp.webp"
+    },
+    "mmWraith00000000": {
+      "actor": "systems/dndestiny/tokens/undead/Wraith.webp",
+      "token": "systems/dndestiny/tokens/undead/Wraith.webp"
+    },
+    "mmZombie00000000": {
+      "actor": "systems/dndestiny/tokens/undead/Zombie.webp",
+      "token": "systems/dndestiny/tokens/undead/Zombie.webp"
+    },
+    "mmAdultRedDragon": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/RedDragonAdult.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/RedDragonAdult.webp",
+          "scaleX": 2.3,
+          "scaleY": 2.3
+        }
+      }
+    },
+    "mmAdultGreenDrag": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/GreenDragonAdult.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/GreenDragonAdult.webp",
+          "scaleX": 2.3,
+          "scaleY": 2.3
+        }
+      }
+    },
+    "mmAncientGreenDr": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/GreenDragonAncient.webp",
+      "token": {
+        "width": 13,
+        "height": 13,
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/GreenDragonAncient.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "mmAdultSilverDra": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/SilverDragonAdult.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/SilverDragonAdult.webp",
+          "scaleX": 2.3,
+          "scaleY": 2.3
+        }
+      }
+    },
+    "mmAdultBrassDrag": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/BrassDragonAdult.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/BrassDragonAdult.webp",
+          "scaleX": 2.3,
+          "scaleY": 2.3
+        }
+      }
+    },
+    "mmHydra000000000": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Hydra.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Hydra.webp",
+          "scaleX": 1.6,
+          "scaleY": 1.6
+        }
+      }
+    },
+    "mmAdultBlackDrag": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/BlackDragonAdult.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/BlackDragonAdult.webp",
+          "scaleX": 2.33,
+          "scaleY": 2.33
+        }
+      }
+    },
+    "mmAdultBlueDrago": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/BlueDragonAdult.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/BlueDragonAdult.webp",
+          "scaleX": 2.33,
+          "scaleY": 2.33
+        }
+      }
+    },
+    "mmAncientBlueDra": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/BlueDragonAncient.webp",
+      "token": {
+        "width": 13,
+        "height": 13,
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/BlueDragonAncient.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "mmAdultGoldDrago": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/GoldDragonAdult.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/GoldDragonAdult.webp",
+          "scaleX": 2.33,
+          "scaleY": 2.33
+        }
+      }
+    },
+    "mmAdultWhiteDrag": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/WhiteDragonAdult.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/WhiteDragonAdult.webp",
+          "scaleX": 2.33,
+          "scaleY": 2.33
+        }
+      }
+    },
+    "mmAncientWhiteDr": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/WhiteDragonAncient.webp",
+      "token": {
+        "width": 13,
+        "height": 13,
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/WhiteDragonAncient.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "mmInvisibleStalk": {
+      "actor": "systems/dndestiny/tokens/elemental/InvisibleStalker.webp",
+      "token": "systems/dndestiny/tokens/elemental/InvisibleStalker.webp"
+    },
+    "mmAdultBronzeDra": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/BronzeDragonAdult.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/BronzeDragonAdult.webp",
+          "scaleX": 2.33,
+          "scaleY": 2.33
+        }
+      }
+    },
+    "AkraLv0100000000": {
+      "actor": "systems/dndestiny/tokens/heroes/ClericDragonborn.webp",
+      "token": "systems/dndestiny/tokens/heroes/ClericDragonborn.webp"
+    },
+    "AkraLv0500000000": {
+      "actor": "systems/dndestiny/tokens/heroes/ClericDragonborn.webp",
+      "token": "systems/dndestiny/tokens/heroes/ClericDragonborn.webp"
+    },
+    "AkraLv1100000000": {
+      "actor": "systems/dndestiny/tokens/heroes/ClericDragonborn.webp",
+      "token": "systems/dndestiny/tokens/heroes/ClericDragonborn.webp"
+    },
+    "AkraLv1700000000": {
+      "actor": "systems/dndestiny/tokens/heroes/ClericDragonborn.webp",
+      "token": "systems/dndestiny/tokens/heroes/ClericDragonborn.webp"
+    },
+    "AothLv0100000000": {
+      "actor": "systems/dndestiny/tokens/heroes/DruidStaff.webp",
+      "token": "systems/dndestiny/tokens/heroes/DruidStaff.webp"
+    },
+    "AothLv0500000000": {
+      "actor": "systems/dndestiny/tokens/heroes/DruidStaff.webp",
+      "token": "systems/dndestiny/tokens/heroes/DruidStaff.webp"
+    },
+    "AothLv1100000000": {
+      "actor": "systems/dndestiny/tokens/heroes/DruidStaff.webp",
+      "token": "systems/dndestiny/tokens/heroes/DruidStaff.webp"
+    },
+    "AothLv1700000000": {
+      "actor": "systems/dndestiny/tokens/heroes/DruidStaff.webp",
+      "token": "systems/dndestiny/tokens/heroes/DruidStaff.webp"
+    },
+    "BeiroLv010000000": {
+      "actor": "systems/dndestiny/tokens/heroes/BardLute.webp",
+      "token": "systems/dndestiny/tokens/heroes/BardLute.webp"
+    },
+    "BeiroLv050000000": {
+      "actor": "systems/dndestiny/tokens/heroes/BardLute.webp",
+      "token": "systems/dndestiny/tokens/heroes/BardLute.webp"
+    },
+    "BeiroLv110000000": {
+      "actor": "systems/dndestiny/tokens/heroes/BardLute.webp",
+      "token": "systems/dndestiny/tokens/heroes/BardLute.webp"
+    },
+    "BeiroLv170000000": {
+      "actor": "systems/dndestiny/tokens/heroes/BardLute.webp",
+      "token": "systems/dndestiny/tokens/heroes/BardLute.webp"
+    },
+    "KruskLv010000000": {
+      "actor": "systems/dndestiny/tokens/heroes/PaladinHammer.webp",
+      "token": "systems/dndestiny/tokens/heroes/PaladinHammer.webp"
+    },
+    "KruskLv050000000": {
+      "actor": "systems/dndestiny/tokens/heroes/PaladinHammer.webp",
+      "token": "systems/dndestiny/tokens/heroes/PaladinHammer.webp"
+    },
+    "KruskLv110000000": {
+      "actor": "systems/dndestiny/tokens/heroes/PaladinHammer.webp",
+      "token": "systems/dndestiny/tokens/heroes/PaladinHammer.webp"
+    },
+    "KruskLv170000000": {
+      "actor": "systems/dndestiny/tokens/heroes/PaladinHammer.webp",
+      "token": "systems/dndestiny/tokens/heroes/PaladinHammer.webp"
+    },
+    "MerricLv01000000": {
+      "actor": "systems/dndestiny/tokens/heroes/BarbarianMaul.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/heroes/BarbarianMaul.webp",
+          "scaleX": 1.25,
+          "scaleY": 1.25
+        }
+      }
+    },
+    "MerricLv05000000": {
+      "actor": "systems/dndestiny/tokens/heroes/BarbarianMaul.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/heroes/BarbarianMaul.webp",
+          "scaleX": 1.25,
+          "scaleY": 1.25
+        }
+      }
+    },
+    "MerricLv11000000": {
+      "actor": "systems/dndestiny/tokens/heroes/BarbarianMaul.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/heroes/BarbarianMaul.webp",
+          "scaleX": 1.25,
+          "scaleY": 1.25
+        }
+      }
+    },
+    "MerricLv17000000": {
+      "actor": "systems/dndestiny/tokens/heroes/BarbarianMaul.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/heroes/BarbarianMaul.webp",
+          "scaleX": 1.25,
+          "scaleY": 1.25
+        }
+      }
+    },
+    "MorthosLv0100000": {
+      "actor": "systems/dndestiny/tokens/heroes/SorcererTiefling.webp",
+      "token": "systems/dndestiny/tokens/heroes/SorcererTiefling.webp"
+    },
+    "MorthosLv0500000": {
+      "actor": "systems/dndestiny/tokens/heroes/SorcererTiefling.webp",
+      "token": "systems/dndestiny/tokens/heroes/SorcererTiefling.webp"
+    },
+    "MorthosLv1100000": {
+      "actor": "systems/dndestiny/tokens/heroes/SorcererTiefling.webp",
+      "token": "systems/dndestiny/tokens/heroes/SorcererTiefling.webp"
+    },
+    "MorthosLv1700000": {
+      "actor": "systems/dndestiny/tokens/heroes/SorcererTiefling.webp",
+      "token": "systems/dndestiny/tokens/heroes/SorcererTiefling.webp"
+    },
+    "PerrinLv01000000": {
+      "actor": "systems/dndestiny/tokens/heroes/MonkStaff.webp",
+      "token": "systems/dndestiny/tokens/heroes/MonkStaff.webp"
+    },
+    "PerrinLv05000000": {
+      "actor": "systems/dndestiny/tokens/heroes/MonkStaff.webp",
+      "token": "systems/dndestiny/tokens/heroes/MonkStaff.webp"
+    },
+    "PerrinLv11000000": {
+      "actor": "systems/dndestiny/tokens/heroes/MonkStaff.webp",
+      "token": "systems/dndestiny/tokens/heroes/MonkStaff.webp"
+    },
+    "PerrinLv17000000": {
+      "actor": "systems/dndestiny/tokens/heroes/MonkStaff.webp",
+      "token": "systems/dndestiny/tokens/heroes/MonkStaff.webp"
+    },
+    "QuillatheLv01000": {
+      "actor": "systems/dndestiny/tokens/heroes/RangerBow.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/heroes/RangerBow.webp",
+          "scaleX": 0.9,
+          "scaleY": 0.9
+        }
+      }
+    },
+    "QuillatheLv05000": {
+      "actor": "systems/dndestiny/tokens/heroes/RangerBow.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/heroes/RangerBow.webp",
+          "scaleX": 0.9,
+          "scaleY": 0.9
+        }
+      }
+    },
+    "QuillatheLv11000": {
+      "actor": "systems/dndestiny/tokens/heroes/RangerBow.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/heroes/RangerBow.webp",
+          "scaleX": 0.9,
+          "scaleY": 0.9
+        }
+      }
+    },
+    "QuillatheLv17000": {
+      "actor": "systems/dndestiny/tokens/heroes/RangerBow.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/heroes/RangerBow.webp",
+          "scaleX": 0.9,
+          "scaleY": 0.9
+        }
+      }
+    },
+    "RandalLv01000000": {
+      "actor": "systems/dndestiny/tokens/heroes/FighterShield.webp",
+      "token": "systems/dndestiny/tokens/heroes/FighterShield.webp"
+    },
+    "RandalLv05000000": {
+      "actor": "systems/dndestiny/tokens/heroes/FighterShield.webp",
+      "token": "systems/dndestiny/tokens/heroes/FighterShield.webp"
+    },
+    "RandalLv11000000": {
+      "actor": "systems/dndestiny/tokens/heroes/FighterShield.webp",
+      "token": "systems/dndestiny/tokens/heroes/FighterShield.webp"
+    },
+    "RandalLv17000000": {
+      "actor": "systems/dndestiny/tokens/heroes/FighterShield.webp",
+      "token": "systems/dndestiny/tokens/heroes/FighterShield.webp"
+    },
+    "RiswynnLv0100000": {
+      "actor": "systems/dndestiny/tokens/heroes/RogueHalfling.webp",
+      "token": "systems/dndestiny/tokens/heroes/RogueHalfling.webp"
+    },
+    "RiswynnLv0500000": {
+      "actor": "systems/dndestiny/tokens/heroes/RogueHalfling.webp",
+      "token": "systems/dndestiny/tokens/heroes/RogueHalfling.webp"
+    },
+    "RiswynnLv1100000": {
+      "actor": "systems/dndestiny/tokens/heroes/RogueHalfling.webp",
+      "token": "systems/dndestiny/tokens/heroes/RogueHalfling.webp"
+    },
+    "RiswynnLv1700000": {
+      "actor": "systems/dndestiny/tokens/heroes/RogueHalfling.webp",
+      "token": "systems/dndestiny/tokens/heroes/RogueHalfling.webp"
+    },
+    "SefrisLv01000000": {
+      "actor": "systems/dndestiny/tokens/heroes/WarlockStaff.webp",
+      "token": "systems/dndestiny/tokens/heroes/WarlockStaff.webp"
+    },
+    "SefrisLv05000000": {
+      "actor": "systems/dndestiny/tokens/heroes/WarlockStaff.webp",
+      "token": "systems/dndestiny/tokens/heroes/WarlockStaff.webp"
+    },
+    "SefrisLv11000000": {
+      "actor": "systems/dndestiny/tokens/heroes/WarlockStaff.webp",
+      "token": "systems/dndestiny/tokens/heroes/WarlockStaff.webp"
+    },
+    "SefrisLv17000000": {
+      "actor": "systems/dndestiny/tokens/heroes/WarlockStaff.webp",
+      "token": "systems/dndestiny/tokens/heroes/WarlockStaff.webp"
+    },
+    "ZannaLv010000000": {
+      "actor": "systems/dndestiny/tokens/heroes/WizardTome.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/heroes/WizardTome.webp",
+          "scaleX": 0.875,
+          "scaleY": 0.875
+        }
+      }
+    },
+    "ZannaLv050000000": {
+      "actor": "systems/dndestiny/tokens/heroes/WizardTome.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/heroes/WizardTome.webp",
+          "scaleX": 0.875,
+          "scaleY": 0.875
+        }
+      }
+    },
+    "ZannaLv110000000": {
+      "actor": "systems/dndestiny/tokens/heroes/WizardTome.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/heroes/WizardTome.webp",
+          "scaleX": 0.875,
+          "scaleY": 0.875
+        }
+      }
+    },
+    "ZannaLv170000000": {
+      "actor": "systems/dndestiny/tokens/heroes/WizardTome.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/heroes/WizardTome.webp",
+          "scaleX": 0.875,
+          "scaleY": 0.875
+        }
+      }
+    }
+  },
+  "dndestiny.monsters": {
+    "irz834sqAxRihtSG": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/CopperDragonAdult.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/CopperDragonAdult.webp",
+          "scaleX": 2.33,
+          "scaleY": 2.33
+        }
+      }
+    },
+    "vFeFRlF2FOgf2HIL": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/RedDragonAncient.webp",
+      "token": {
+        "width": 13,
+        "height": 13,
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/RedDragonAncient.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "1vaBSMUfOy6JPJ14": {
+      "actor":"systems/dndestiny/tokens/humanoid/Drow.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Drow.webp"
+    },
+    "3o2rQBqpzjIHmrBW": {
+      "actor": "systems/dndestiny/tokens/thumbs/fiend/Erinyes.webp",
+      "token": {
+        "texture": {
+          "src":"systems/dndestiny/tokens/fiend/Erinyes.webp",
+          "scaleX":1.8,
+          "scaleY":1.8
+        }
+      }
+    },
+    "lOYt73eaJojBDxAV": {
+      "actor": "systems/dndestiny/tokens/thumbs/celestial/Solar.webp",
+      "token": "systems/dndestiny/tokens/celestial/Solar.webp"
+    },
+    "Hm4o2FgPZsdbXjLq": {
+      "actor":"systems/dndestiny/tokens/construct/FleshGolem.webp",
+      "token": "systems/dndestiny/tokens/construct/FleshGolem.webp"
+    },
+    "mNijwXPMhwR7yYfc": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/YoungBlueDragon.webp",
+      "token": {
+        "texture": {
+          "src":"systems/dndestiny/tokens/dragon/YoungBlueDragon.webp",
+          "scaleX":2,
+          "scaleY":2
+        }
+      }
+    },
+    "FzvZ6xl3U9GoL9ju": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/YoungBrassDragon.webp",
+      "token": {
+        "texture": {
+          "src":"systems/dndestiny/tokens/dragon/YoungBrassDragon.webp",
+          "scaleX":2,
+          "scaleY":2
+        }
+      }
+    },
+    "qW8cBwg7ghCA4Cw6": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/YoungCopperDragon.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/YoungCopperDragon.webp",
+          "scaleX":2,
+          "scaleY":2
+        }
+      }
+    },
+    "7198siHjPJf8g0cG": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/Wyvern.webp",
+      "token": {
+        "texture": {
+          "src":"systems/dndestiny/tokens/dragon/Wyvern.webp",
+          "scaleX":2,
+          "scaleY":2
+        }
+      }
+    },
+    "sLdpiuaZF8lujJQy": {
+      "actor":"systems/dndestiny/tokens/fiend/Barbed.webp",
+      "token": "systems/dndestiny/tokens/fiend/Barbed.webp"
+    },
+    "Aw2wmqGIatxe2ImI": {
+      "actor": "systems/dndestiny/tokens/thumbs/giant/CloudGiant.webp",
+      "token": {
+        "texture": {
+          "src":"systems/dndestiny/tokens/giant/CloudGiant.webp",
+          "scaleX":1.66,
+          "scaleY":1.66
+        }
+      }
+    },
+    "KLCkHep28HBfdsky": {
+      "actor":"systems/dndestiny/tokens/giant/Ettin.webp",
+      "token": {
+        "texture": {
+          "src":"systems/dndestiny/tokens/giant/Ettin.webp",
+          "scaleX":1.5,
+          "scaleY":1.5
+        }
+      }
+    },
+    "9g4N9sjyh8Ql46to": {
+      "actor": "systems/dndestiny/tokens/thumbs/giant/HillGiant.webp",
+      "token": {
+        "texture": {
+          "src":"systems/dndestiny/tokens/giant/HillGiant.webp",
+          "scaleX":1.66,
+          "scaleY":1.66
+        }
+      }
+    },
+    "5TmstVMURpVtmNR3": {
+      "actor":"systems/dndestiny/tokens/humanoid/HalfRedDragonVeteran.webp",
+      "token": "systems/dndestiny/tokens/humanoid/HalfRedDragonVeteran.webp"
+    },
+    "zIr3NaNF0mWz5Ahq": {
+      "actor":"systems/dndestiny/tokens/humanoid/Weretiger.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Weretiger.webp"
+    },
+    "nEC1BRwM8Lx9hLXW": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Androsphinx.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Androsphinx.webp"
+    },
+    "gGeLeV411iQ5Yijs": {
+      "actor":"systems/dndestiny/tokens/plant/ShamblingMound.webp",
+      "token": "systems/dndestiny/tokens/plant/ShamblingMound.webp"
+    },
+    "NB6wUgVqeOQtsQKu": {
+      "actor": "systems/dndestiny/tokens/thumbs/plant/Treant.webp",
+      "token": "systems/dndestiny/tokens/plant/Treant.webp"
+    },
+    "RenLfmDT2XlbCF4x": {
+      "actor":"systems/dndestiny/tokens/undead/OgreZombie.webp",
+      "token": "systems/dndestiny/tokens/undead/OgreZombie.webp"
+    },
+    "shhHtE7b92PefCWB": {
+      "actor": "systems/dndestiny/tokens/thumbs/aberration/Aboleth.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/aberration/Aboleth.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "P6qC8jB3pnEH0tIE": {
+      "actor": "systems/dndestiny/tokens/thumbs/aberration/Chuul.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/aberration/Chuul.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "HPUO3weiwRQnql0d": {
+      "actor": "systems/dndestiny/tokens/thumbs/aberration/Cloaker.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/aberration/Cloaker.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "8pX2JhWUpTNNRBVx": {
+      "actor": "systems/dndestiny/tokens/aberration/GibberingMouther.webp",
+      "token": "systems/dndestiny/tokens/aberration/GibberingMouther.webp"
+    },
+    "jcZblJ6lqtW0ePxe": {
+      "actor": "systems/dndestiny/tokens/thumbs/aberration/Otyugh.webp",
+      "token": "systems/dndestiny/tokens/aberration/Otyugh.webp"
+    },
+    "K5cKmPoFkpuOotis": {
+      "actor": "systems/dndestiny/tokens/beast/Ape.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Ape.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "SXXvwaLBNuzBymp3": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/AxeBeak.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/AxeBeak.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "JW8bXggOMBx1S6tF": {
+      "actor": "systems/dndestiny/tokens/beast/Baboon.webp",
+      "token": "systems/dndestiny/tokens/beast/Baboon.webp"
+    },
+    "oQvORD924obyPdCc": {
+      "actor": "systems/dndestiny/tokens/beast/Badger.webp",
+      "token": "systems/dndestiny/tokens/beast/Badger.webp"
+    },
+    "qav2dvMIUiMQCCsy": {
+      "actor": "systems/dndestiny/tokens/beast/Bat.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Bat.webp",
+          "scaleX": 0.6,
+          "scaleY": 0.6
+        }
+      }
+    },
+    "D5WjGwKskeUT8HXa": {
+      "actor": "systems/dndestiny/tokens/beast/BlackBear.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/BlackBear.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "AJiJW7K957aJJCN6": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/BloodHawk.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/BloodHawk.webp",
+          "scaleX": 1.875,
+          "scaleY": 1.875
+        }
+      }
+    },
+    "lZR4lhNmYSf89s4Q": {
+      "actor": "systems/dndestiny/tokens/beast/Boar.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Boar.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "omcDpBoB69esCXeM": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/BrownBear.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/BrownBear.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "FQMFuzzSh73d0Nrd": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Camel.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Camel.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "hIf83RD3ZVW4Egfi": {
+      "actor": "systems/dndestiny/tokens/beast/CatOrange.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/CatOrange.webp",
+          "scaleX": 0.7,
+          "scaleY": 0.7
+        }
+      }
+    },
+    "UTuKdTah1DKfPwWe": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/ConstrictorSnake.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/ConstrictorSnake.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "8RgUhb31VvjUNZU1": {
+      "actor": "systems/dndestiny/tokens/beast/CrabOrange.webp",
+      "token": "systems/dndestiny/tokens/beast/CrabOrange.webp"
+    },
+    "8aCTKP5qaBPFOqxM": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Crocodile.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Crocodile.webp",
+          "scaleX": 1.2,
+          "scaleY": 1.2
+        }
+      }
+    },
+    "4EODJbmPlpnNGVR7": {
+      "actor": "systems/dndestiny/tokens/beast/Deer.webp",
+      "token": "systems/dndestiny/tokens/beast/Deer.webp"
+    },
+    "EYiQZ3rFL25fEJY5": {
+      "actor": "systems/dndestiny/tokens/beast/DireWolf.webp",
+      "token": "systems/dndestiny/tokens/beast/DireWolf.webp"
+    },
+    "Bupo3E9X5Ptx6XeT": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/DraftHorse.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/DraftHorse.webp",
+          "scaleX": 2.0,
+          "scaleY": 2.0
+        }
+      }
+    },
+    "EI8w6XjzCZICkox9": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Eagle.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Eagle.webp",
+          "scaleX": 1.75,
+          "scaleY": 1.75
+        }
+      }
+    },
+    "jLPhaBnMtAbB5dp1": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Elephant.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Elephant.webp",
+          "scaleX": 1.2,
+          "scaleY": 1.2
+        }
+      }
+    },
+    "55PkbskG5iBZGrgR": {
+      "actor": "systems/dndestiny/tokens/beast/Elk.webp",
+      "token": "systems/dndestiny/tokens/beast/Elk.webp"
+    },
+    "SMfgOsfPgf6rb01k": {
+      "actor": "systems/dndestiny/tokens/beast/FlyingSnake.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/FlyingSnake.webp",
+          "scaleX": 0.8,
+          "scaleY": 0.8
+        }
+      }
+    },
+    "EZgiprHXA2D7Uyb3": {
+      "actor": "systems/dndestiny/tokens/beast/Frog.webp",
+      "token": "systems/dndestiny/tokens/beast/Frog.webp"
+    },
+    "8MuL8xisavJW9bnw": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantApe.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantApe.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "cJGY1ZywUOo6heNR": {
+      "actor": "systems/dndestiny/tokens/beast/GiantBadger.webp",
+      "token": "systems/dndestiny/tokens/beast/GiantBadger.webp"
+    },
+    "SoK7l5zJQKxTVgLL": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantBat.webp",
+      "token": "systems/dndestiny/tokens/beast/GiantBat.webp"
+    },
+    "SsuCaF2fIEoDdFA3": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantBoar.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantBoar.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "Hn8FFLEzscgT7azz": {
+      "actor": "systems/dndestiny/tokens/beast/GiantCentipede.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantCentipede.webp",
+          "scaleX": 1.875,
+          "scaleY": 1.875
+        }
+      }
+    },
+    "NpvwE1feOHyEqAbP": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantConstrictorSnake.webp",
+      "token": "systems/dndestiny/tokens/beast/GiantConstrictorSnake.webp"
+    },
+    "AOJvmk1IchxNxQzP": {
+      "actor": "systems/dndestiny/tokens/beast/GiantCrab.webp",
+      "token": "systems/dndestiny/tokens/beast/GiantCrab.webp"
+    },
+    "3YwmvDupMwycWNCO": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantCrocodile.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantCrocodile.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "9bHoR8k5D2DKHaF3": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantEagle.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantEagle.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "hQt3qIahnB1Odb40": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantElk.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantElk.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "Z0GiAv3bJxTjUfjM": {
+      "actor": "systems/dndestiny/tokens/beast/GiantFireBeetle.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantFireBeetle.webp",
+          "scaleX": 0.875,
+          "scaleY": 0.875
+        }
+      }
+    },
+    "kSAi2KRonL4G4JpO": {
+      "actor": "systems/dndestiny/tokens/beast/GiantFrog.webp",
+      "token": "systems/dndestiny/tokens/beast/GiantFrog.webp"
+    },
+    "rjqk7ToMD8sGr3n4": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantGoat.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantGoat.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "aAqfEHPiVbhMwZ6j": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantHyena.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantHyena.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "pLzSh4dA517Tn73E": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantLizard.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantLizard.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "p9Xnr820UAZBOIVN": {
+      "actor": "systems/dndestiny/tokens/beast/GiantOctopus.webp",
+      "token": "systems/dndestiny/tokens/beast/GiantOctopus.webp"
+    },
+    "VVXly3ue0i3YgGrB": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantOwl.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantOwl.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "ZW39DE2zI3TXVYC9": {
+      "actor": "systems/dndestiny/tokens/beast/GiantPoisonousSnake.webp",
+      "token": "systems/dndestiny/tokens/beast/GiantPoisonousSnake.webp"
+    },
+    "q1YJIeIt6rK8fCKn": {
+      "actor": "systems/dndestiny/tokens/beast/GiantRat.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantRat.webp",
+          "scaleX": 1.125,
+          "scaleY": 1.125
+        }
+      }
+    },
+    "z0zvgcIugizwcuxJ": {
+      "actor": "systems/dndestiny/tokens/beast/GiantRat.webp",
+      "token": "systems/dndestiny/tokens/beast/GiantRat.webp"
+    },
+    "GxgIVRX5GbVTifiF": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantScorpion.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantScorpion.webp",
+          "scaleX": 1.4,
+          "scaleY": 1.4
+        }
+      }
+    },
+    "c9XDGsTJRy9HUaxQ": {
+      "actor": "systems/dndestiny/tokens/beast/GiantSeaHorse.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantSeaHorse.webp",
+          "scaleX": 1.2,
+          "scaleY": 1.2
+        }
+      }
+    },
+    "MWlwLlKXh8jUUxOL": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantShark.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantShark.webp",
+          "scaleX": 1.3,
+          "scaleY": 1.3
+        }
+      }
+    },
+    "v99wOosUJjUgcUNF": {
+      "actor": "systems/dndestiny/tokens/beast/GiantSpider.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantSpider.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "Ixo5shumxy4I9qyD": {
+      "actor": "systems/dndestiny/tokens/beast/GiantToad.webp",
+      "token": "systems/dndestiny/tokens/beast/GiantToad.webp"
+    },
+    "4ZlUHt4xmB7GdPfk": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantVulture.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantVulture.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "4tl0s2SnaLjkoDiI": {
+      "actor": "systems/dndestiny/tokens/beast/GiantWasp.webp",
+      "token": "systems/dndestiny/tokens/beast/GiantWasp.webp"
+    },
+    "8VXxqeBvN54rPh81": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/GiantWeasel.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/GiantWeasel.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "f9JbhBfWucrY2eDA": {
+      "actor": "systems/dndestiny/tokens/beast/GiantWolfSpider.webp",
+      "token": "systems/dndestiny/tokens/beast/GiantWolfSpider.webp"
+    },
+    "y8sRU8Ks2lcrGsaf": {
+      "actor": "systems/dndestiny/tokens/beast/Goat.webp",
+      "token": "systems/dndestiny/tokens/beast/Goat.webp"
+    },
+    "fnkPNfIpS62LqOu4": {
+      "actor": "systems/dndestiny/tokens/beast/Hawk.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Hawk.webp",
+          "scaleX": 0.8,
+          "scaleY": 0.8
+        }
+      }
+    },
+    "siBUEAj4UVdaiH6p": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/HunterShark.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/HunterShark.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "cDr1JtzEV26bP5Ym": {
+      "actor": "systems/dndestiny/tokens/beast/Hyena.webp",
+      "token": "systems/dndestiny/tokens/beast/Hyena.webp"
+    },
+    "MZYCPIVoBs918qGZ": {
+      "actor": "systems/dndestiny/tokens/beast/Jackal.webp",
+      "token": "systems/dndestiny/tokens/beast/Jackal.webp"
+    },
+    "ciLSItjCpwT7nMmk": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/KillerWhale.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/KillerWhale.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "hjhERRzafCiFFVLA": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Lion.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Lion.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "I2x01hzOjVN4NUjf": {
+      "actor": "systems/dndestiny/tokens/beast/Lizard.webp",
+      "token": "systems/dndestiny/tokens/beast/Lizard.webp"
+    },
+    "MiYRAIHwm9It1in8": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Mammoth.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Mammoth.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "YTpL2c3NO4sOn2UA": {
+      "actor": "systems/dndestiny/tokens/beast/Mastiff.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Mastiff.webp"
+        }
+      }
+    },
+    "Vk7uHVkJ5b26gaTh": {
+      "actor": "systems/dndestiny/tokens/beast/Mule.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Mule.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "3UUNbGiG2Yf1ZPxM": {
+      "actor": "systems/dndestiny/tokens/beast/Octopus.webp",
+      "token": "systems/dndestiny/tokens/beast/Octopus.webp"
+    },
+    "d0prpsGSAorDadec": {
+      "actor": "systems/dndestiny/tokens/beast/Owl.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Owl.webp",
+          "scaleX": 0.8,
+          "scaleY": 0.8
+        }
+      }
+    },
+    "AijNdqMurWxDxUSl": {
+      "actor": "systems/dndestiny/tokens/beast/Panther.webp",
+      "token": "systems/dndestiny/tokens/beast/Panther.webp"
+    },
+    "4OeZZguYgJcsZoM9": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Plesiosaurus.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Plesiosaurus.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "D5rwVIxmfFrdyyxT": {
+      "actor": "systems/dndestiny/tokens/beast/PoisonousSnake.webp",
+      "token": "systems/dndestiny/tokens/beast/PoisonousSnake.webp"
+    },
+    "hb6pjvdCNYmLLp8V": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/PolarBear.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/PolarBear.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "PHO4J98zK2p4KNyc": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Pony.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Pony.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "nkyCGJ9wXeAZkyyz": {
+      "actor": "systems/dndestiny/tokens/beast/Quipper.webp",
+      "token": "systems/dndestiny/tokens/beast/Quipper.webp"
+    },
+    "pozQUPTnLZW8epox": {
+      "actor": "systems/dndestiny/tokens/beast/Rat.webp",
+      "token": "systems/dndestiny/tokens/beast/Rat.webp"
+    },
+    "LPdX5YLlwci0NDZx": {
+      "actor": "systems/dndestiny/tokens/beast/Raven.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Raven.webp",
+          "scaleX": 0.8,
+          "scaleY": 0.8
+        }
+      }
+    },
+    "F0yILX4xKKt4dxKY": {
+      "actor": "systems/dndestiny/tokens/beast/ReefShark.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/ReefShark.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "SBCe2BSa6opTS5M4": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Rhinoceros.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Rhinoceros.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "rz8UTUnFT87BsAFR": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/RidingHorse.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/RidingHorse.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "tYYoifu9teGLetVI": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/SaberToothedTiger.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/SaberToothedTiger.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "Y0vxQVF7w2P38FK2": {
+      "actor": "systems/dndestiny/tokens/beast/Scorpion.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Scorpion.webp",
+          "scaleX": 0.8,
+          "scaleY": 0.8
+        }
+      }
+    },
+    "FWSDiq9SZsdiBAa8": {
+      "actor": "systems/dndestiny/tokens/beast/SeaHorse.webp",
+      "token": "systems/dndestiny/tokens/beast/SeaHorse.webp"
+    },
+    "28gU50HtG8Kp7uIz": {
+      "actor": "systems/dndestiny/tokens/beast/Spider.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Spider.webp",
+          "scaleX": 0.8,
+          "scaleY": 0.8
+        }
+      }
+    },
+    "gKRtiMNAjZiCVfwz": {
+      "actor": "systems/dndestiny/tokens/beast/Stirge.webp",
+      "token": "systems/dndestiny/tokens/beast/Stirge.webp"
+    },
+    "PcZ0QjIG6bHpffp9": {
+      "actor": "systems/dndestiny/tokens/beast/SwarmBats.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/SwarmBats.webp",
+          "scaleX": 1.25,
+          "scaleY": 1.25
+        }
+      }
+    },
+    "XfQMBoTh892XSnCX": {
+      "actor": "systems/dndestiny/tokens/beast/SwarmPoisonousSnakes.webp",
+      "token": "systems/dndestiny/tokens/beast/SwarmPoisonousSnakes.webp"
+    },
+    "dZZFmG8LiBlgWi76": {
+      "actor": "systems/dndestiny/tokens/beast/SwarmBeetles.webp",
+      "token": "systems/dndestiny/tokens/beast/SwarmBeetles.webp"
+    },
+    "KC4tYOolARhajP18": {
+      "actor": "systems/dndestiny/tokens/beast/SwarmCentipedes.webp",
+      "token": "systems/dndestiny/tokens/beast/SwarmCentipedes.webp"
+    },
+    "S0zDrv6lbnwWaz9E": {
+      "actor": "systems/dndestiny/tokens/beast/SwarmInsects.webp",
+      "token": "systems/dndestiny/tokens/beast/SwarmInsects.webp"
+    },
+    "KXG5XLIwKhn1V0Y5": {
+      "actor": "systems/dndestiny/tokens/beast/SwarmQuippers.webp",
+      "token": "systems/dndestiny/tokens/beast/SwarmQuippers.webp"
+    },
+    "8ihbbjkaOFTPbI73": {
+      "actor": "systems/dndestiny/tokens/beast/SwarmRats.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/SwarmRats.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "g40zN6xMye6bSS94": {
+      "actor": "systems/dndestiny/tokens/beast/SwarmRavens.webp",
+      "token": "systems/dndestiny/tokens/beast/SwarmRavens.webp"
+    },
+    "4udpeEneFSZK9NTB": {
+      "actor": "systems/dndestiny/tokens/beast/SwarmSpiders.webp",
+      "token": "systems/dndestiny/tokens/beast/SwarmSpiders.webp"
+    },
+    "YUaprnengdFDNG8P": {
+      "actor": "systems/dndestiny/tokens/beast/SwarmWasps.webp",
+      "token": "systems/dndestiny/tokens/beast/SwarmWasps.webp"
+    },
+    "FayqbnjBMszO6Pat": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Tiger.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Tiger.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "HlddcPm4cWptj3ka": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/TyrannosaurusRex.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/TyrannosaurusRex.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "e5IQxSJO7ySEDdSH": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Triceratops.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Triceratops.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "fkJ8Z8zi2JtlcHh9": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Vulture.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Vulture.webp",
+          "scaleX": 1.8,
+          "scaleY": 1.8
+        }
+      }
+    },
+    "T1xZTDCGuvMBSq8d": {
+      "actor": "systems/dndestiny/tokens/thumbs/beast/Warhorse.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Warhorse.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "WOdeacKCYVhgLDuN": {
+      "actor": "systems/dndestiny/tokens/beast/Weasel.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/beast/Weasel.webp",
+          "scaleX": 0.8,
+          "scaleY": 0.8
+        }
+      }
+    },
+    "yawTeS8u2FCfzzZH": {
+      "actor": "systems/dndestiny/tokens/beast/Wolf.webp",
+      "token": "systems/dndestiny/tokens/beast/Wolf.webp"
+    },
+    "ZaP1H91t4FzbRqR5": {
+      "actor": "systems/dndestiny/tokens/thumbs/celestial/Couatl.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/celestial/Couatl.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "m4H3hjamBNMH09S9": {
+      "actor": "systems/dndestiny/tokens/thumbs/celestial/Deva.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/celestial/Deva.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "EIgAW1dWVPpyWLUh": {
+      "actor": "systems/dndestiny/tokens/thumbs/celestial/Pegasus.webp",
+      "token": "systems/dndestiny/tokens/celestial/Pegasus.webp"
+    },
+    "XEByBLeOkDgL3mrr": {
+      "actor": "systems/dndestiny/tokens/thumbs/celestial/Planetar.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/celestial/Planetar.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "G9PENY6nw0xRxCJW": {
+      "actor": "systems/dndestiny/tokens/thumbs/celestial/Unicorn.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/celestial/Unicorn.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "eORmAXuV5v3nWsQL": {
+      "actor": "systems/dndestiny/tokens/construct/AnimatedArmor.webp",
+      "token": "systems/dndestiny/tokens/construct/AnimatedArmor.webp"
+    },
+    "YOqhbf8WsX0jH9Fu": {
+      "actor": "systems/dndestiny/tokens/construct/ClayGolem.webp",
+      "token": "systems/dndestiny/tokens/construct/ClayGolem.webp"
+    },
+    "EqJUA3Z3181RSSFU": {
+      "actor": "systems/dndestiny/tokens/construct/FlyingSword.webp",
+      "token": "systems/dndestiny/tokens/construct/FlyingSword.webp"
+    },
+    "ZQTCZfTV9ZoTjNCU": {
+      "actor": "systems/dndestiny/tokens/construct/Homonculus.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/construct/Homonculus.webp"
+        }
+      }
+    },
+    "h98AuPfomEPcCibP": {
+      "actor": "systems/dndestiny/tokens/construct/IronGolem.webp",
+      "token": "systems/dndestiny/tokens/construct/IronGolem.webp"
+    },
+    "f6HaKROPIcBRmSd1": {
+      "actor": "systems/dndestiny/tokens/construct/RugOfSmothering.webp",
+      "token": "systems/dndestiny/tokens/construct/RugOfSmothering.webp"
+    },
+    "z85EsGS2GVWj46qE": {
+      "actor": "systems/dndestiny/tokens/construct/ShieldGuardian.webp",
+      "token": "systems/dndestiny/tokens/construct/ShieldGuardian.webp"
+    },
+    "z3gSIXHHWYaHjfBT": {
+      "actor": "systems/dndestiny/tokens/construct/StoneGolem.webp",
+      "token": "systems/dndestiny/tokens/construct/StoneGolem.webp"
+    },
+    "IZMbiAHqQpzPo0CX": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/BlackDragonWyrmling.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/BlackDragonWyrmling.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "najtPRiHLR6buSWe": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/BlueDragonWyrmling.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/BlueDragonWyrmling.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "azCbLQt5LAYwTI7U": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/BrassDragonWyrmling.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/BrassDragonWyrmling.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "hY9ptpO5Xl2tfkcj": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/BronzeDragonWyrmling.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/BronzeDragonWyrmling.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "AyvniEKtyroOe83p": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/CopperDragonWyrmling.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/CopperDragonWyrmling.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "naSoHU9KbkgeNIwB": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/GoldDragonWyrmling.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/GoldDragonWyrmling.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "KH6ZrUiUOKQCOlRH": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/GreenDragonWyrmling.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/GreenDragonWyrmling.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "fkCNtbvPOMd7mipF": {
+      "actor": "systems/dndestiny/tokens/dragon/Pseudodragon.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/Pseudodragon.webp",
+          "scaleX": 1.4,
+          "scaleY": 1.4
+        }
+      }
+    },
+    "zgWkII3VoE4AHCND": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/RedDragonWyrmling.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/RedDragonWyrmling.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "J1QVPd8POvcPaqx4": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/SilverDragonWyrmling.webp",
+      "token": "systems/dndestiny/tokens/dragon/SilverDragonWyrmling.webp"
+    },
+    "vc2TAgIuq4yInjbf": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/WhiteDragonWyrmling.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/WhiteDragonWyrmling.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "bcapsJdIhY5WktpT": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/YoungBlackDragon.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/YoungBlackDragon.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "NmQLj0zv4FmfuSan": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/YoungBronzeDragon.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/YoungBronzeDragon.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "QSytPah5WKoFJ1zt": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/YoungGoldDragon.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/YoungGoldDragon.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "85ahD1jEo9B3POaQ": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/YoungGreenDragon.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/YoungGreenDragon.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "qrasJNDC7SGj7xzG": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/YoungRedDragon.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/YoungRedDragon.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "eykRfV85DQJoCkmc": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/YoungSilverDragon.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/YoungSilverDragon.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "u1UQfHutP5eEKkjM": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/YoungWhiteDragon.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/YoungWhiteDragon.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "IiEDPMWqBlzkggYD": {
+      "actor": "systems/dndestiny/tokens/elemental/Azer.webp",
+      "token": "systems/dndestiny/tokens/elemental/Azer.webp"
+    },
+    "5P1VGAZQwOilwZQf": {
+      "actor": "systems/dndestiny/tokens/elemental/Djinni.webp",
+      "token": "systems/dndestiny/tokens/elemental/Djinni.webp"
+    },
+    "BUCfQ7ihaXX75Vai": {
+      "actor": "systems/dndestiny/tokens/elemental/DustMephit.webp",
+      "token": "systems/dndestiny/tokens/elemental/DustMephit.webp"
+    },
+    "sApYLZj9PTZ40wJr": {
+      "actor": "systems/dndestiny/tokens/elemental/EarthElemental.webp",
+      "token": "systems/dndestiny/tokens/elemental/EarthElemental.webp"
+    },
+    "LTomFUTBrkRi0Pj5": {
+      "actor": "systems/dndestiny/tokens/elemental/Efreeti.webp",
+      "token": "systems/dndestiny/tokens/elemental/Efreeti.webp"
+    },
+    "8SMQl75HLjhuSeau": {
+      "actor": "systems/dndestiny/tokens/elemental/FireElemental.webp",
+      "token": "systems/dndestiny/tokens/elemental/FireElemental.webp"
+    },
+    "0m8QyDN52qw9zzOM": {
+      "actor": "systems/dndestiny/tokens/thumbs/elemental/Gargoyle.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/elemental/Gargoyle.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "ESEm3fGUfSKjzVUc": {
+      "actor": "systems/dndestiny/tokens/elemental/IceMephit.webp",
+      "token": "systems/dndestiny/tokens/elemental/IceMephit.webp"
+    },
+    "oJCOB9X2BPsBkWW5": {
+      "actor": "systems/dndestiny/tokens/elemental/MagmaMephit.webp",
+      "token": "systems/dndestiny/tokens/elemental/MagmaMephit.webp"
+    },
+    "8MD1vRBTcgSXXk3u": {
+      "actor": "systems/dndestiny/tokens/elemental/Magmin.webp",
+      "token": "systems/dndestiny/tokens/elemental/Magmin.webp"
+    },
+    "yVNPVJIBpQ2Mp3Xa": {
+      "actor": "systems/dndestiny/tokens/thumbs/elemental/Salamander.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/elemental/Salamander.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "UthHOT7QfZfEIUue": {
+      "actor": "systems/dndestiny/tokens/elemental/SteamMephit.webp",
+      "token": "systems/dndestiny/tokens/elemental/SteamMephit.webp"
+    },
+    "namJz755U1EhvEJa": {
+      "actor": "systems/dndestiny/tokens/elemental/WaterElemental.webp",
+      "token": "systems/dndestiny/tokens/elemental/WaterElemental.webp"
+    },
+    "banHjKDMCegbUwYE": {
+      "actor": "systems/dndestiny/tokens/elemental/WindElemental.webp",
+      "token": "systems/dndestiny/tokens/elemental/WindElemental.webp"
+    },
+    "2MZNHeOZweXAYbv1": {
+      "actor": "systems/dndestiny/tokens/elemental/Xorn.webp",
+      "token": "systems/dndestiny/tokens/elemental/Xorn.webp"
+    },
+    "jOANE6M0My6UJF4e": {
+      "actor": "systems/dndestiny/tokens/fey/BlinkDog.webp",
+      "token": "systems/dndestiny/tokens/fey/BlinkDog.webp"
+    },
+    "KOHVWl5RU9XBR8Jb": {
+      "actor": "systems/dndestiny/tokens/fey/Dryad.webp",
+      "token": "systems/dndestiny/tokens/fey/Dryad.webp"
+    },
+    "saq6WM959pKHuaqP": {
+      "actor": "systems/dndestiny/tokens/fey/GreenHag.webp",
+      "token": "systems/dndestiny/tokens/fey/GreenHag.webp"
+    },
+    "8xhuJXYMnlQD7LF6": {
+      "actor": "systems/dndestiny/tokens/fey/Satyr.webp",
+      "token": "systems/dndestiny/tokens/fey/Satyr.webp"
+    },
+    "OQqybZoMeDFn5AFD": {
+      "actor": "systems/dndestiny/tokens/fey/SeaHag.webp",
+      "token": "systems/dndestiny/tokens/fey/SeaHag.webp"
+    },
+    "MUpBNDoJEr09bLaO": {
+      "actor": "systems/dndestiny/tokens/fey/Sprite.webp",
+      "token": "systems/dndestiny/tokens/fey/Sprite.webp"
+    },
+    "uZ8NrRenwYZ4qNf6": {
+      "actor": "systems/dndestiny/tokens/thumbs/fiend/Balor.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/fiend/Balor.webp",
+          "scaleX": 2.3,
+          "scaleY": 2.3
+        }
+      }
+    },
+    "9ggQBmAKXraOtz7S": {
+      "actor": "systems/dndestiny/tokens/fiend/BeardedDevil.webp",
+      "token": "systems/dndestiny/tokens/fiend/BeardedDevil.webp"
+    },
+    "AnseLn7HwuP97grf": {
+      "actor": "systems/dndestiny/tokens/thumbs/fiend/BoneDevil.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/fiend/BoneDevil.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "KtM6IV9I5l1MWUDk": {
+      "actor": "systems/dndestiny/tokens/thumbs/fiend/ChainDevil.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/fiend/ChainDevil.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "kz2fW9xb5CcvXLX4": {
+      "actor": "systems/dndestiny/tokens/fiend/Dretch.webp",
+      "token": "systems/dndestiny/tokens/fiend/Dretch.webp"
+    },
+    "OGPHF4sCVOAi87TU": {
+      "actor": "systems/dndestiny/tokens/fiend/Glabrezu.webp",
+      "token": "systems/dndestiny/tokens/fiend/Glabrezu.webp"
+    },
+    "iSCL4Q82ivnYelzc": {
+      "actor": "systems/dndestiny/tokens/fiend/HellHound.webp",
+      "token": "systems/dndestiny/tokens/fiend/HellHound.webp"
+    },
+    "ec3lhsNv1ZRu7Qaq": {
+      "actor": "systems/dndestiny/tokens/fiend/Hezrou.webp",
+      "token": "systems/dndestiny/tokens/fiend/Hezrou.webp"
+    },
+    "MADGs8pWMVyyFOf1": {
+      "actor": "systems/dndestiny/tokens/thumbs/fiend/HornedDevil.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/fiend/HornedDevil.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "1zzRQps9jZdLZGqI": {
+      "actor": "systems/dndestiny/tokens/thumbs/fiend/IceDevil.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/fiend/IceDevil.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "dLQiESMsfsXijD5c": {
+      "actor": "systems/dndestiny/tokens/fiend/Imp.webp",
+      "token": "systems/dndestiny/tokens/fiend/Imp.webp"
+    },
+    "tubcO7kaQ4w0soxS": {
+      "actor": "systems/dndestiny/tokens/fiend/Lemure.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/fiend/Lemure.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "egsSDYbqoLCelb0J": {
+      "actor": "systems/dndestiny/tokens/thumbs/fiend/Marilith.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/fiend/Marilith.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "rUg5JMnKNnZNBAq9": {
+      "actor": "systems/dndestiny/tokens/fiend/Nalfeshnee.webp",
+      "token": "systems/dndestiny/tokens/fiend/Nalfeshnee.webp"
+    },
+    "xvh2UOKv1bh03Gih": {
+      "actor": "systems/dndestiny/tokens/fiend/NightHag.webp",
+      "token": "systems/dndestiny/tokens/fiend/NightHag.webp"
+    },
+    "5SgVGhQBswgWRwsF": {
+      "actor": "systems/dndestiny/tokens/thumbs/fiend/Nightmare.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/fiend/Nightmare.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "RCv5y7iWlfNxkinx": {
+      "actor": "systems/dndestiny/tokens/thumbs/fiend/PitFiend.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/fiend/PitFiend.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "bwtkdzavdNHISgp4": {
+      "actor": "systems/dndestiny/tokens/fiend/Quasit.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/fiend/Quasit.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "qXzMsRTHEodqO8l2": {
+      "actor": "systems/dndestiny/tokens/fiend/Rakshasa.webp",
+      "token": "systems/dndestiny/tokens/fiend/Rakshasa.webp"
+    },
+    "VmdyZDjqAc8vdncY": {
+      "actor": "systems/dndestiny/tokens/thumbs/fiend/Succubus.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/fiend/Succubus.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "6oc29m5uzzzb0pk3": {
+      "actor": "systems/dndestiny/tokens/thumbs/fiend/Vrock.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/fiend/Vrock.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "45Z5kogZEhawX1Ey": {
+      "actor": "systems/dndestiny/tokens/thumbs/giant/FireGiant.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/giant/FireGiant.webp",
+          "scaleX": 1.6,
+          "scaleY": 1.6
+        }
+      }
+    },
+    "Buxe6dDK5Mw7kxe6": {
+      "actor": "systems/dndestiny/tokens/thumbs/giant/FrostGiant.webp",
+      "token": "systems/dndestiny/tokens/giant/FrostGiant.webp"
+    },
+    "eIGowKTkEBC9gUzx": {
+      "actor": "systems/dndestiny/tokens/giant/Ogre.webp",
+      "token": "systems/dndestiny/tokens/giant/Ogre.webp"
+    },
+    "L1w8yBkInMscfJ3F": {
+      "actor": "systems/dndestiny/tokens/thumbs/giant/Oni.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/giant/Oni.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "SOin81NWijHRvXFK": {
+      "actor": "systems/dndestiny/tokens/thumbs/giant/StoneGiant.webp",
+      "token": "systems/dndestiny/tokens/giant/StoneGiant.webp"
+    },
+    "68bAMIpe4jvDeR9G": {
+      "actor": "systems/dndestiny/tokens/thumbs/giant/StormGiant.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/giant/StormGiant.webp",
+          "scaleX": 1.66,
+          "scaleY": 1.66
+        }
+      }
+    },
+    "ZHAFrnCwCz17dmLc": {
+      "actor": "systems/dndestiny/tokens/giant/Troll.webp",
+      "token": "systems/dndestiny/tokens/giant/Troll.webp"
+    },
+    "CHEUjiYrVM9X0vIT": {
+      "actor": "systems/dndestiny/tokens/humanoid/Acolyte.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Acolyte.webp"
+    },
+    "B7lBOr1AahNZs4a6": {
+      "actor": "systems/dndestiny/tokens/humanoid/Archmage.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Archmage.webp"
+    },
+    "EMvcuOpu7ABCmBWi": {
+      "actor": "systems/dndestiny/tokens/humanoid/Assassin.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Assassin.webp"
+    },
+    "n4TEv7inVUkyZviN": {
+      "actor": "systems/dndestiny/tokens/humanoid/Bandit.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Bandit.webp"
+    },
+    "rb7OJt822wIO52qY": {
+      "actor": "systems/dndestiny/tokens/humanoid/BanditCaptain.webp",
+      "token": "systems/dndestiny/tokens/humanoid/BanditCaptain.webp"
+    },
+    "kz1t6xeXVwODpYb2": {
+      "actor": "systems/dndestiny/tokens/humanoid/Berserker.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Berserker.webp"
+    },
+    "QtJairF0h18BRhEM": {
+      "actor": "systems/dndestiny/tokens/humanoid/Bugbear.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Bugbear.webp"
+    },
+    "SqZRuJ8lt2KGJBbq": {
+      "actor": "systems/dndestiny/tokens/humanoid/Commoner.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Commoner.webp"
+    },
+    "tYfQIxCJT0WaaKmc": {
+      "actor": "systems/dndestiny/tokens/humanoid/CultFanatic.webp",
+      "token": "systems/dndestiny/tokens/humanoid/CultFanatic.webp"
+    },
+    "qkLNA1lKMMJpxuWg": {
+      "actor": "systems/dndestiny/tokens/humanoid/Cultist.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Cultist.webp"
+    },
+    "ZM1P6LoYSwMiIJN9": {
+      "actor": "systems/dndestiny/tokens/humanoid/DeepGnome.webp",
+      "token": "systems/dndestiny/tokens/humanoid/DeepGnome.webp"
+    },
+    "K15Yl8JmB5iPircc": {
+      "actor": "systems/dndestiny/tokens/humanoid/Druid.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Druid.webp"
+    },
+    "iGBdQA3IuKsurcUy": {
+      "actor": "systems/dndestiny/tokens/humanoid/Duergar.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Duergar.webp"
+    },
+    "fsPruAIDOg4tVrgb": {
+      "actor": "systems/dndestiny/tokens/thumbs/humanoid/Gladiator.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/humanoid/Gladiator.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "R2GPY9BhRmmwZwkh": {
+      "actor": "systems/dndestiny/tokens/humanoid/Gnoll.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Gnoll.webp"
+    },
+    "TjWQOgI3A4UAl7lC": {
+      "actor": "systems/dndestiny/tokens/humanoid/Goblin.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Goblin.webp"
+    },
+    "GpeQYtlo8oGvGlkM": {
+      "actor": "systems/dndestiny/tokens/humanoid/Grimlock.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Grimlock.webp"
+    },
+    "E9CvDPDg5dFEpVjS": {
+      "actor": "systems/dndestiny/tokens/humanoid/Guard.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Guard.webp"
+    },
+    "6qnT52lZtZblgGw8": {
+      "actor": "systems/dndestiny/tokens/humanoid/Hobgoblin.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Hobgoblin.webp"
+    },
+    "D5UqYD1EnTrJaMTO": {
+      "actor": "systems/dndestiny/tokens/humanoid/Knight.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Knight.webp"
+    },
+    "5ngbctIMeEnuC1p1": {
+      "actor": "systems/dndestiny/tokens/humanoid/Kobold.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Kobold.webp"
+    },
+    "57DofLgRQx16ARoc": {
+      "actor": "systems/dndestiny/tokens/humanoid/Lizardfolk.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Lizardfolk.webp"
+    },
+    "mQnsXanewsPiV7QE": {
+      "actor": "systems/dndestiny/tokens/humanoid/Mage.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Mage.webp"
+    },
+    "KUpbXdn1XmHEeOPk": {
+      "actor": "systems/dndestiny/tokens/humanoid/Merfolk.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Merfolk.webp"
+    },
+    "GlaCGcgIP6YjBjGc": {
+      "actor": "systems/dndestiny/tokens/humanoid/Noble.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Noble.webp"
+    },
+    "HB49mCOVBXwWeKWQ": {
+      "actor": "systems/dndestiny/tokens/humanoid/Orc.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Orc.webp"
+    },
+    "PVD5wRdyO7iCJPs1": {
+      "actor": "systems/dndestiny/tokens/humanoid/Priest.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Priest.webp"
+    },
+    "lyNBFmJdbh4NLRzz": {
+      "actor": "systems/dndestiny/tokens/humanoid/Sahuagin.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Sahuagin.webp"
+    },
+    "O3ABqI55Ir1du1Xa": {
+      "actor": "systems/dndestiny/tokens/humanoid/Scout.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Scout.webp"
+    },
+    "13K3XK2A3wwxVKLD": {
+      "actor": "systems/dndestiny/tokens/humanoid/Spy.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Spy.webp"
+    },
+    "Cy3A0rsNMPLZozam": {
+      "actor": "systems/dndestiny/tokens/humanoid/Thug.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Thug.webp"
+    },
+    "nREPw9g94Bsb9sIl": {
+      "actor": "systems/dndestiny/tokens/humanoid/TribalWarrior.webp",
+      "token": "systems/dndestiny/tokens/humanoid/TribalWarrior.webp"
+    },
+    "J8xjoG4Dxb8WkHtV": {
+      "actor": "systems/dndestiny/tokens/humanoid/Veteran.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Veteran.webp"
+    },
+    "oRBnO5OHoOZzlCOr": {
+      "actor": "systems/dndestiny/tokens/humanoid/Werebear.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Werebear.webp"
+    },
+    "J9hgSaZODGjrNl9B": {
+      "actor": "systems/dndestiny/tokens/humanoid/Wereboar.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Wereboar.webp"
+    },
+    "CrnUJhTbkdZjCZsH": {
+      "actor": "systems/dndestiny/tokens/humanoid/Wererat.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Wererat.webp"
+    },
+    "7tRhrxuknTpHpYcA": {
+      "actor": "systems/dndestiny/tokens/humanoid/Werewolf.webp",
+      "token": "systems/dndestiny/tokens/humanoid/Werewolf.webp"
+    },
+    "Wcsjbl25uiUsyQwn": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Ankheg.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Ankheg.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "hqj2yXtgwt64v3Lj": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Basilisk.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Basilisk.webp"
+    },
+    "x47ZnpHfYl0ptDM9": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Behir.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Behir.webp"
+    },
+    "1ES45ODWg3pCrkzv": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Bulette.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Bulette.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "5kZNNWzZ6HrfKuWf": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Centaur.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Centaur.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "kr6r8bhSehACPfZ8": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Chimera.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Chimera.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "EpYl7qifM5pq6W6B": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Cockatrice.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Cockatrice.webp"
+    },
+    "g7FSu2oU4YHPgWNA": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Darkmantle.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Darkmantle.webp"
+    },
+    "PH78NBdvoaszAb61": {
+      "actor": "systems/dndestiny/tokens/monstrosity/DeathDog.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/DeathDog.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "mWbrPhcKOz6oLXMV": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Doppelganger.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Doppelganger.webp"
+    },
+    "1OQbxoZI5BtlB2ME": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Drider.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Drider.webp"
+    },
+    "aKt7vFAS1J0x3FQm": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Ettercap.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Ettercap.webp"
+    },
+    "nZthq6WHLhcdu3te": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Gorgon.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Gorgon.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "tFJX45zj3QDc3Zli": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Grick.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Grick.webp"
+    },
+    "h052EIIUmRwJum65": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Griffon.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Griffon.webp",
+          "scaleX": 2.8,
+          "scaleY": 2.8
+        }
+      }
+    },
+    "8ExSFCar5Lbhdo7u": {
+      "actor": "systems/dndestiny/tokens/monstrosity/GuardianNaga.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/GuardianNaga.webp"
+    },
+    "6wbasdWWqtXeIAyD": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Gynosphinx.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Gynosphinx.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "CqQ6pXQA5WXZNOm3": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Harpy.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Harpy.webp"
+    },
+    "T2PExQE84ZcIbAXz": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Hippogriff.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Hippogriff.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "MnoL59nOOfYatAkQ": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Lamia.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Lamia.webp"
+    },
+    "MAoCGF5VkQwhmgvI": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Manticore.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Manticore.webp"
+    },
+    "eiifqZwYGi71r2Yl": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Medusa.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Medusa.webp"
+    },
+    "1cwfYaACm5F0l4y3": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Merrow.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Merrow.webp"
+    },
+    "hx240PG5r5qpRet3": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Mimic.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Mimic.webp",
+          "scaleX": 1.2,
+          "scaleY": 1.2
+        }
+      }
+    },
+    "pOPQU4UnR27zA0jf": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Minotaur.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Minotaur.webp"
+    },
+    "zY3W5MG7FjssENf6": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Owlbear.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Owlbear.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "llSG0Hi4eGlRlQ4o": {
+      "actor": "systems/dndestiny/tokens/monstrosity/PhaseSpider.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/PhaseSpider.webp"
+    },
+    "VBzqw2rOUvTuNOPI": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Remorhaz.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Remorhaz.webp"
+    },
+    "p980augbCIdpK9ZX": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Roc.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Roc.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "qZyLwdx7lj5d1wfD": {
+      "actor": "systems/dndestiny/tokens/monstrosity/Roper.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Roper.webp"
+    },
+    "WJsxqbHU28D64lWT": {
+      "actor": "systems/dndestiny/tokens/monstrosity/RustMonster.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/RustMonster.webp"
+    },
+    "BAT6ld8qJZetpycL": {
+      "actor": "systems/dndestiny/tokens/monstrosity/SpiritNaga.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/SpiritNaga.webp"
+    },
+    "KCvt4FdOVJbuZ3T0": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Tarrasque.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/Tarrasque.webp"
+    },
+    "yGTh874etxUckmAf": {
+      "actor": "systems/dndestiny/tokens/monstrosity/WinterWolf.webp",
+      "token": "systems/dndestiny/tokens/monstrosity/WinterWolf.webp"
+    },
+    "VBkp2rGQKvMcCOus": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Worg.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Worg.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "NwQpeeaMxAC3fRft": {
+      "actor": "systems/dndestiny/tokens/ooze/BlackPudding.webp",
+      "token": "systems/dndestiny/tokens/ooze/BlackPudding.webp"
+    },
+    "3fzQVYQhXxCXRa2o": {
+      "actor": "systems/dndestiny/tokens/thumbs/ooze/GelatinousCube.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/ooze/GelatinousCube.webp",
+          "scaleX": 2,
+          "scaleY": 2
+        }
+      }
+    },
+    "fqbFYtbtkrL53FOC": {
+      "actor": "systems/dndestiny/tokens/ooze/GrayOoze.webp",
+      "token": "systems/dndestiny/tokens/ooze/GrayOoze.webp"
+    },
+    "xBhG7Dos3tkg9jWz": {
+      "actor": "systems/dndestiny/tokens/ooze/OchreJelly.webp",
+      "token": "systems/dndestiny/tokens/ooze/OchreJelly.webp"
+    },
+    "gaSTr7DFZJLmgI2J": {
+      "actor": "systems/dndestiny/tokens/plant/AwakenedShrub.webp",
+      "token": "systems/dndestiny/tokens/plant/AwakenedShrub.webp"
+    },
+    "TaK6nQMGqZ0y8gt7": {
+      "actor": "systems/dndestiny/tokens/plant/Shrieker.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/plant/Shrieker.webp",
+          "scaleX": 0.8,
+          "scaleY": 0.8
+        }
+      }
+    },
+    "7EmUVycEASn7SFL0": {
+      "actor": "systems/dndestiny/tokens/plant/VioletFungus.webp",
+      "token": "systems/dndestiny/tokens/plant/VioletFungus.webp"
+    },
+    "IyIybE5t2adMEVUM": {
+      "actor": "systems/dndestiny/tokens/undead/Ghast.webp",
+      "token": "systems/dndestiny/tokens/undead/Ghast.webp"
+    },
+    "qoFEjfrANBdrCP6m": {
+      "actor": "systems/dndestiny/tokens/undead/Ghost.webp",
+      "token": "systems/dndestiny/tokens/undead/Ghost.webp"
+    },
+    "OBujQLLPSmlJiZnL": {
+      "actor": "systems/dndestiny/tokens/undead/Ghoul.webp",
+      "token": "systems/dndestiny/tokens/undead/Ghoul.webp"
+    },
+    "bfh29vIEoGzI240e": {
+      "actor": "systems/dndestiny/tokens/undead/Lich.webp",
+      "token": "systems/dndestiny/tokens/undead/Lich.webp"
+    },
+    "xple5bvGj42uGgdd": {
+      "actor": "systems/dndestiny/tokens/undead/MinotaurSkeleton.webp",
+      "token": "systems/dndestiny/tokens/undead/MinotaurSkeleton.webp"
+    },
+    "t8WYD7ak07X7xpx8": {
+      "actor": "systems/dndestiny/tokens/undead/Mummy.webp",
+      "token": "systems/dndestiny/tokens/undead/Mummy.webp"
+    },
+    "UFW8M3JHzHkxUEGM": {
+      "actor": "systems/dndestiny/tokens/undead/MummyLord.webp",
+      "token": "systems/dndestiny/tokens/undead/MummyLord.webp"
+    },
+    "QGcQYZbVl4bWzi4E": {
+      "actor": "systems/dndestiny/tokens/undead/Shadow.webp",
+      "token": "systems/dndestiny/tokens/undead/Shadow.webp"
+    },
+    "nU8GN8La8DCt8SDb": {
+      "actor": "systems/dndestiny/tokens/undead/Skeleton.webp",
+      "token": "systems/dndestiny/tokens/undead/Skeleton.webp"
+    },
+    "PuPo4H4Dcxigf0fY": {
+      "actor": "systems/dndestiny/tokens/undead/Specter.webp",
+      "token": "systems/dndestiny/tokens/undead/Specter.webp"
+    },
+    "DDO9lDCDtNHkfShP": {
+      "actor": "systems/dndestiny/tokens/undead/Vampire.webp",
+      "token": "systems/dndestiny/tokens/undead/Vampire.webp"
+    },
+    "zpaZb7I8alY32vWV": {
+      "actor": "systems/dndestiny/tokens/undead/VampireSpawn.webp",
+      "token": "systems/dndestiny/tokens/undead/VampireSpawn.webp"
+    },
+    "7KJ5vjnp0FJrdu6T": {
+      "actor": "systems/dndestiny/tokens/thumbs/undead/WarhorseSkeleton.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/undead/WarhorseSkeleton.webp",
+          "scaleX": 1.5,
+          "scaleY": 1.5
+        }
+      }
+    },
+    "rbyp54px2D0ql4QK": {
+      "actor": "systems/dndestiny/tokens/undead/Wight.webp",
+      "token": "systems/dndestiny/tokens/undead/Wight.webp"
+    },
+    "8KSVpQZyzius93ko": {
+      "actor": "systems/dndestiny/tokens/undead/WilloWisp.webp",
+      "token": "systems/dndestiny/tokens/undead/WilloWisp.webp"
+    },
+    "ET4PEVEiNJLU4f7c": {
+      "actor": "systems/dndestiny/tokens/undead/Wraith.webp",
+      "token": "systems/dndestiny/tokens/undead/Wraith.webp"
+    },
+    "NAISFPoNNgUCsEyW": {
+      "actor": "systems/dndestiny/tokens/undead/Zombie.webp",
+      "token": "systems/dndestiny/tokens/undead/Zombie.webp"
+    },
+    "ZyIBOoZZD0nDaO2s": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/RedDragonAdult.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/RedDragonAdult.webp",
+          "scaleX": 2.3,
+          "scaleY": 2.3
+        }
+      }
+    },
+    "GP8JMSDugRxuLOD2": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/GreenDragonAdult.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/GreenDragonAdult.webp",
+          "scaleX": 2.3,
+          "scaleY": 2.3
+        }
+      }
+    },
+    "zjqjcRWKDMc59Tnx": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/GreenDragonAncient.webp",
+      "token": {
+        "width": 13,
+        "height": 13,
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/GreenDragonAncient.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "geM2F7HvVGhtk3h4": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/SilverDragonAdult.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/SilverDragonAdult.webp",
+          "scaleX": 2.3,
+          "scaleY": 2.3
+        }
+      }
+    },
+    "7vswgicsiMfS4ZTS": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/BrassDragonAdult.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/BrassDragonAdult.webp",
+          "scaleX": 2.3,
+          "scaleY": 2.3
+        }
+      }
+    },
+    "K4vsSlHqbBAHUDHY": {
+      "actor": "systems/dndestiny/tokens/thumbs/monstrosity/Hydra.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/monstrosity/Hydra.webp",
+          "scaleX": 1.6,
+          "scaleY": 1.6
+        }
+      }
+    },
+    "M4eX4Mu5IHCr3TMf": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/BlackDragonAdult.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/BlackDragonAdult.webp",
+          "scaleX": 2.33,
+          "scaleY": 2.33
+        }
+      }
+    },
+    "cGM3iVYTtCsYXjzO": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/BlueDragonAdult.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/BlueDragonAdult.webp",
+          "scaleX": 2.33,
+          "scaleY": 2.33
+        }
+      }
+    },
+    "SNT0JNVSngUTsj4m": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/BlueDragonAncient.webp",
+      "token": {
+        "width": 13,
+        "height": 13,
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/BlueDragonAncient.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "MO382D2sxtAIuUC5": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/GoldDragonAdult.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/GoldDragonAdult.webp",
+          "scaleX": 2.33,
+          "scaleY": 2.33
+        }
+      }
+    },
+    "3uIursokd3KdZrW3": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/WhiteDragonAdult.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/WhiteDragonAdult.webp",
+          "scaleX": 2.33,
+          "scaleY": 2.33
+        }
+      }
+    },
+    "aTITHYYxthuZBPBn": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/WhiteDragonAncient.webp",
+      "token": {
+        "width": 13,
+        "height": 13,
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/WhiteDragonAncient.webp",
+          "scaleX": 3,
+          "scaleY": 3
+        }
+      }
+    },
+    "oDspGxRQFBhE74L2": {
+      "actor": "systems/dndestiny/tokens/elemental/InvisibleStalker.webp",
+      "token": "systems/dndestiny/tokens/elemental/InvisibleStalker.webp"
+    },
+    "VCuG0Z3MrO8kfDU0": {
+      "actor": "systems/dndestiny/tokens/thumbs/dragon/BronzeDragonAdult.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/dragon/BronzeDragonAdult.webp",
+          "scaleX": 2.33,
+          "scaleY": 2.33
+        }
+      }
+    }
+  },
+  "dndestiny.heroes": {
+    "125qFnXvT9z0iOic": {
+      "actor": "systems/dndestiny/tokens/heroes/MonkStaff.webp",
+      "token": "systems/dndestiny/tokens/heroes/MonkStaff.webp"
+    },
+    "2Pdtnswo8Nj2nafY": {
+      "actor": "systems/dndestiny/tokens/heroes/FighterShield.webp",
+      "token": "systems/dndestiny/tokens/heroes/FighterShield.webp"
+    },
+    "4Jsv5vYaJ1atUEDV": {
+      "actor": "systems/dndestiny/tokens/heroes/WizardTome.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/heroes/WizardTome.webp",
+          "scaleX": 0.875,
+          "scaleY": 0.875
+        }
+      }
+    },
+    "Dh1AA6w104V17V6w": {
+      "actor": "systems/dndestiny/tokens/heroes/PaladinHammer.webp",
+      "token": "systems/dndestiny/tokens/heroes/PaladinHammer.webp"
+    },
+    "Jw8DeuPjt1qpusdB": {
+      "actor": "systems/dndestiny/tokens/heroes/WarlockStaff.webp",
+      "token": "systems/dndestiny/tokens/heroes/WarlockStaff.webp"
+    },
+    "ZGDys30OS76uYaIO": {
+      "actor": "systems/dndestiny/tokens/heroes/DruidStaff.webp",
+      "token": "systems/dndestiny/tokens/heroes/DruidStaff.webp"
+    },
+    "bzlxBO5km3zCQA8G": {
+      "actor": "systems/dndestiny/tokens/heroes/RogueHalfling.webp",
+      "token": "systems/dndestiny/tokens/heroes/RogueHalfling.webp"
+    },
+    "cYD0wRXLW4B17aoY": {
+      "actor": "systems/dndestiny/tokens/heroes/RangerBow.webp",
+      "token": {
+        "texture": {
+          "src": "systems/dndestiny/tokens/heroes/RangerBow.webp",
+          "scaleX": 0.9,
+          "scaleY": 0.9
+        }
+      }
+    },
+    "irWonyO6ZLh47sN7": {
+      "actor": "systems/dndestiny/tokens/heroes/BarbarianMaul.webp",
+      "token": "systems/dndestiny/tokens/heroes/BarbarianMaul.webp"
+    },
+    "kfzBL0q1Y7LgGs2x": {
+      "actor": "systems/dndestiny/tokens/heroes/ClericDragonborn.webp",
+      "token": "systems/dndestiny/tokens/heroes/ClericDragonborn.webp"
+    },
+    "xT2C2Itv2XambDYp": {
+      "actor": "systems/dndestiny/tokens/heroes/SorcererTiefling.webp",
+      "token": "systems/dndestiny/tokens/heroes/SorcererTiefling.webp"
+    },
+    "xVmbM44RXyI2Eqq3": {
+      "actor": "systems/dndestiny/tokens/heroes/BardLute.webp",
+      "token": "systems/dndestiny/tokens/heroes/BardLute.webp"
+    }
+  }
+}

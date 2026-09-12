@@ -1,0 +1,9 @@
+<section class="tab activity-{{ tab.id }} {{ tab.cssClass }}" data-tab="{{ tab.id }}" data-group="{{ tab.group }}">
+    {{> "systems/dndestiny/templates/activity/parts/activity-identity.hbs" }}
+    {{> "systems/dndestiny/templates/activity/parts/attack-identity.hbs" }}
+    <fieldset>
+        <legend>{{ localize "DND5E.ACTIVITY.SECTIONS.Behavior" }}</legend>
+        {{> "dndestiny.fieldlist" behaviorFields }}
+    </fieldset>
+    {{> "systems/dndestiny/templates/activity/parts/activity-visibility.hbs" }}
+</section>

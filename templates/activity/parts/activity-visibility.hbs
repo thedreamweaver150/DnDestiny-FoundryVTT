@@ -1,0 +1,20 @@
+<fieldset>
+    <legend>{{ localize "DND5E.ACTIVITY.FIELDS.visibility.label" }}</legend>
+    {{> "dndestiny.fieldlist" visibilityFields }}
+    <div class="form-group">
+        <label>{{ localize "DND5E.ACTIVITY.FIELDS.visibility.level.label" }}</label>
+        <div class="form-fields range-fields">
+            {{ formInput fields.visibility.fields.level.fields.min value=source.visibility.level.min
+                         placeholder="0" ariaLabel=(localize "DND5E.LevelLimit.Min")
+                         input=@root.inputs.createNumberInput }}
+            <dndestiny-icon src="systems/dndestiny/icons/svg/range-connector.svg" class="sep"></dndestiny-icon>
+            {{ formInput fields.visibility.fields.level.fields.max value=source.visibility.level.max
+                         placeholder="∞" ariaLabel=(localize "DND5E.LevelLimit.Max")
+                         input=@root.inputs.createNumberInput }}
+        </div>
+        <p class="hint">{{ localize "DND5E.ACTIVITY.FIELDS.visibility.level.hint" }}</p>
+    </div>
+    {{#if (or (not activity.isSpell) activity.isRider)}}
+    {{ formField fields.visibility.fields.identifier value=source.visibility.identifier rootId=partId }}
+    {{/if}}
+</fieldset>

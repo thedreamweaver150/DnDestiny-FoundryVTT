@@ -1,0 +1,12 @@
+<div>
+    {{> ".actor" actor=hostActor class="host" }}
+    <dndestiny-icon src="systems/dndestiny/icons/svg/range-connector.svg"></dndestiny-icon>
+    {{> ".actor" actor=sourceActor class="source" }}
+</div>
+
+{{#*inline ".actor"}}
+<div class="{{ class }}">
+    <img src="{{ actor.artwork }}" alt="{{ actor.name }}">
+    <span class="name">{{ actor.name }}</span>
+</div>
+{{/inline}}

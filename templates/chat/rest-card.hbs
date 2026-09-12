@@ -1,0 +1,13 @@
+<div class="chat-card rest-card">
+    {{{ content }}}
+
+    {{#if actor}}
+
+    {{!-- Deltas --}}
+    {{#if deltas.length}}{{> "dndestiny.card-deltas" }}{{/if}}
+
+    {{!-- Actions --}}
+    {{#if activities.length}}{{> "dndestiny.card-activities" }}{{/if}}
+
+    {{/if}}
+</div>

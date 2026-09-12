@@ -1,0 +1,25 @@
+<div class="standard-form">
+    <div class="breakdown form-group split-group">
+        <div class="form-fields">
+            {{#if hp.previous}}
+            <div class="form-group label-top">
+                <label>Prev.</label>
+                <span>{{ hp.previous }}</span>
+            </div>
+            <span class="separator">+</span>
+            {{/if}}
+
+            <div class="form-group label-top">
+                <label>{{ hp.modifierLabel }}</label>
+                <span>{{ hp.gained }}</span>
+            </div>
+
+            <span class="separator">=</span>
+
+            <div class="form-group label-top">
+                <label>Final</label>
+                <span>{{ hp.total }}</span>
+            </div>
+        </div>
+    </div>
+</div>
