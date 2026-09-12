@@ -774,6 +774,14 @@ Hooks.once("init", () => {
         schema.dndestinyDamageDenomination = new NumberField({ integer: true, min: 4 });
         return schema;
       }
+
+      // Drops the inherited "1st Level" tag from the usage chat card - real
+      // spells have a slot level worth calling out, but Light Abilities
+      // don't (their "level" field is unused fallout from subclassing
+      // SpellData - see the class comment above), so it's just noise there.
+      get chatProperties() {
+        return super.chatProperties.filter(p => p.type !== "level");
+      }
     }
 
     CONFIG.Item.dataModels[LIGHT_ABILITY_ITEM_TYPE] = LightAbilityData;
@@ -4945,13 +4953,17 @@ function injectAbilitySlotField(app, rootElement) {
   if (damageDieSelect && damageDieSelect.value !== currentDie) damageDieSelect.value = currentDie;
 
   // Swap the sheet header's type subtitle (normally the spell's level/
-  // school, e.g. "1st Level Evocation") to read the slot's label instead,
-  // same treatment as Foundation's Background -> Foundation swap.
+  // school, e.g. "1st Level Evocation") to read the slot's label instead -
+  // or hide it entirely when no slot is set, since Light Abilities aren't
+  // meaningfully "leveled" the way real spells are (same treatment as
+  // Foundation's Background -> Foundation swap, but with nothing to fall
+  // back to here).
   const subtitleSpan = rootElement.querySelector(".subtitles li span");
   if (subtitleSpan) {
-    if (!subtitleSpan.dataset.dndestinyOriginalText) subtitleSpan.dataset.dndestinyOriginalText = subtitleSpan.textContent;
-    const label = ABILITY_SLOT_CHOICES.find(s => s.key === current)?.label ?? subtitleSpan.dataset.dndestinyOriginalText;
+    const label = ABILITY_SLOT_CHOICES.find(s => s.key === current)?.label ?? "";
     if (subtitleSpan.textContent !== label) subtitleSpan.textContent = label;
+    const subtitleItem = subtitleSpan.closest("li");
+    if (subtitleItem) subtitleItem.hidden = !label;
   }
 }
 
