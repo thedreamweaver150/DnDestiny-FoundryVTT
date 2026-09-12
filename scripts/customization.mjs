@@ -887,6 +887,16 @@ Hooks.once("init", () => {
     delete CONFIG.DND5E.traits.languages.labels?.all;
   }
 
+  // Custom Consumption Types - see consumeActiveGrenade/
+  // consumptionLabelsActiveGrenade above. Registered here (rather than
+  // where those functions are defined) so it lands in CONFIG.DND5E before
+  // "i18nInit" pre-localizes every activityConsumptionTypes entry's label.
+  CONFIG.DND5E.activityConsumptionTypes.dndestinyGrenade = {
+    label: "Grenade",
+    consume: consumeActiveGrenade,
+    consumptionLabels: consumptionLabelsActiveGrenade
+  };
+
   // Custom Skills
   CONFIG.DND5E.skills["tec"] = {
     label: "Technology",
@@ -3690,12 +3700,6 @@ function injectCoreLightAbilitiesTab(sheetApp, rootElement) {
   const lightSaveDc = hasLight ? 8 + prof + abilityMod : null;
   const lightAttackMod = hasLight ? (abilityMod >= 0 ? `+${abilityMod + prof}` : `${abilityMod + prof}`) : null;
 
-  const sourceHint = !primaryClass
-    ? "No class item found - add a class to configure Light abilities."
-    : !lightAbilityKey
-      ? `${primaryClass.name} has no Light Ability set - open the class item and set one.`
-      : `Powers keyed from ${primaryClass.name}`;
-
   const abilityLabel = hasLight ? (CONFIG.DND5E.abilities[lightAbilityKey]?.label || lightAbilityKey.toUpperCase()) : "Unconfigured";
 
   // Mirrors the native dnd5e2 "card" component (see .card / .card .header /
@@ -3732,8 +3736,6 @@ function injectCoreLightAbilitiesTab(sheetApp, rootElement) {
 
         ${renderGhostLinkCard(actor)}
       </div>
-
-      <p class="dndestiny-light-source-hint">${sourceHint}</p>
 
       <div class="dndestiny-light-abilities-body">
         <h3 class="dndestiny-light-section-heading">Core Abilities</h3>
@@ -3963,6 +3965,49 @@ function bindGhostLinkCardEvents(rootElement, actor) {
   });
 }
 
+// Renders a Core Ability slot/Grenade row's Charges Remaining cell -
+// editable exactly like the native Charges column on the Inventory tab (see
+// templates/inventory/columns/uses.hbs), since neither row uses dndestiny's
+// native item-row markup (see handleAbilityRowDragStart) and so doesn't pick
+// up that column for free. Bound via bindAbilitySlotListEvents/
+// bindGrenadeListEvents below, which listen for "change" on
+// .dndestiny-charges-remaining and write the entered remaining value back as
+// system.uses.spent - same field the native column edits.
+function renderChargesRemaining(item, cssClass) {
+  const uses = item.system?.uses ?? {};
+  if (!uses.max) return `<div class="${cssClass}" data-tooltip="Charges Remaining">—</div>`;
+
+  const remaining = Math.max(0, (uses.max ?? 0) - (uses.spent ?? 0));
+  return `
+    <div class="${cssClass}" data-tooltip="Charges Remaining">
+      <input type="text" class="dndestiny-charges-remaining" inputmode="numeric" pattern="^\\d*$"
+             value="${remaining}" data-item-id="${item.id}" aria-label="Charges Remaining">
+      <span class="separator">&sol;</span>
+      <span class="max">${uses.max}</span>
+    </div>
+  `;
+}
+
+// Delegated "change" handler for the .dndestiny-charges-remaining input
+// rendered by renderChargesRemaining above - mirrors injectWeaponAmmoBadge's
+// own Shots Remaining input (same clamp-then-update pattern) rather than the
+// native Inventory column's delta-string parsing (dnd5e.utils.parseInputDelta),
+// since this row isn't a real <dndestiny-inventory> element and everything
+// else in this file already reimplements this simpler variant.
+function bindChargesRemainingInput(list, actor) {
+  list.addEventListener("change", async (e) => {
+    const input = e.target.closest(".dndestiny-charges-remaining");
+    if (!input) return;
+
+    const item = actor.items.get(input.dataset.itemId);
+    const max = item?.system?.uses?.max ?? 0;
+    if (!item || !max) return;
+
+    const clamped = clamp(Number(input.value) || 0, 0, max);
+    await item.update({ "system.uses.spent": max - clamped });
+  });
+}
+
 // Displays the 3 Core Ability slots (see ABILITY_SLOTS), each holding at
 // most 1 Light Ability item (dropped onto the actor sheet like any other
 // item) - pulled out of the native Spells list here instead, same as
@@ -3982,8 +4027,6 @@ function renderAbilitySlotList(actor) {
       `;
     }
 
-    const uses = item.system?.uses ?? {};
-    const usesLabel = uses.max ? `${Math.max(0, (uses.max ?? 0) - (uses.spent ?? 0))}/${uses.max}` : "—";
     const die = item.system?.dndestinyRechargeDie || "d6";
     const threshold = item.system?.dndestinyRechargeThreshold ?? 6;
 
@@ -3994,7 +4037,7 @@ function renderAbilitySlotList(actor) {
           <span class="title">${item.name}</span>
           <span class="subtitle">${label}</span>
         </div>
-        <div class="dndestiny-ability-slot-uses" data-tooltip="Charges Remaining">${usesLabel}</div>
+        ${renderChargesRemaining(item, "dndestiny-ability-slot-uses")}
         <div class="dndestiny-ability-slot-recharge" data-tooltip="Recharge">${die.toUpperCase()} (${threshold}+)</div>
         <button type="button" class="unbutton dndestiny-ability-slot-btn" data-action="recharge" data-item-id="${item.id}"
                 data-tooltip="Roll Recharge" aria-label="Roll Recharge">
@@ -4110,6 +4153,7 @@ function bindAbilitySlotListEvents(customSection, actor) {
 
   list.addEventListener("dragstart", (e) => handleAbilityRowDragStart(e, actor));
   bindAbilityRowContextMenu(list, ".dndestiny-ability-slot-row[data-item-id]", actor);
+  bindChargesRemainingInput(list, actor);
 
   list.addEventListener("click", async (e) => {
     const addBtn = e.target.closest('[data-action="add"][data-slot]');
@@ -4178,8 +4222,6 @@ function renderGrenadeList(actor) {
   const activeId = actor.getFlag(MODULE_ID, ACTIVE_GRENADE_FLAG) ?? null;
 
   const rows = grenades.map(g => {
-    const uses = g.system?.uses ?? {};
-    const usesLabel = uses.max ? `${Math.max(0, (uses.max ?? 0) - (uses.spent ?? 0))}/${uses.max}` : "—";
     const die = g.system?.dndestinyRechargeDie || "d6";
     const threshold = g.system?.dndestinyRechargeThreshold ?? 6;
     const isActive = g.id === activeId;
@@ -4193,7 +4235,7 @@ function renderGrenadeList(actor) {
           <span class="title">${g.name}</span>
           <span class="subtitle">${activation} &bull; ${duration}</span>
         </div>
-        <div class="dndestiny-grenade-uses" data-tooltip="Charges Remaining">${usesLabel}</div>
+        ${renderChargesRemaining(g, "dndestiny-grenade-uses")}
         <div class="dndestiny-grenade-recharge" data-tooltip="Recharge">${die.toUpperCase()} (${threshold}+)</div>
         <button type="button" class="unbutton dndestiny-grenade-btn" data-action="recharge" data-item-id="${g.id}"
                 data-tooltip="Roll Recharge" aria-label="Roll Recharge">
@@ -4222,6 +4264,7 @@ function bindGrenadeListEvents(customSection, actor) {
 
   list.addEventListener("dragstart", (e) => handleAbilityRowDragStart(e, actor));
   bindAbilityRowContextMenu(list, ".dndestiny-grenade-item[data-item-id]", actor);
+  bindChargesRemainingInput(list, actor);
 
   list.addEventListener("click", async (e) => {
     const target = e.target.closest('[data-action][data-item-id]');
@@ -4276,6 +4319,63 @@ async function rollAbilityRecharge(item) {
   });
 
   if (success) await item.update({ "system.uses.spent": 0 });
+}
+
+// Adds a "Grenade" option to every Activity's Consumption "Type" dropdown
+// (the Use Activity's Consumption tab and every other Activity type share
+// the same activity-consumption.hbs partial, whose Type options come
+// straight from CONFIG.DND5E.activityConsumptionTypes via
+// Activity#validConsumptionTypes - see the "init" hook registration below).
+// Lets any Activity on any item - not just a Grenade item itself - spend 1
+// charge of the acting actor's Active Grenade (see ACTIVE_GRENADE_FLAG/
+// renderGrenadeList) as part of its cost, the same way a native "Item Uses"
+// consumption spends a charge of a specific item. No "Target" picker is
+// shown for it (no `validTargets` below) since the target - whichever
+// Grenade is currently Active - is resolved per-actor at use time rather
+// than chosen when configuring the Activity.
+async function consumeActiveGrenade(config, updates) {
+  const { ConsumptionError } = dndestiny.dataModels.activity;
+  const actor = this.actor;
+  const activeId = actor?.getFlag(MODULE_ID, ACTIVE_GRENADE_FLAG) ?? null;
+  const grenade = activeId ? actor?.items.get(activeId) : null;
+
+  if (!grenade) throw new ConsumptionError(
+    `${this.activity.name} requires an Active Grenade, but none is set - open the Core Light Abilities tab and set one.`
+  );
+
+  const result = await this._usesConsumption(config, {
+    uses: grenade.system.uses,
+    type: `${grenade.name}'s Charges`,
+    rolls: updates.rolls,
+    delta: { item: grenade.id, keyPath: "system.uses.spent" }
+  });
+  if (!result) return;
+
+  const itemUpdate = { "system.uses.spent": result.spent };
+  const itemIndex = updates.item.findIndex(i => i._id === grenade.id);
+  if (itemIndex === -1) updates.item.push({ _id: grenade.id, ...itemUpdate });
+  else foundry.utils.mergeObject(updates.item[itemIndex], itemUpdate);
+}
+
+// Consumption-summary hint for the "Grenade" type above, shown in the
+// Configure Use dialog before an Activity is actually used - mirrors
+// ConsumptionTargetData.consumptionLabelsItemUses, just against the actor's
+// Active Grenade instead of a picked item/self.
+function consumptionLabelsActiveGrenade(config) {
+  const { cost, simplifiedCost, increaseKey } = this._resolveHintCost(config);
+  const actor = this.actor;
+  const activeId = actor?.getFlag(MODULE_ID, ACTIVE_GRENADE_FLAG) ?? null;
+  const grenade = activeId ? actor?.items.get(activeId) : null;
+  const grenadeName = grenade ? grenade.name : "the Active Grenade";
+  const available = grenade?.system?.uses?.value ?? 0;
+  const isIncrease = increaseKey === "Increase";
+
+  return {
+    label: isIncrease ? "Recover Charge" : "Expend Charge",
+    hint: `Will ${isIncrease ? "recover" : "expend"} ${cost} ${cost === "1" ? "charge" : "charges"} `
+      + `from <em>${grenadeName}</em> (${dndestiny.utils.formatNumber(available)} available).`,
+    warn: !grenade || (simplifiedCost > available)
+  };
 }
 
 // Grenades and the 3 Core Ability slots (see hasAbilitySlot) track charges
