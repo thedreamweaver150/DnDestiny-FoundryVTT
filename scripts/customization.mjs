@@ -896,6 +896,11 @@ Hooks.once("init", () => {
     consume: consumeActiveGrenade,
     consumptionLabels: consumptionLabelsActiveGrenade
   };
+  CONFIG.DND5E.activityConsumptionTypes.dndestinyMelee = {
+    label: "Melee",
+    consume: consumeMeleeAbility,
+    consumptionLabels: consumptionLabelsMeleeAbility
+  };
 
   // Custom Skills
   CONFIG.DND5E.skills["tec"] = {
@@ -1155,16 +1160,20 @@ Hooks.once("init", () => {
     dndestinySmalSwd: "Compendium.dndestiny.equipment.Item.dndestinySmalSwd"
   });
 
-  // Clears out dnd5e's stock "Class Feature Type" options (Arcane Shot,
-  // Channel Divinity, Fighting Style, Metamagic Option, etc.) from the
+  // Replaces dnd5e's stock "Class Feature Type" options (Arcane Shot,
+  // Channel Divinity, Fighting Style, Metamagic Option, etc.) in the
   // Feature item sheet's subtype dropdown when Feature Type is set to
-  // "Class Feature" - none of them apply to dndestiny's own classes, and
-  // they'd otherwise sit there implying they do. Deleting the whole
-  // "subtypes" key (rather than emptying it to {}) makes the dropdown not
-  // render at all, same as "Background Feature"/"Race Feature"/etc. above,
-  // which have no subtypes entry of their own either - dndestiny's own
-  // subtype list goes back in here once it exists.
-  delete CONFIG.DND5E.featureTypes.class?.subtypes;
+  // "Class Feature" - none of the stock ones apply to dndestiny's own
+  // classes, and they'd otherwise sit there implying they do. This used to
+  // just delete the whole "subtypes" key (making the dropdown not render
+  // at all, same as "Background Feature"/"Race Feature"/etc., which have
+  // no subtypes entry of their own) until dndestiny had its own subtype to
+  // put there - "Focus Actions" is that first one.
+  if (CONFIG.DND5E.featureTypes.class) {
+    CONFIG.DND5E.featureTypes.class.subtypes = {
+      dndestinyFocusAction: "Focus Actions"
+    };
+  }
 
   // Destiny Armor - replaces dndestiny's stock PHB armor examples (armorIds)
   // with Destiny-reskinned equivalents, one-for-one at the same AC/Dex cap/
@@ -4375,6 +4384,53 @@ function consumptionLabelsActiveGrenade(config) {
     hint: `Will ${isIncrease ? "recover" : "expend"} ${cost} ${cost === "1" ? "charge" : "charges"} `
       + `from <em>${grenadeName}</em> (${dndestiny.utils.formatNumber(available)} available).`,
     warn: !grenade || (simplifiedCost > available)
+  };
+}
+
+// "Melee" Consumption type - same idea as "Grenade" above, but targeting
+// whichever item currently sits in the actor's Melee Ability slot (see
+// ABILITY_SLOTS). A negative Amount restores charges instead (clamped so
+// spent never drops below 0), so an Activity can freely spend or refund the
+// slotted Melee Ability's uses regardless of which ability that is.
+const getMeleeAbilityItem = (actor) => actor?.items.find(
+  i => isLightAbilityTypeItem(i) && i.system?.dndestinyAbilitySlot === "melee"
+) ?? null;
+
+async function consumeMeleeAbility(config, updates) {
+  const { ConsumptionError } = dndestiny.dataModels.activity;
+  const melee = getMeleeAbilityItem(this.actor);
+
+  if (!melee) throw new ConsumptionError(
+    `${this.activity.name} requires a Melee Ability, but none is slotted - open the Core Light Abilities tab and add one.`
+  );
+
+  const result = await this._usesConsumption(config, {
+    uses: melee.system.uses,
+    type: `${melee.name}'s Charges`,
+    rolls: updates.rolls,
+    delta: { item: melee.id, keyPath: "system.uses.spent" }
+  });
+  if (!result) return;
+
+  const itemUpdate = { "system.uses.spent": Math.max(0, result.spent) };
+  const itemIndex = updates.item.findIndex(i => i._id === melee.id);
+  if (itemIndex === -1) updates.item.push({ _id: melee.id, ...itemUpdate });
+  else foundry.utils.mergeObject(updates.item[itemIndex], itemUpdate);
+}
+
+function consumptionLabelsMeleeAbility(config) {
+  const { cost, simplifiedCost, increaseKey } = this._resolveHintCost(config);
+  const melee = getMeleeAbilityItem(this.actor);
+  const meleeName = melee ? melee.name : "the Melee Ability";
+  const available = melee?.system?.uses?.value ?? 0;
+  const isIncrease = increaseKey === "Increase";
+
+  return {
+    label: isIncrease ? "Recover Charge" : "Expend Charge",
+    hint: `Will ${isIncrease ? "recover" : "expend"} ${cost} ${cost === "1" ? "charge" : "charges"} `
+      + `${isIncrease ? "of" : "from"} <em>${meleeName}</em> `
+      + `(${dndestiny.utils.formatNumber(available)} available).`,
+    warn: !melee || (simplifiedCost > available)
   };
 }
 
