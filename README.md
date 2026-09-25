@@ -4,6 +4,13 @@
 
 A [Foundry Virtual Tabletop](https://foundryvtt.com/) game system for **Dungeons & Destiny**, a Destiny-themed tabletop RPG built on the 5th-edition SRD. This system is forked from Foundry's official [dnd5e](https://github.com/foundryvtt/dnd5e) system and extends it with the classes, races, gear, and mechanics unique to the Dungeons & Destiny setting.
 
+# **Very Big Disclaimer**
+This project uses AI (Claude Code) to help with development. Specifically, it helps produce the functionality for the system. I still test everything Claude writes into the system to make sure its not buggy/feels fine to use and i input the text from the books without the use of Claude to ensure accuracy.
+
+**NO ART OR ASSETS ARE GENERATED WITH THE USE OF AI, ONLY CODE.**
+
+That being said, i know this will be a deal breaker for most and that's fine. i did this for fun and to learn new things. i still encourage people to try it because i did pour a lot of time and love into it so other people could have a way to play this great system with their friends
+
 ## Features
 
 Dungeons & Destiny keeps everything you already know from 5e-based systems and layers Destiny's own mechanics on top:
@@ -59,6 +66,8 @@ Compendiums are included for character origins, classes and subclasses, backgrou
 ## License
 
 This system is a fork of [dnd5e](https://github.com/foundryvtt/dnd5e) and is distributed under the same MIT license — see [LICENSE](LICENSE) for details. Dungeons & Destiny content is used under the terms of the [Systems Reference Document 5.1](https://www.dndbeyond.com/srd) and Foundry Virtual Tabletop's [Limited License](LICENSE.txt).
+
+**I AM IN NO WAY AFFILIATED WITH BUNGIE OR VELVET FANG.**
 
 ## Links
 
