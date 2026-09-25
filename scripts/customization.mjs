@@ -898,8 +898,11 @@ Hooks.once("init", () => {
   };
   CONFIG.DND5E.activityConsumptionTypes.dndestinyMelee = {
     label: "Melee",
-    consume: consumeMeleeAbility,
-    consumptionLabels: consumptionLabelsMeleeAbility
+    ...makeAbilitySlotConsumption("melee")
+  };
+  CONFIG.DND5E.activityConsumptionTypes.dndestinySuperclass = {
+    label: "Superclass",
+    ...makeAbilitySlotConsumption("superclass")
   };
 
   // Custom Skills
@@ -4387,51 +4390,57 @@ function consumptionLabelsActiveGrenade(config) {
   };
 }
 
-// "Melee" Consumption type - same idea as "Grenade" above, but targeting
-// whichever item currently sits in the actor's Melee Ability slot (see
-// ABILITY_SLOTS). A negative Amount restores charges instead (clamped so
-// spent never drops below 0), so an Activity can freely spend or refund the
-// slotted Melee Ability's uses regardless of which ability that is.
-const getMeleeAbilityItem = (actor) => actor?.items.find(
-  i => isLightAbilityTypeItem(i) && i.system?.dndestinyAbilitySlot === "melee"
-) ?? null;
+// "Melee" and "Superclass" Consumption types - same idea as "Grenade" above,
+// but targeting whichever item currently sits in the actor's matching Core
+// Ability slot (see ABILITY_SLOTS). A negative Amount restores charges
+// instead (clamped so spent never drops below 0), so an Activity can freely
+// spend or refund the slotted ability's uses regardless of which ability
+// that is. Built by a factory since the two only differ by slot key/label.
+function makeAbilitySlotConsumption(slotKey) {
+  const slotLabel = ABILITY_SLOTS.find(s => s.key === slotKey).label;
+  const getSlotItem = (actor) => actor?.items.find(
+    i => isLightAbilityTypeItem(i) && i.system?.dndestinyAbilitySlot === slotKey
+  ) ?? null;
 
-async function consumeMeleeAbility(config, updates) {
-  const { ConsumptionError } = dndestiny.dataModels.activity;
-  const melee = getMeleeAbilityItem(this.actor);
+  async function consume(config, updates) {
+    const { ConsumptionError } = dndestiny.dataModels.activity;
+    const slotItem = getSlotItem(this.actor);
 
-  if (!melee) throw new ConsumptionError(
-    `${this.activity.name} requires a Melee Ability, but none is slotted - open the Core Light Abilities tab and add one.`
-  );
+    if (!slotItem) throw new ConsumptionError(
+      `${this.activity.name} requires a ${slotLabel}, but none is slotted - open the Core Light Abilities tab and add one.`
+    );
 
-  const result = await this._usesConsumption(config, {
-    uses: melee.system.uses,
-    type: `${melee.name}'s Charges`,
-    rolls: updates.rolls,
-    delta: { item: melee.id, keyPath: "system.uses.spent" }
-  });
-  if (!result) return;
+    const result = await this._usesConsumption(config, {
+      uses: slotItem.system.uses,
+      type: `${slotItem.name}'s Charges`,
+      rolls: updates.rolls,
+      delta: { item: slotItem.id, keyPath: "system.uses.spent" }
+    });
+    if (!result) return;
 
-  const itemUpdate = { "system.uses.spent": Math.max(0, result.spent) };
-  const itemIndex = updates.item.findIndex(i => i._id === melee.id);
-  if (itemIndex === -1) updates.item.push({ _id: melee.id, ...itemUpdate });
-  else foundry.utils.mergeObject(updates.item[itemIndex], itemUpdate);
-}
+    const itemUpdate = { "system.uses.spent": Math.max(0, result.spent) };
+    const itemIndex = updates.item.findIndex(i => i._id === slotItem.id);
+    if (itemIndex === -1) updates.item.push({ _id: slotItem.id, ...itemUpdate });
+    else foundry.utils.mergeObject(updates.item[itemIndex], itemUpdate);
+  }
 
-function consumptionLabelsMeleeAbility(config) {
-  const { cost, simplifiedCost, increaseKey } = this._resolveHintCost(config);
-  const melee = getMeleeAbilityItem(this.actor);
-  const meleeName = melee ? melee.name : "the Melee Ability";
-  const available = melee?.system?.uses?.value ?? 0;
-  const isIncrease = increaseKey === "Increase";
+  function consumptionLabels(config) {
+    const { cost, simplifiedCost, increaseKey } = this._resolveHintCost(config);
+    const slotItem = getSlotItem(this.actor);
+    const slotItemName = slotItem ? slotItem.name : `the ${slotLabel}`;
+    const available = slotItem?.system?.uses?.value ?? 0;
+    const isIncrease = increaseKey === "Increase";
 
-  return {
-    label: isIncrease ? "Recover Charge" : "Expend Charge",
-    hint: `Will ${isIncrease ? "recover" : "expend"} ${cost} ${cost === "1" ? "charge" : "charges"} `
-      + `${isIncrease ? "of" : "from"} <em>${meleeName}</em> `
-      + `(${dndestiny.utils.formatNumber(available)} available).`,
-    warn: !melee || (simplifiedCost > available)
-  };
+    return {
+      label: isIncrease ? "Recover Charge" : "Expend Charge",
+      hint: `Will ${isIncrease ? "recover" : "expend"} ${cost} ${cost === "1" ? "charge" : "charges"} `
+        + `${isIncrease ? "of" : "from"} <em>${slotItemName}</em> `
+        + `(${dndestiny.utils.formatNumber(available)} available).`,
+      warn: !slotItem || (simplifiedCost > available)
+    };
+  }
+
+  return { consume, consumptionLabels };
 }
 
 // Grenades and the 3 Core Ability slots (see hasAbilitySlot) track charges
